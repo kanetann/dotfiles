@@ -3,6 +3,7 @@
 " ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin
 
 set complete=sl
+set! ui.key.generalAccessKey=0
 
 let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
 js <<EOF
@@ -17,9 +18,6 @@ liberator.globalVariables.plugin_loader_plugins = <>
     ime_controller
     ldrize_cooperation
     lookupDictionary
-    migemo-find
-    migemo_completion
-    migemo_hint
     nextlink
     subscldr
     tombloo
@@ -27,7 +25,9 @@ liberator.globalVariables.plugin_loader_plugins = <>
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
 
-set! ui.key.generalAccessKey=0
+"    migemo-find
+"    migemo_completion
+"    migemo_hint
 
 "migemo_hint.js
 "set hintmatching=custom
