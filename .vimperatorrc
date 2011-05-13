@@ -1,0 +1,118 @@
+" update vimperator plugins
+" git clone https://github.com/vimpr/vimperator-plugins.git ~/.vimperator/github-plugin/
+" ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin
+
+set complete=sl
+
+let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
+js <<EOF
+liberator.globalVariables.plugin_loader_plugins = <>
+    _libly
+    auto_reload
+    auto_source
+    copy
+    feedSomeKeys_2
+    feedSomeKeys_3
+    forcefocuscontent
+    ime_controller
+    ldrize_cooperation
+    lookupDictionary
+    migemo-find
+    migemo_completion
+    migemo_hint
+    nextlink
+    subscldr
+    tombloo
+    walk-input
+</>.toString().split(/\s+/).filter(function(n) n);
+EOF
+
+set! ui.key.generalAccessKey=0
+
+"migemo_hint.js
+"set hintmatching=custom
+
+" feedSomeKeys_2.js
+":autocmd LocationChange .* :fmapc
+":autocmd LocationChange 'reader\.livedoor\.com/reader' :fmap j k s a p o v c <Space> <S-Space> z b < >
+":autocmd LocationChange 'www\.google\.co\.jp' :fmap j k o p
+":autocmd LocationChange 'search\.cpan\.org' :fmap j k o p
+":autocmd LocationChange 'www\.amazon\.co\.jp' :fmap j k o p
+":autocmd LocationChange 'www\.rememberthemilk\.com' :fmap c d p g s u l y r z <C-1>,1 <C-2>,2 <C-3>,3 <C-4>,4 a n k j i h m
+
+
+" feedSomeKeys_3.js
+:command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+:lazy fmaps -u='(fastladder|livedoor)\.com/reader' j k s a p o v c i,p <Space> <S-Space> z b < > q w e,g
+:lazy fmaps -u='https?://www\.rememberthemilk\.com/home/' j k m i c ? F,f G,g S,s L,l Y,y H,h M,m <Del> <C-S-Left> <C-S-Right>
+:lazy fmaps -u='www\.google\.co\.jp' j k o p
+
+
+" forcefocuscontent.js
+set focuscontent
+
+" _smooziee.js
+"let g:smooziee_scroll_amount="300"
+"let g:smooziee_scroll_interval="10"
+
+" hatena bookmark settings
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
+
+javascript <<EOF
+liberator.globalVariables.hBookmark_shortcuts = {
+    hintsAdd     : 'c',
+    hintsComment : 'C',
+    add          : ['c'],
+    comment      : ['C'],
+};
+
+liberator.globalVariables.hBookmark_commands = {
+        hbsearch             : 'hb[search]',
+        hbsearch_tab         : 'hbt[absearch]',
+        hbsearch_comment     : 'hbc[omment]',
+        hbsearch_comment_tab : 'hbtc[omment]',
+        hbsearch_url         : 'hbu[rl]',
+        hbsearch_url_tab     : 'hbtu[rl]',
+        hbsearch_title       : 'hbti[tle]',
+        hbsearch_title_tab   : 'hbtti[tle]',
+};
+liberator.globalVariables.hBookmark_bangFunction = 'entryPage';
+liberator.globalVariables.hBookmark_search_interval = 1000;
+liberator.globalVariables.hBookmark_search_limit = 10;
+liberator.globalVariables.hBookmark_search_max_limit = 100;
+
+EOF
+
+" keymap settings
+map e :eijiro
+map s :subscldr<CR>
+
+" user command settings
+js <<EOM
+(function () {
+    commands.addUserCommand(
+        ['cpan'],
+        'search modules from cpan',
+        function (args) {
+            var arg = args.string;
+            liberator.open(
+                'http://search.cpan.org/search?mode=all&query=' + encodeURIComponent(arg),
+                liberator.NEW_TAB
+            );
+        }
+    );
+})();
+EOM
+
+" vim: set ft=vimperator:
+
+
+
+
+
+
+
+
+
+
+
