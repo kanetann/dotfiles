@@ -87,6 +87,9 @@ EOF
 map e :eijiro
 map s :subscldr<CR>
 
+
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
 " user command settings
 js <<EOM
 (function () {
