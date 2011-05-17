@@ -40,5 +40,5 @@ nmap <Space>b :ls<CR>:buffer-
 nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
-imap jj <ESC>
+inoremap jj <ESC>
 

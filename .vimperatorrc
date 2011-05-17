@@ -22,6 +22,7 @@ liberator.globalVariables.plugin_loader_plugins = <>
     subscldr
     tombloo
     walk-input
+    lo
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
 
@@ -84,7 +85,7 @@ liberator.globalVariables.hBookmark_search_max_limit = 100;
 EOF
 
 " keymap settings
-map e :eijiro
+map e :eijiro 
 map s :subscldr<CR>
 
 
