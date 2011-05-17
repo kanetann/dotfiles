@@ -23,6 +23,9 @@ liberator.globalVariables.plugin_loader_plugins = <>
     tombloo
     walk-input
     lo
+    migemo-find
+    migemo_completion
+    migemo_hint
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
 
@@ -31,7 +34,7 @@ EOF
 "    migemo_hint
 
 "migemo_hint.js
-"set hintmatching=custom
+set hintmatching=custom
 
 " feedSomeKeys_2.js
 ":autocmd LocationChange .* :fmapc
@@ -87,7 +90,7 @@ EOF
 " keymap settings
 map e :eijiro 
 map s :subscldr<CR>
-
+noremap <C-r> :source ~/.vimperatorrc
 
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
@@ -98,8 +101,7 @@ js <<EOM
         ['cpan'],
         'search modules from cpan',
         function (args) {
-            var arg = args.string;
-            liberator.open(
+            var arg = args.string; liberator.open(
                 'http://search.cpan.org/search?mode=all&query=' + encodeURIComponent(arg),
                 liberator.NEW_TAB
             );
