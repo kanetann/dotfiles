@@ -98,31 +98,34 @@ set! browser.cache.disk.enable=false
 set! browser.cache.memory.enable=true
 set! browser.cache.memory.capacity=16384
 set! browser.download.manager.retention=1
-set! browser.history_expire_days=7
-set! browser.history_expire_days_min=7
+set! browser.history_expire_days=3
+set! browser.history_expire_days.mirror=3
+set! browser.history_expire_days_min=3
+set! browser.history_expire_sites=200
+set! browser.sessionstore.enabled=true
 set! browser.sessionstore.interval=300000
+set! browser.sessionstore.max_concurrent_tabs=0
 set! browser.sessionstore.max_tabs_undo=25
+set! browser.sessionhistory.max_entries=10
 set! browser.sessionhistory.max_total_viewers=5
 set! browser.startup.homepage="about:blank"
 set! browser.tabs.closeWindowWithLastTab=false
 set! config.trim_on_minimize=true
+set! extensions.checkCompatibility=false
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true
 set! network.http.pipelining.maxrequests=8
 set! network.http.proxy.pipelining=true
-set! network.http.max.connections=96
+set! network.http.max.connections=64
 set! network.http.max-connections-per-server=32
+set! network.http.max-persistent-connections-per-proxy=16
+set! network.http.max-persistent-connections-per-server=16
+set! network.dns.disablePrefetch=true
 set! network.dns.disableIPv6=true
+set! network.prefetch-next=false
+set! security.dialog_enable_delay=0
 set! ui.key.generalAccessKey=0
 set! ui.submenyDelay=0
-set! extensions.checkCompatibility=false
-set! browser.sessionstore.max_concurrent_tabs=0
-set! security.dialog_enable_delay=0
-
-
-
-
-
 
 
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
