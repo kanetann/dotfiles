@@ -22,12 +22,12 @@ liberator.globalVariables.plugin_loader_plugins = <>
     tombloo
     walk-input
     lo
+    migemo-find
+    migemo_completion
+    migemo_hint
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
 
-"    migemo-find
-"    migemo_completion
-"    migemo_hint
 
 "migemo_hint.js
 set hintmatching=custom
@@ -112,6 +112,7 @@ set! browser.startup.homepage="about:blank"
 set! browser.tabs.closeWindowWithLastTab=false
 set! config.trim_on_minimize=true
 set! extensions.checkCompatibility=false
+set! extensions.checkCompatibility.4.0=false
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true
 set! network.http.pipelining.maxrequests=8
