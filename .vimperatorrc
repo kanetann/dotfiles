@@ -3,7 +3,6 @@
 " ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin
 
 set complete=sl
-set! ui.key.generalAccessKey=0
 
 let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
 js <<EOF
@@ -23,9 +22,6 @@ liberator.globalVariables.plugin_loader_plugins = <>
     tombloo
     walk-input
     lo
-    migemo-find
-    migemo_completion
-    migemo_hint
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
 
@@ -91,6 +87,43 @@ EOF
 map e :eijiro 
 map s :subscldr<CR>
 noremap <C-r> :source ~/.vimperatorrc
+inoremap <C-p> <UP>
+inoremap <C-n> <DOWN>
+cnoremap <C-n> <TAB>
+cnoremap <C-p> <S-TAB>
+
+
+
+set! browser.cache.disk.enable=false
+set! browser.cache.memory.enable=true
+set! browser.cache.memory.capacity=16384
+set! browser.download.manager.retention=1
+set! browser.history_expire_days=7
+set! browser.history_expire_days_min=7
+set! browser.sessionstore.interval=300000
+set! browser.sessionstore.max_tabs_undo=25
+set! browser.sessionhistory.max_total_viewers=5
+set! browser.startup.homepage="about:blank"
+set! browser.tabs.closeWindowWithLastTab=false
+set! config.trim_on_minimize=true
+set! network.http.pipelining=true
+set! network.http.pipelining.firstrequest=true
+set! network.http.pipelining.maxrequests=8
+set! network.http.proxy.pipelining=true
+set! network.http.max.connections=96
+set! network.http.max-connections-per-server=32
+set! network.dns.disableIPv6=true
+set! ui.key.generalAccessKey=0
+set! ui.submenyDelay=0
+set! extensions.checkCompatibility=false
+set! browser.sessionstore.max_concurrent_tabs=0
+set! security.dialog_enable_delay=0
+
+
+
+
+
+
 
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
