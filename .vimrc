@@ -1,5 +1,26 @@
-" editor
+" vundle settings
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'Shougo/neocomlcache'
+Bundle 'Shogo/unite.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
+Bundle 'thinca/vim-quickrun'
+Bundle 'thinca/vim-ref'
+Bundle 'kana/vim-fakeclip'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'rails.vim'
+Bundle 'git.vim'
+Bundle 'zencoding.vim'
 filetype plugin indent on
+
+
+" editor
 syntax enable
 "colorscheme darkblue
 set number
