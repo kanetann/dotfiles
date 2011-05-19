@@ -11,30 +11,30 @@ liberator.globalVariables.plugin_loader_plugins = <>
     _libly
     auto_reload
     auto_source
-    auto_detect_link
+//    auto_detect_link
     copy
 //    cpan-search
     feedSomeKeys_2
     feedSomeKeys_3
-    fetchyoutube
+//    fetchyoutube
     forcefocuscontent
     google-translator
     happy_hacking_vimperator
-    hints-for-embedded
+//    hints-for-embedded
     hatena-bookmark-search
     ime_controller
     migemo-find
     migemo_completion
     migemo_hint
     ldrize_cooperation
+    lo
     lookupDictionary
     nextlink
     subscldr
     stella
     tombloo
-    yetmappings
+//    yetmappings
     walk-input
-    lo
 </>.toString().split(/\s+/).filter(function(n) n);
 liberator.globalVariables.autoDetectLink = {nextPatterns: [/next/, /次/]};
 EOF
