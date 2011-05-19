@@ -149,3 +149,5 @@ esac
 #
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
+source ~/.zsh/plugin/incr*.zsh
+
