@@ -11,23 +11,36 @@ liberator.globalVariables.plugin_loader_plugins = <>
     _libly
     auto_reload
     auto_source
+    auto_detect_link
     copy
+//    cpan-search
     feedSomeKeys_2
     feedSomeKeys_3
+    fetchyoutube
     forcefocuscontent
+    google-translator
+    happy_hacking_vimperator
+    hints-for-embedded
+    hatena-bookmark-search
     ime_controller
+    migemo-find
+    migemo_completion
+    migemo_hint
     ldrize_cooperation
     lookupDictionary
     nextlink
     subscldr
+    stella
     tombloo
+    yetmappings
     walk-input
     lo
-    migemo-find
-    migemo_completion
-    migemo_hint
 </>.toString().split(/\s+/).filter(function(n) n);
+liberator.globalVariables.autoDetectLink = {nextPatterns: [/next/, /次/]};
 EOF
+
+" nextlink.js
+let g:nextlink_followlink = "true"
 
 "migemo_hint.js
 set hintmatching=custom
@@ -131,21 +144,5 @@ set! ui.submenyDelay=0
 
 " alternative ime_controller.js
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
-
-" user command settings
-js <<EOM
-(function () {
-    commands.addUserCommand(
-        ['cpan'],
-        'search modules from cpan',
-        function (args) {
-            var arg = args.string; liberator.open(
-                'http://search.cpan.org/search?mode=all&query=' + encodeURIComponent(arg),
-                liberator.NEW_TAB
-            );
-        }
-    );
-})();
-EOM
 
 " vim: set ft=vimperator:
