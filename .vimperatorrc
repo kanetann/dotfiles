@@ -2,9 +2,10 @@
 " git clone https://github.com/vimpr/vimperator-plugins.git ~/.vimperator/github-plugin/
 " ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin
 
+let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
+
 set complete=sl
 
-let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
 js <<EOF
 liberator.globalVariables.plugin_loader_plugins = <>
     _libly
@@ -27,7 +28,6 @@ liberator.globalVariables.plugin_loader_plugins = <>
     migemo_hint
 </>.toString().split(/\s+/).filter(function(n) n);
 EOF
-
 
 "migemo_hint.js
 set hintmatching=custom
@@ -87,13 +87,14 @@ EOF
 map e :eijiro 
 map s :subscldr<CR>
 noremap <C-r> :source ~/.vimperatorrc
-inoremap <C-p> <UP>
-inoremap <C-n> <DOWN>
+" inoremap <C-p> <UP>
+" inoremap <C-n> <DOWN>
+" inoremap <C-k> <UP>
+" inoremap <C-j> <DOWN>
 cnoremap <C-n> <TAB>
 cnoremap <C-p> <S-TAB>
 
-
-
+" firefox settings
 set! browser.cache.disk.enable=false
 set! browser.cache.memory.enable=true
 set! browser.cache.memory.capacity=16384
@@ -128,7 +129,7 @@ set! security.dialog_enable_delay=0
 set! ui.key.generalAccessKey=0
 set! ui.submenyDelay=0
 
-
+" alternative ime_controller.js
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
 " user command settings
@@ -148,14 +149,3 @@ js <<EOM
 EOM
 
 " vim: set ft=vimperator:
-
-
-
-
-
-
-
-
-
-
-
