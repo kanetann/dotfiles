@@ -4,14 +4,13 @@
 
 let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
 
-set complete=sl
-
 js <<EOF
 liberator.globalVariables.plugin_loader_plugins = <>
     _libly
     auto_reload
     auto_source
 //    auto_detect_link
+    caret-hint
     copy
 //    cpan-search
     feedSomeKeys_2
@@ -107,6 +106,10 @@ noremap <C-r> :source ~/.vimperatorrc
 cnoremap <C-n> <TAB>
 cnoremap <C-p> <S-TAB>
 
+" vimp3 settings
+set noautocomplete
+set complete=sl
+
 " firefox settings
 set! browser.cache.disk.enable=false
 set! browser.cache.memory.enable=true
@@ -121,12 +124,13 @@ set! browser.sessionstore.interval=300000
 set! browser.sessionstore.max_concurrent_tabs=0
 set! browser.sessionstore.max_tabs_undo=25
 set! browser.sessionhistory.max_entries=10
-set! browser.sessionhistory.max_total_viewers=5
+set! browser.sessionhistory.max_total_viewers=3
 set! browser.startup.homepage="about:blank"
 set! browser.tabs.closeWindowWithLastTab=false
 set! config.trim_on_minimize=true
 set! extensions.checkCompatibility=false
 set! extensions.checkCompatibility.4.0=false
+set! javascript.options.mem.high_water_mark=32
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true
 set! network.http.pipelining.maxrequests=8
