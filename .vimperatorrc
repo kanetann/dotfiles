@@ -90,7 +90,7 @@ liberator.globalVariables.hBookmark_search_max_limit = 100;
 EOF
 
 " keymap settings
-map e :eijiro 
+map e :eijiro
 map s :subscldr<CR>
 noremap <C-r> :source ~/.vimperatorrc
 " inoremap <C-p> <UP>
@@ -103,6 +103,9 @@ cnoremap <C-p> <S-TAB>
 " vimp3 settings
 set noautocomplete
 set complete=sl
+
+" install homebrew and try brew install macvim. macvim preference after last window closes = quit macvim.
+set editor="/usr/local/bin/mvim -f"
 
 " firefox settings
 set! browser.cache.disk.enable=false
@@ -121,6 +124,7 @@ set! browser.sessionhistory.max_entries=10
 set! browser.sessionhistory.max_total_viewers=3
 set! browser.startup.homepage="about:blank"
 set! browser.tabs.closeWindowWithLastTab=false
+set! browser.tabs.loadDivertedInBackground=true
 set! config.trim_on_minimize=true
 set! extensions.checkCompatibility=false
 set! extensions.checkCompatibility.4.0=false
