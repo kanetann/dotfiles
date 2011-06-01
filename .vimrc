@@ -17,6 +17,7 @@ Bundle 'FuzzyFinder'
 Bundle 'rails.vim'
 Bundle 'git.vim'
 Bundle 'zencoding.vim'
+Bundle 'git://github.com/kakkyz81/evervim.git'
 filetype plugin indent on
 
 
@@ -62,4 +63,12 @@ nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
 inoremap jj <ESC>
+
+" quickrun 
+" 横分割をするようにする
+let g:quickrun_config={'*': {'split': ''}}
+
+" 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
+set splitbelow
+set splitright
 
