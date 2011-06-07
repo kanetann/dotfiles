@@ -151,3 +151,5 @@ esac
 
 source ~/.zsh/plugin/incr*.zsh
 
+function chpwd() { ll }
+
