@@ -60,16 +60,21 @@ set backspace=2
 set hidden
 
 " keybind
-nmap <Space>b :ls<CR>:buffer-
+nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
 inoremap jj <ESC>
 
-vmap y "+y
-vmap p "+p
-nmap y "+y
-nmap p "+p
+"vnoremap y "*y
+"vmap p "+p
+"nnoremap y "*y
+"nmap p "+p
+
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
 
 " quickrun 
 " 横分割をするようにする
@@ -79,7 +84,7 @@ let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 set splitright
 
-
+set clipboard=unnamed
 
 
 
