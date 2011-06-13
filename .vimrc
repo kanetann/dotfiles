@@ -64,17 +64,17 @@ nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
-inoremap jj <ESC>
+"inoremap jj <ESC>
 
 "vnoremap y "*y
 "vmap p "+p
 "nnoremap y "*y
 "nmap p "+p
 
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-h> <Left>
-imap <C-l> <Right>
+"imap <C-j> <Down>
+"imap <C-k> <Up>
+"imap <C-h> <Left>
+"imap <C-l> <Right>
 
 " quickrun 
 " 横分割をするようにする
