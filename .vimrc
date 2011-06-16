@@ -19,6 +19,7 @@ Bundle 'motemen/git-vim.git'
 Bundle 'zencoding.vim'
 Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
+Bundle 'h1mesuke/unite-outline'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
@@ -26,6 +27,7 @@ filetype plugin indent on
 " editor
 syntax enable
 "colorscheme darkblue
+colorscheme desert
 set number
 set ruler
 set autoread
@@ -38,7 +40,8 @@ set wildmode=list:longest,full
 set ignorecase
 set smartcase
 set nowrapscan
-set hlsearch
+set nohlsearch
+set incsearch
 
 " backup
 set nobackup
@@ -54,7 +57,12 @@ set shiftwidth=4
 
 set autoindent
 set cindent
-set backspace=2
+set backspace=indent,eol,start
+set showmatch
+set whichwrap=b,s,h,l,<,>,[,] 
+set showcmd
+set showmode
+
 
 " buffer
 set hidden
@@ -66,10 +74,8 @@ nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
 inoremap jj <ESC>
 
-vmap y "+y
-vmap p "+p
-nmap y "+y
-nmap p "+p
+map <C-N>   :bnext<CR>
+map <C-P>   :bprevious<CR>
 
 " quickrun 
 " 横分割をするようにする
@@ -80,6 +86,8 @@ set splitbelow
 set splitright
 
 
+" neocomplecache
+let g:neocomplcache_enable_at_startup = 1
 
 
 
