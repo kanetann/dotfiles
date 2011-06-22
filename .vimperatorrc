@@ -129,6 +129,7 @@ set! browser.tabs.loadDivertedInBackground=true
 set! config.trim_on_minimize=true
 set! extensions.checkCompatibility=false
 set! extensions.checkCompatibility.4.0=false
+set! extensions.checkCompatibility.5.0=false
 set! javascript.options.mem.high_water_mark=32
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true
