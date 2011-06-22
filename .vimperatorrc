@@ -91,7 +91,7 @@ liberator.globalVariables.hBookmark_search_max_limit = 100;
 EOF
 
 " keymap settings
-map e :eijiro
+map e :eijiro<Space>
 map s :subscldr<CR>
 noremap <C-r> :source ~/.vimperatorrc
 " inoremap <C-p> <UP>

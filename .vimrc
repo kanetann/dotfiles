@@ -68,11 +68,11 @@ set showmode
 set hidden
 
 " keybind
-nmap <Space>b :ls<CR>:buffer-
+nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
-inoremap jj <ESC>
+"inoremap jj <ESC>
 
 map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
@@ -85,9 +85,9 @@ let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 set splitright
 
+set clipboard=unnamed
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
-
 
 
