@@ -8,11 +8,12 @@ bind l windowlist
 bind n screen
 caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
 #defencoding utf-8
-#defhstatus screen@$HOSTNAME
+defhstatus screen@$HOSTNAME
 #defkanji utf-8
-#defscrollback 10000
+defscrollback 10000
 #encoding utf-8 utf-8
 escape ^Jj
 #startup_message off
 #vbell off
+termcapinfo xterm* ti@:te@
 
