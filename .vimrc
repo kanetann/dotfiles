@@ -20,15 +20,25 @@ Bundle 'zencoding.vim'
 Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/wombat256.vim'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
 
+set t_Co=256
+
 " editor
 syntax enable
 "colorscheme darkblue
-colorscheme desert
-set number
+"colorscheme desert
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
+"colorscheme wombat256
+colorscheme wombat256mod
+
+"set number
 set ruler
 set autoread
 set laststatus=2
@@ -73,6 +83,7 @@ nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left>
 nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
 
 "inoremap jj <ESC>
+inoremap <ESC> <ESC>:set iminsert=0<CR>
 
 map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
@@ -89,5 +100,4 @@ set clipboard=unnamed
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
-
 
