@@ -22,6 +22,7 @@ Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/wombat256.vim'
+Bundle 'mattn/zencoding-vim'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
@@ -100,4 +101,9 @@ set clipboard=unnamed
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
+
+" zencoding-vim
+let g:use_zen_complete_tag = 1
+let g:user_zen_expandabbr_key = '<c-e>'
+
 
