@@ -16,13 +16,14 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'rails.vim'
 Bundle 'motemen/git-vim.git'
-Bundle 'zencoding.vim'
 Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'kana/vim-fakeclip'
+Bundle 'restart.vim'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
@@ -74,7 +75,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 set showcmd
 set showmode
 
-
 " buffer
 set hidden
 
@@ -97,7 +97,7 @@ let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 set splitright
 
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
@@ -105,5 +105,8 @@ let g:neocomplcache_enable_at_startup = 1
 " zencoding-vim
 let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
+
+" unite.vim
+nnoremap <silent> ,u :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
 
 
