@@ -39,6 +39,9 @@ let g:nextlink_followlink = "true"
 "migemo_hint.js
 set hintmatching=custom
 
+" migemo-find.js for search result add focus 
+set linksearch=true
+
 " feedSomeKeys_2.js
 ":autocmd LocationChange .* :fmapc
 ":autocmd LocationChange 'reader\.livedoor\.com/reader' :fmap j k s a p o v c g <Space> <S-Space> z b < >
@@ -149,5 +152,6 @@ set! ui.submenyDelay=0
 
 " alternative ime_controller.js
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
 
 " vim: set ft=vimperator:

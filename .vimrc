@@ -51,7 +51,7 @@ set wildmode=list:longest,full
 set ignorecase
 set smartcase
 set nowrapscan
-set nohlsearch
+set hlsearch
 set incsearch
 
 " backup
