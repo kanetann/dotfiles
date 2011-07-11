@@ -19,6 +19,7 @@ Bundle 'motemen/git-vim.git'
 Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'tsukkee/unite-help'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'mattn/zencoding-vim'
@@ -97,7 +98,9 @@ let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 set splitright
 
+" clipboard
 set clipboard=unnamed,autoselect
+set paste
 
 set cursorline
 highlight cursorline term=reverse cterm=reverse
@@ -111,5 +114,6 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
 nnoremap <silent> ,u :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
+nnoremap <silent> ,h :<C-u>Unite -winheight=10 -start-insert help<CR>
 
 
