@@ -99,6 +99,9 @@ set splitright
 
 set clipboard=unnamed,autoselect
 
+set cursorline
+highlight cursorline term=reverse cterm=reverse
+
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
 
