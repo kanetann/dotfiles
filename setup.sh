@@ -10,6 +10,7 @@ ln -s ~/dotfiles/.screenrc ~/.screenrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 
 git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
 
