@@ -25,6 +25,7 @@ Bundle 'vim-scripts/wombat256.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'kana/vim-fakeclip'
 Bundle 'restart.vim'
+Bundle 'shanlalit/vim-autoclose.git'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
@@ -100,7 +101,8 @@ set splitright
 
 " clipboard
 set clipboard=unnamed,autoselect
-set paste
+"set paste
+set pastetoggle=,p
 
 set cursorline
 highlight cursorline term=reverse cterm=reverse
