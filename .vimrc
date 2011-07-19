@@ -15,7 +15,8 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'rails.vim'
-Bundle 'motemen/git-vim.git'
+"Bundle 'motemen/git-vim.git'
+Bundle 'harajune/git-vim.git'
 Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
@@ -26,9 +27,12 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'kana/vim-fakeclip'
 Bundle 'restart.vim'
 Bundle 'shanlalit/vim-autoclose.git'
-Bundle 'vim-scripts/errormarker.vim'
 Bundle 't9md/vim-textmanip'
-" Bundle 'commentout.vim'
+Bundle 'c9s/perlomni.vim'
+Bundle 'tyru/skk.vim'
+Bundle 'im_control.vim'
+
+"Bundle 'commentout.vim'
 
 filetype plugin indent on
 
@@ -122,8 +126,8 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
-nnoremap <silent> ,u :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
-nnoremap <silent> ,h :<C-u>Unite -winheight=10 -start-insert help<CR>
+nnoremap <silent> ,ud :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
+nnoremap <silent> ,uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
@@ -132,4 +136,17 @@ vmap <C-h> <Plug>(Textmanip.move_selection_left)
 vmap <C-l> <Plug>(Textmanip.move_selection_right)
 vmap <M-d> <Plug>(Textmanip.duplicate_selection_v)
 nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
+
+" errormarker
+compiler perl
+autocmd BufWritePost *.pl,*.pm silent make %
+
+" vim-ref
+"wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
+let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
+
+"ノーマルモードの<C-^>を無効化
+nnoremap <silent> <C-^> <Nop>
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
+
 
