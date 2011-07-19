@@ -26,11 +26,18 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'kana/vim-fakeclip'
 Bundle 'restart.vim'
 Bundle 'shanlalit/vim-autoclose.git'
+Bundle 'vim-scripts/errormarker.vim'
+Bundle 't9md/vim-textmanip'
 " Bundle 'commentout.vim'
 
 filetype plugin indent on
 
 set t_Co=256
+
+" Perl syntax check configurations for errormaker.vim
+"compiler perl
+"autocmd BufWritePost *.pl,*.pm silent make %
+"call perl5lib#set_perl5lib()
 
 " editor
 syntax enable
@@ -118,4 +125,11 @@ let g:user_zen_expandabbr_key = '<c-e>'
 nnoremap <silent> ,u :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
 nnoremap <silent> ,h :<C-u>Unite -winheight=10 -start-insert help<CR>
 
+" textmanip
+vmap <C-j> <Plug>(Textmanip.move_selection_down)
+vmap <C-k> <Plug>(Textmanip.move_selection_up)
+vmap <C-h> <Plug>(Textmanip.move_selection_left)
+vmap <C-l> <Plug>(Textmanip.move_selection_right)
+vmap <M-d> <Plug>(Textmanip.duplicate_selection_v)
+nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
 
