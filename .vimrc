@@ -12,26 +12,23 @@ Bundle 'tpope/vim-surround'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-ref'
 Bundle 'kana/vim-fakeclip'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 Bundle 'rails.vim'
 "Bundle 'motemen/git-vim.git'
 Bundle 'harajune/git-vim.git'
-Bundle 'kakkyz81/evervim.git'
+"Bundle 'kakkyz81/evervim.git'
 Bundle 'Align'
 Bundle 'h1mesuke/unite-outline'
 Bundle 'tsukkee/unite-help'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'mattn/zencoding-vim'
-Bundle 'kana/vim-fakeclip'
-Bundle 'restart.vim'
 Bundle 'shanlalit/vim-autoclose.git'
 Bundle 't9md/vim-textmanip'
 Bundle 'c9s/perlomni.vim'
-Bundle 'tyru/skk.vim'
-Bundle 'im_control.vim'
-
+"Bundle 'tyru/skk.vim'
+"Bundle 'im_control.vim'
 "Bundle 'commentout.vim'
 
 filetype plugin indent on
@@ -137,16 +134,16 @@ vmap <C-l> <Plug>(Textmanip.move_selection_right)
 vmap <M-d> <Plug>(Textmanip.duplicate_selection_v)
 nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
 
-" errormarker
-compiler perl
-autocmd BufWritePost *.pl,*.pm silent make %
+"" errormarker
+"compiler perl
+"autocmd BufWritePost *.pl,*.pm silent make %
 
 " vim-ref
 "wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
 let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 
-"ノーマルモードの<C-^>を無効化
-nnoremap <silent> <C-^> <Nop>
-inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
+""ノーマルモードの<C-^>を無効化
+"nnoremap <silent> <C-^> <Nop>
+"inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
 
 
