@@ -168,7 +168,7 @@ zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
 #
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
-source ~/.zsh/plugin/incr*.zsh
+#source ~/.zsh/plugin/incr*.zsh
 
 function chpwd() { ll }
 

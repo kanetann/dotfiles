@@ -53,12 +53,21 @@ set linksearch=true
 
 
 " feedSomeKeys_3.js
-:command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
-:lazy fmaps -u='(fastladder|livedoor)\.com/reader' j k s a p o v c i,p g <Space> <S-Space> z b < > q w e,g
-:lazy fmaps -u='https?://www\.rememberthemilk\.com/home/' j k m i c ? F,f G,g S,s L,l Y,y H,h M,m <Del> <C-S-Left> <C-S-Right>
-:lazy fmaps -u='www\.google\.co\.jp' j k o p
-:lazy fmaps -u='www\.tumblr\.com' j k h l o p i,tj
-"lazy fmaps -u='^http://[^\./]*\.tumblr\.com/' i,tj e,tk n,h, r,t I,l <C-i>,e c
+":command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+":lazy fmaps -u='(fastladder|livedoor)\.com/reader' j k s a p o v c i,p g <Space> <S-Space> z b < > q w e,g
+":lazy fmaps -u='https?://www\.rememberthemilk\.com/home/' j k m i c ? F,f G,g S,s L,l Y,y H,h M,m <Del> <C-S-Left> <C-S-Right>
+"":lazy fmaps -u='www\.google\.co\.jp' j k o p
+":lazy fmaps -u='www\.tumblr\.com' j k h l o p i,tj
+""lazy fmaps -u='^http://[^\./]*\.tumblr\.com/' i,tj e,tk n,h, r,t I,l <C-i>,e c
+
+"feedsomekeys_3
+command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+lazy fmaps -u='www\.google\.com/calendar/.*' a w m x c e ＜DEL＞（※1） / + q s ? A W M X C E
+lazy fmaps -u='mail\.google\.com/mail/.*' c / j,n k n,j p,k o u e x s r a # [ ] ? gi gs gt gd ga gc
+lazy fmaps -u='www\.google\.co\.jp/.*' j k v p o : s ? + i
+lazy fmaps -u='livedoor\.com/reader' j k s a p o v c z b < > Z <Space> <S-Space> i q w G U u
+lazy fmaps -u='www\.tumblr\.com' j k h l o p i,tj
+
 
 " forcefocuscontent.js
 set focuscontent
@@ -135,6 +144,7 @@ set! config.trim_on_minimize=true
 set! extensions.checkCompatibility=false
 set! extensions.checkCompatibility.4.0=false
 set! extensions.checkCompatibility.5.0=false
+set! extensions.checkCompatibility.5.0.1=false
 set! javascript.options.mem.high_water_mark=32
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true
@@ -154,5 +164,26 @@ set! ui.submenyDelay=0
 " alternative ime_controller.js
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
+"プラグイン設定
+" Greasemonkey 0.9.xでwindowを共通にする
+javascript <<EOF
+autocommands.add('VimperatorEnter', '.*',
+  function() {
+    let gm = Components.classes['@greasemonkey.mozdev.org/greasemonkey-service;1'];
+    if (gm) {
+      gm = gm.getService().wrappedJSObject;
+      if (gm.injectScripts.toSource().search('sharedWindow') == -1) {
+          gm.injectScripts = liberator.eval(
+              gm.injectScripts.toSource()
+                  .replace(/(?=var firebugConsole)/,
+                          'var sharedWindow = {};' +
+                          'sharedWindow.window = sharedWindow;' +
+                          'sharedWindow.__proto__ = new XPCNativeWrapper(unsafeContentWin);')
+                  .replace(/(?=sandbox\.__proto__)/, ' sandbox.window = sharedWindow;'),
+              gm.injectScripts);
+      }
+    }
+  });
+EOF
 
 " vim: set ft=vimperator:
