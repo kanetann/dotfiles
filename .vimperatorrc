@@ -1,6 +1,7 @@
 " update vimperator plugins
 " git clone https://github.com/vimpr/vimperator-plugins.git ~/.vimperator/github-plugin/
-" ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin
+" mkdir ~/.vimperator/plugin
+" ln -s ~/.vimperator/github-plugin/plugin_loader.js ~/.vimperator/plugin/plugin_loader.js
 
 let g:plugin_loader_roots = "~/.vimperator/github-plugin/"
 
