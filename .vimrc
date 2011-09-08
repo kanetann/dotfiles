@@ -112,9 +112,6 @@ set clipboard=unnamed,autoselect
 "set paste
 set pastetoggle=,p
 
-set cursorline
-highlight cursorline term=reverse cterm=reverse
-
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
 
@@ -123,8 +120,8 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
-nnoremap <silent> ,ud :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
-nnoremap <silent> ,uh :<C-u>Unite -winheight=10 -start-insert help<CR>
+nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
+nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
