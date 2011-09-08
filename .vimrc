@@ -103,6 +103,17 @@ map <C-P>   :bprevious<CR>
 " 横分割をするようにする
 let g:quickrun_config={'*': {'split': ''}}
 
+augroup QuickRunUnitTest
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *test.php set filetype=php.unit
+  autocmd BufWinEnter,BufNewFile test_*.py set filetype=python.unit
+  autocmd BufWinEnter,BufNewFile *.t set filetype=perl.unit
+augroup END
+let g:quickrun_config = {}
+let g:quickrun_config['php.unit'] = {'command': 'phpunitrunner'}
+let g:quickrun_config['python.unit'] = {'command': 'nosetests', 'cmdopt': '-s -vv'}
+let g:quickrun_config['perl.unit'] = {'command': 'prove'}
+
 " 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
 set splitbelow
 set splitright
