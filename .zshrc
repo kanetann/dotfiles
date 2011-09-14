@@ -4,7 +4,7 @@
 #
 # LANG
 #
-export LANG=ja_JP.UTF-8
+#export LANG=ja_JP.UTF-8
 
 ## Default shell configuration
 #
@@ -170,5 +170,5 @@ zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
 
 #source ~/.zsh/plugin/incr*.zsh
 
-function chpwd() { ll }
+function chpwd() { ls -la }
 
