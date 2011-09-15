@@ -1,0 +1,7 @@
+# .proverc
+# to see http://perldoc.perl.org/prove.html
+-l
+-v
+-c
+--state=hot,fast,save
+-j9
