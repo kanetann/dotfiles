@@ -12,6 +12,7 @@ ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.proverc ~/.proverc
 
 git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
 git config --global http.sslVerify false
