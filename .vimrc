@@ -27,7 +27,7 @@ Bundle 'git://github.com/mattn/zencoding-vim.git'
 Bundle 'git://github.com/shanlalit/vim-autoclose.git'
 Bundle 'git://github.com/t9md/vim-textmanip.git'
 Bundle 'git://github.com/c9s/perlomni.vim'
-Bundle 'git://github.com/vim-scripts/project.tar.gz.git'
+"Bundle 'git://github.com/vim-scripts/project.tar.gz.git'
 "Bundle 'tyru/skk.vim'
 "Bundle 'im_control.vim'
 "Bundle 'commentout.vim'
@@ -156,19 +156,19 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
 
 " project.vim
-let g:proj_flags = "imst"
-let g:proj_window_width = 48
-nmap <silent> <Leader>P <Plug>ToggleProject
-nmap <silent> <Leader>p :Project<CR>
-let g:proj_run1='!git add %f'
-let g:proj_run_fold1='*!git add %f'
-let g:proj_run2='!git checkout --  %f'
-let g:proj_run_fold2='*!git checkout -- %f'
-let g:proj_run3='!git status'
-autocmd BufAdd .vimprojects silent! %foldopen!
-if getcwd() != $HOME
-    if filereadable(getcwd(). '/.vimprojects')
-        exec 'Project .vimprojects'
-    endif
-endif
+"let g:proj_flags = 'imst'
+"let g:proj_window_width = 48
+"nmap <silent> <Leader>P <Plug>ToggleProject
+"nmap <silent> <Leader>p :Project<CR>
+"let g:proj_run1='!git add %f'
+"let g:proj_run_fold1='*!git add %f'
+"let g:proj_run2='!git checkout --  %f'
+"let g:proj_run_fold2='*!git checkout -- %f'
+"let g:proj_run3='!git status'
+"autocmd BufAdd .vimprojects silent! %foldopen!
+"if getcwd() != $HOME
+"    if filereadable(getcwd(). '/.vimprojects')
+"        exec 'Project .vimprojects'
+"    endif
+"endif
 
