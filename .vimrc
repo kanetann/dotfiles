@@ -156,7 +156,8 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
 
 " project.vim
-let g:proj_flags = "imstc"
+let g:proj_flags = "imst"
+let g:proj_window_width = 48
 nmap <silent> <Leader>P <Plug>ToggleProject
 nmap <silent> <Leader>p :Project<CR>
 let g:proj_run1='!git add %f'
