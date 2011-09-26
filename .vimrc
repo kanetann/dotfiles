@@ -166,9 +166,9 @@ let g:proj_run2='!git checkout --  %f'
 let g:proj_run_fold2='*!git checkout -- %f'
 let g:proj_run3='!git status'
 autocmd BufAdd .vimprojects silent! %foldopen!
-"if getcwd() != $HOME
-"    if filereadable(getcwd(). '/.vimprojects')
-"        Project .vimprojects
-"    endif
-"endif
+if getcwd() != $HOME
+    if filereadable(getcwd(). '/.vimprojects')
+        exec 'Project .vimprojects'
+    endif
+endif
 
