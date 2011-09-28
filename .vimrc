@@ -172,3 +172,5 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 "    endif
 "endif
 
+nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+
