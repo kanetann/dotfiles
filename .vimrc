@@ -132,7 +132,7 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
-nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=10 file file_mru buffer<CR>
+nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru file<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 
 " textmanip
