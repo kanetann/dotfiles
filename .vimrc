@@ -38,16 +38,12 @@ Bundle 'git://github.com/vim-scripts/Indent-Guides'
 Bundle 'git://github.com/vim-scripts/tComment'
 "Bundle 'git://github.com/vim-scripts/errormarker.vim'
 Bundle 'git://github.com/Sixeight/unite-grep'
-Bundle 'git://github.com/t9md/vim-unite-lines'
+"Bundle 'git://github.com/t9md/vim-unite-lines'
+Bundle 'git://github.com/Shougo/vimproc'
 
 filetype plugin indent on
 
 set t_Co=256
-
-" Perl syntax check configurations for errormaker.vim
-"compiler perl
-"autocmd BufWritePost *.pl,*.pm silent make %
-"call perl5lib#set_perl5lib()
 
 " editor
 syntax enable
@@ -144,8 +140,9 @@ nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru fil
 "nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
-"""""""""" nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
+nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
 """""""""" nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord lines<CR>
+nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
@@ -201,14 +198,13 @@ let g:indent_guides_color_change_percent= 30
 let g:indent_guides_guide_size = 1
 
 " errormarker
-"compiler perl
+"autocmd FileType perl,cgi :compiler perl
 "let g:errormarker_errortext = '!!'
 "let g:errormarker_warningtext = '??'
 "let g:errormarker_errorgroup = 'Error'
 "let g:errormarker_warninggroup = 'Todo'
 "if !exists('g:flymake_enabled')
 "    let g:flymake_enabled = 1
-"    autocmd BufWritePost *.rb,*.pl,*.pm,*.t silent make | cw
+"    autocmd BufWritePost *.rb,*.pl,*.pm,*.t silent make
 "endif
-
 
