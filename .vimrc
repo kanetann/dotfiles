@@ -31,6 +31,14 @@ Bundle 'git://github.com/c9s/perlomni.vim'
 "Bundle 'tyru/skk.vim'
 "Bundle 'im_control.vim'
 "Bundle 'commentout.vim'
+Bundle 'git://github.com/Shougo/vimfiler'
+Bundle 'git://github.com/vim-scripts/YankRing.vim'
+Bundle 'git://github.com/vim-scripts/matchit.zip'
+Bundle 'git://github.com/vim-scripts/Indent-Guides'
+Bundle 'git://github.com/vim-scripts/tComment'
+"Bundle 'git://github.com/vim-scripts/errormarker.vim'
+Bundle 'git://github.com/Sixeight/unite-grep'
+Bundle 'git://github.com/t9md/vim-unite-lines'
 
 filetype plugin indent on
 
@@ -133,7 +141,11 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
 nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru file<CR>
-nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
+"nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
+nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
+nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
+"""""""""" nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
+"""""""""" nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord lines<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
@@ -142,10 +154,6 @@ vmap <C-h> <Plug>(Textmanip.move_selection_left)
 vmap <C-l> <Plug>(Textmanip.move_selection_right)
 vmap <M-d> <Plug>(Textmanip.duplicate_selection_v)
 nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
-
-"" errormarker
-"compiler perl
-"autocmd BufWritePost *.pl,*.pm silent make %
 
 " vim-ref
 "wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
@@ -172,5 +180,35 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 "    endif
 "endif
 
-nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+" vimfiler
+let g:vimfiler_as_default_explorer = 1
+
+"foldmethod
+set foldmethod=indent
+
+" YankRing(p after ctrl+p)
+let g:yankring_history_dir = expand('$HOME')
+let g:yankring_history_file = '.yankring_history'
+nnoremap <silent> pp :YRShow<CR>
+let g:yankring_max_history = 10
+let g:yankring_window_height = 13
+
+" indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent= 30
+let g:indent_guides_guide_size = 1
+
+" errormarker
+"compiler perl
+"let g:errormarker_errortext = '!!'
+"let g:errormarker_warningtext = '??'
+"let g:errormarker_errorgroup = 'Error'
+"let g:errormarker_warninggroup = 'Todo'
+"if !exists('g:flymake_enabled')
+"    let g:flymake_enabled = 1
+"    autocmd BufWritePost *.rb,*.pl,*.pm,*.t silent make | cw
+"endif
+
 
