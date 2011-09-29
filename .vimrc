@@ -185,8 +185,8 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
 
-"foldmethod
-set foldmethod=indent
+"foldmethod (> use Unite outline.)
+"set foldmethod=indent
 
 " YankRing(p after ctrl+p)
 let g:yankring_history_dir = expand('$HOME')
