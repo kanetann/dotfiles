@@ -197,7 +197,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent= 30
 let g:indent_guides_guide_size = 1
 
-" errormarker
+"" errormarker
 "autocmd FileType perl,cgi :compiler perl
 "let g:errormarker_errortext = '!!'
 "let g:errormarker_warningtext = '??'
@@ -206,5 +206,12 @@ let g:indent_guides_guide_size = 1
 "if !exists('g:flymake_enabled')
 "    let g:flymake_enabled = 1
 "    autocmd BufWritePost *.rb,*.pl,*.pm,*.t silent make
+"endif
+"if has('win32') || has('win64')
+"    let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+"    let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
+"else
+"    let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+"    let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
 "endif
 

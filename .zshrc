@@ -172,3 +172,4 @@ zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
 
 function chpwd() { ls -la }
 
+test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
