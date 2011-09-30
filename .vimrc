@@ -192,11 +192,11 @@ nnoremap <silent> pp :YRShow<CR>
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
 
-" indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent= 30
-let g:indent_guides_guide_size = 1
-
+" " indent-guides
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_color_change_percent= 30
+" let g:indent_guides_guide_size = 1
+ 
 "" errormarker
 "autocmd FileType perl,cgi :compiler perl
 "let g:errormarker_errortext = '!!'
