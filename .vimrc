@@ -105,7 +105,6 @@ map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
 
 " quickrun 
-" 横分割をするようにする
 let g:quickrun_config={'*': {'split': ''}}
 
 augroup QuickRunUnitTest
@@ -119,14 +118,13 @@ let g:quickrun_config['php.unit'] = {'command': 'phpunitrunner'}
 let g:quickrun_config['python.unit'] = {'command': 'nosetests', 'cmdopt': '-s -vv'}
 let g:quickrun_config['perl.unit'] = {'command': 'prove'}
 
-" 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
 set splitbelow
 set splitright
 
 " clipboard
-set clipboard=unnamed,autoselect
+"set clipboard=unnamed,autoselect
 "set paste
-set pastetoggle=,p
+"set pastetoggle=,p
 
 " neocomplecache
 let g:neocomplcache_enable_at_startup = 1
@@ -156,10 +154,6 @@ nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
 "wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
 let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 
-""ノーマルモードの<C-^>を無効化
-"nnoremap <silent> <C-^> <Nop>
-"inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF"
-
 " project.vim
 "let g:proj_flags = 'imst'
 "let g:proj_window_width = 48
@@ -188,10 +182,9 @@ let g:vimfiler_as_default_explorer = 1
 " YankRing(p after ctrl+p)
 let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
-nnoremap <silent> pp :YRShow<CR>
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
-
+ 
 " " indent-guides
 " let g:indent_guides_enable_on_vim_startup = 1
 " let g:indent_guides_color_change_percent= 30
