@@ -141,6 +141,8 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
 """""""""" nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord lines<CR>
 nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
+nnoremap <silent> <Space>urm :<C-u>Unite ref/man<CR>
+nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
