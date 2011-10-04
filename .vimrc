@@ -269,3 +269,5 @@ let g:yankring_window_height = 13
 "    let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
 "endif
 
+" tagfile
+autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx silent :!ctags -R .
