@@ -236,6 +236,16 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_execute_file_list = {}
+let g:vimfiler_execute_file_list['rb']    = 'vim'
+let g:vimfiler_execute_file_list['pl']    = 'vim'
+let g:vimfiler_execute_file_list['pm']    = 'vim'
+let g:vimfiler_execute_file_list['t']     = 'vim'
+let g:vimfiler_execute_file_list['tx']    = 'vim'
+let g:vimfiler_execute_file_list['py']    = 'vim'
+let g:vimfiler_execute_file_list['htm']   = 'vim'
+let g:vimfiler_execute_file_list['html']  = 'vim'
+let g:vimfiler_execute_file_list['xhtml'] = 'vim'
 
 "foldmethod (> use Unite outline.)
 "set foldmethod=indent
