@@ -165,6 +165,7 @@ map <C-P>   :bprevious<CR>
 
 " quickrun 
 let g:quickrun_config={'*': {'split': ''}}
+noremap <silent> <Space>r :<C-u>QuickRun<CR>
 
 augroup QuickRunUnitTest
   autocmd!
@@ -285,19 +286,16 @@ autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx silent :!ctags -R .
 " git-vim
 let g:git_no_map_default = 1
 let g:git_command_edit = 'rightbelow vnew'
-nnoremap <Space>gd :<C-u>GitDiff<Enter>
-nnoremap <Space>gD :<C-u>GitDiff --cached<Enter>
-nnoremap <Space>gs :<C-u>GitStatus<Enter>
-nnoremap <Space>gl :<C-u>GitLog<Enter>
-nnoremap <Space>gL :<C-u>GitLog -u \| head -10000<Enter>
-nnoremap <Space>ga :<C-u>GitAdd<Enter>
-nnoremap <Space>gA :<C-u>GitAdd <cfile><Enter>
-nnoremap <Space>gc :<C-u>GitCommit<Enter>
-nnoremap <Space>gC :<C-u>GitCommit --amend<Enter>
-nnoremap <Space>gp :<C-u>GitPush<Enter>
-nnoremap <Space>gP :<C-u>GitPull<Enter>
-nnoremap <Space>go :<C-u>GitCheckout <cfile><Enter>
-nnoremap <Space>gv :<C-u>GitCimDiffMerge<Enter>
-nnoremap <Space>gV :<C-u>GitCimDiffMergeDone<Enter>
-
+nnoremap <Space>gd :<C-u>GitDiff<CR>
+nnoremap <Space>gD :<C-u>GitDiff --cached<CR>
+nnoremap <Space>gs :<C-u>GitStatus<CR>
+nnoremap <Space>gl :<C-u>GitLog<CR>
+nnoremap <Space>gL :<C-u>GitLog -u \| head -10000<CR>
+nnoremap <Space>ga :<C-u>GitAdd<Space>
+nnoremap <Space>gc :<C-u>GitCommit<CR>
+nnoremap <Space>gC :<C-u>GitCommit --amend<CR>
+nnoremap <Space>gp :<C-u>GitPush<CR>
+nnoremap <Space>gP :<C-u>GitPull<CR>
+nnoremap <Space>go :<C-u>GitCheckout<Space>
+nnoremap <Space>gv :<C-u>GitVimDiff<Space>
 
