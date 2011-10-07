@@ -164,7 +164,7 @@ map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
 
 " quickrun 
-let g:quickrun_config={'*': {'split': ''}}
+let g:quickrun_config={'*': {'split': 'below'}}
 noremap <silent> <Space>r :<C-u>QuickRun<CR>
 
 augroup QuickRunUnitTest
