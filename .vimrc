@@ -299,3 +299,5 @@ nnoremap <Space>gP :<C-u>GitPull<CR>
 nnoremap <Space>go :<C-u>GitCheckout<Space>
 nnoremap <Space>gv :<C-u>GitVimDiff<Space>
 
+" alternate
+nnoremap <C-i> <C-^>
