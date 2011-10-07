@@ -155,7 +155,7 @@ set hidden
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap ;g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/ **/* \| cw
+nnoremap ;;g <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw
 
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
