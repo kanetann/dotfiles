@@ -14,6 +14,7 @@ liberator.globalVariables.plugin_loader_plugins = <>
     copy
     feedSomeKeys_2
     feedSomeKeys_3
+    fetchyoutube
     forcefocuscontent
     google-translator
     hatena-bookmark-search
@@ -145,6 +146,7 @@ set! extensions.checkCompatibility=false
 set! extensions.checkCompatibility.4.0=false
 set! extensions.checkCompatibility.5.0=false
 set! extensions.checkCompatibility.5.0.1=false
+set! extensions.checkCompatibility.6.0=false
 set! javascript.options.mem.high_water_mark=32
 set! network.http.pipelining=true
 set! network.http.pipelining.firstrequest=true

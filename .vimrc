@@ -40,6 +40,7 @@ Bundle 'git://github.com/vim-scripts/tComment'
 Bundle 'git://github.com/Sixeight/unite-grep'
 "Bundle 'git://github.com/t9md/vim-unite-lines'
 Bundle 'git://github.com/Shougo/vimproc'
+Bundle 'git://github.com/mikewest/vimroom.git'
 
 filetype plugin indent on
 
