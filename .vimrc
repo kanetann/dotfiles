@@ -31,7 +31,7 @@ Bundle 'git://github.com/c9s/perlomni.vim'
 "Bundle 'tyru/skk.vim'
 "Bundle 'im_control.vim'
 "Bundle 'commentout.vim'
-Bundle 'git://github.com/Shougo/vimfiler'
+"Bundle 'git://github.com/Shougo/vimfiler'
 Bundle 'git://github.com/vim-scripts/YankRing.vim'
 Bundle 'git://github.com/vim-scripts/matchit.zip'
 Bundle 'git://github.com/vim-scripts/Indent-Guides'
@@ -195,6 +195,7 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
+let g:unite_source_file_mru_limit = 5
 nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru file<CR>
 "nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
@@ -237,7 +238,7 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " vimfiler
-let g:vimfiler_as_default_explorer = 1
+"let g:vimfiler_as_default_explorer = 1
 " let g:vimfiler_execute_file_list = {}
 " let g:vimfiler_execute_file_list['rb']    = 'vim'
 " let g:vimfiler_execute_file_list['pl']    = 'vim'
@@ -287,18 +288,22 @@ autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx silent :!ctags -R .
 " git-vim
 let g:git_no_map_default = 1
 let g:git_command_edit = 'rightbelow vnew'
-nnoremap <Space>gd :<C-u>GitDiff<CR>
-nnoremap <Space>gD :<C-u>GitDiff --cached<CR>
-nnoremap <Space>gs :<C-u>GitStatus<CR>
-nnoremap <Space>gl :<C-u>GitLog<CR>
-nnoremap <Space>gL :<C-u>GitLog -u \| head -10000<CR>
-nnoremap <Space>ga :<C-u>GitAdd<Space>
-nnoremap <Space>gc :<C-u>GitCommit<CR>
-nnoremap <Space>gC :<C-u>GitCommit --amend<CR>
-nnoremap <Space>gp :<C-u>GitPush<CR>
-nnoremap <Space>gP :<C-u>GitPull<CR>
-nnoremap <Space>go :<C-u>GitCheckout<Space>
-nnoremap <Space>gv :<C-u>GitVimDiff<Space>
+nnoremap <silent> <Space>gd :<C-u>GitDiff<CR>
+nnoremap <silent> <Space>gD :<C-u>GitDiff --cached<CR>
+nnoremap <silent> <Space>gs :<C-u>GitStatus<CR>
+nnoremap <silent> <Space>gl :<C-u>GitLog<CR>
+nnoremap <silent> <Space>gL :<C-u>GitLog -u \| head -10000<CR>
+nnoremap <silent> <Space>ga :<C-u>GitAdd<Space>
+nnoremap <silent> <Space>gc :<C-u>GitCommit<CR>
+nnoremap <silent> <Space>gC :<C-u>GitCommit --amend<CR>
+nnoremap <silent> <Space>gp :<C-u>GitPush<CR>
+nnoremap <silent> <Space>gP :<C-u>GitPull<CR>
+nnoremap <silent> <Space>go :<C-u>GitCheckout<Space>
+nnoremap <silent> <Space>gv :<C-u>GitVimDiff<Space>
 
 " alternate file toggle shortcut key
 nnoremap <C-i> <C-^>
+
+" quit 
+nnoremap <silent> q :<C-u>q<CR>
+
