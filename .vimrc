@@ -41,6 +41,8 @@ Bundle 'git://github.com/Sixeight/unite-grep'
 "Bundle 'git://github.com/t9md/vim-unite-lines'
 Bundle 'git://github.com/Shougo/vimproc'
 Bundle 'git://github.com/mikewest/vimroom.git'
+Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
+Bundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
 
 filetype plugin indent on
 
@@ -113,7 +115,8 @@ syntax enable
 "colorscheme solarized
 "let g:solarized_termcolors=256
 "colorscheme wombat256
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme molokai
 
 "set number
 set ruler
@@ -205,6 +208,7 @@ nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
 nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
 nnoremap <silent> <Space>urm :<C-u>Unite ref/man<CR>
 nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
+nnoremap <silent> <Space>uc :<C-u>Unite colorscheme<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
