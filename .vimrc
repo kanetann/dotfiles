@@ -208,7 +208,7 @@ nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
 nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
 nnoremap <silent> <Space>urm :<C-u>Unite ref/man<CR>
 nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
-nnoremap <silent> <Space>uc :<C-u>Unite colorscheme<CR>
+nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 
 " textmanip
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
