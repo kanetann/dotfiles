@@ -113,6 +113,7 @@ alias df="df -h"
 alias su="su -l"
 alias tmux="tmux -2"
 alias grep="grep --color"
+alias v="vim"
 
 ## terminal configuration
 #
