@@ -198,7 +198,7 @@ let g:use_zen_complete_tag = 1
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
-let g:unite_source_file_mru_limit = 5
+let g:unite_source_file_mru_limit = 10
 nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru file<CR>
 "nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
