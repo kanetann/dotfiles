@@ -118,7 +118,7 @@ syntax enable
 "colorscheme wombat256mod
 colorscheme molokai
 if &diff
-        colorscheme some_other_scheme
+        colorscheme leo
 endif
 
 "set number
