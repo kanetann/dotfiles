@@ -117,6 +117,9 @@ syntax enable
 "colorscheme wombat256
 "colorscheme wombat256mod
 colorscheme molokai
+if &diff
+        colorscheme some_other_scheme
+endif
 
 "set number
 set ruler
