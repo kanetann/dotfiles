@@ -30,3 +30,8 @@ test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 EOS
 vvm install vimorg--v7-3-254
 vvm use vimorg--v7-3-254
+
+# install oh-my-zsh
+wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+
+
