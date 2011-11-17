@@ -32,3 +32,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/.vvm/bin:/Users/aa/.vvm/vims/current/bin
+
+alias tmux="tmux -2"
+alias v="vim"
+[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
+function chpwd() { ls -la }
+test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
+REPORTTIME=1
+PATH=${PATH}:~/dotfiles/edit-server/
+
