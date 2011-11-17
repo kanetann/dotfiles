@@ -176,3 +176,4 @@ function chpwd() { ls -la }
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 
 REPORTTIME=1
+PATH=${PATH}:~/dotfiles/edit-server/
