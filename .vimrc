@@ -314,3 +314,9 @@ nnoremap <C-i> <C-^>
 " quit 
 nnoremap <silent> q :<C-u>q<CR>
 
+if has('gui_macvim')
+  set imdisable
+  set antialias
+  set guifontwide=Osaka:h14
+  set guifont=Osaka-Mono:h14
+endif
