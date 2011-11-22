@@ -45,6 +45,7 @@ Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
 Bundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
 Bundle 'git://github.com/mattn/webapi-vim.git'
 Bundle 'git://github.com/mattn/vimplenote-vim.git'
+Bundle 'git://github.com/tyru/open-browser.vim.git'
 
 filetype plugin indent on
 
@@ -332,3 +333,8 @@ nnoremap <silent> <Space>vn :<C-u>VimpleNote -n<CR>
 nnoremap <silent> <Space>vt :<C-u>VimpleNote -t<CR>
 nnoremap <silent> <Space>vl :<C-u>VimpleNote -l<CR>
 nnoremap <silent> <Space>vD :<C-u>VimpleNote -D<CR>
+
+" open-browser.vim
+let g:netrw_nogx = 1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
