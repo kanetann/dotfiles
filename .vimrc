@@ -322,3 +322,13 @@ if has('gui_macvim')
   set guifontwide=Osaka:h14
   set guifont=Osaka-Mono:h14
 endif
+
+
+" vimplenote settings.
+nnoremap <silent> <Space>vs :<C-u>VimpleNote -s<CR>
+nnoremap <silent> <Space>vd :<C-u>VimpleNote -d<CR>
+nnoremap <silent> <Space>vu :<C-u>VimpleNote -u<CR>
+nnoremap <silent> <Space>vn :<C-u>VimpleNote -n<CR>
+nnoremap <silent> <Space>vt :<C-u>VimpleNote -t<CR>
+nnoremap <silent> <Space>vl :<C-u>VimpleNote -l<CR>
+nnoremap <silent> <Space>vD :<C-u>VimpleNote -D<CR>
