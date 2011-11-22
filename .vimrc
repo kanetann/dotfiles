@@ -1,51 +1,42 @@
 " vundle settings
 set nocompatible
-filetype off
+filetype plugin indent off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'git://github.com/Shougo/neocomplcache.git'
-Bundle 'git://github.com/Shougo/unite.vim.git'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/tpope/vim-surround.git'
-Bundle 'git://github.com/thinca/vim-quickrun.git'
-Bundle 'git://github.com/thinca/vim-ref.git'
-Bundle 'git://github.com/kana/vim-fakeclip.git'
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-Bundle 'git://github.com/vim-scripts/rails.vim.git'
-"Bundle 'motemen/git-vim.git'
-Bundle 'git://github.com/harajune/git-vim.git'
-"Bundle 'kakkyz81/evervim.git'
-Bundle 'git://github.com/vim-scripts/Align.git'
-Bundle 'git://github.com/h1mesuke/unite-outline.git'
-Bundle 'git://github.com/tsukkee/unite-help.git'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/vim-scripts/wombat256.vim'
-Bundle 'git://github.com/mattn/zencoding-vim.git'
-Bundle 'git://github.com/shanlalit/vim-autoclose.git'
-Bundle 'git://github.com/t9md/vim-textmanip.git'
-Bundle 'git://github.com/c9s/perlomni.vim'
-"Bundle 'git://github.com/vim-scripts/project.tar.gz.git'
-"Bundle 'tyru/skk.vim'
-"Bundle 'im_control.vim'
-"Bundle 'commentout.vim'
-"Bundle 'git://github.com/Shougo/vimfiler'
-Bundle 'git://github.com/vim-scripts/YankRing.vim'
-Bundle 'git://github.com/vim-scripts/matchit.zip'
-Bundle 'git://github.com/vim-scripts/Indent-Guides'
-Bundle 'git://github.com/vim-scripts/tComment'
-"Bundle 'git://github.com/vim-scripts/errormarker.vim'
-Bundle 'git://github.com/Sixeight/unite-grep'
-"Bundle 'git://github.com/t9md/vim-unite-lines'
-Bundle 'git://github.com/Shougo/vimproc'
-Bundle 'git://github.com/mikewest/vimroom.git'
-Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
-Bundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
-Bundle 'git://github.com/mattn/webapi-vim.git'
-Bundle 'git://github.com/mattn/vimplenote-vim.git'
-Bundle 'git://github.com/tyru/open-browser.vim.git'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/tpope/vim-surround.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'git://github.com/kana/vim-fakeclip.git'
+NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
+NeoBundle 'git://github.com/harajune/git-vim.git'
+NeoBundle 'git://github.com/vim-scripts/Align.git'
+NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
+NeoBundle 'git://github.com/tsukkee/unite-help.git'
+NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/shanlalit/vim-autoclose.git'
+NeoBundle 'git://github.com/t9md/vim-textmanip.git'
+NeoBundle 'git://github.com/c9s/perlomni.vim'
+NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
+NeoBundle 'git://github.com/vim-scripts/matchit.zip'
+NeoBundle 'git://github.com/vim-scripts/Indent-Guides'
+NeoBundle 'git://github.com/vim-scripts/tComment'
+NeoBundle 'git://github.com/Sixeight/unite-grep'
+NeoBundle 'git://github.com/Shougo/vimproc'
+NeoBundle 'git://github.com/mikewest/vimroom.git'
+NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
+NeoBundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
+NeoBundle 'git://github.com/tyru/open-browser.vim.git'
+NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
 
 filetype plugin indent on
 
@@ -246,6 +237,7 @@ let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
 "endif
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <C-C><C-C> :nohlsearch<CR>
 
 " vimfiler
 "let g:vimfiler_as_default_explorer = 1
@@ -326,13 +318,14 @@ endif
 
 
 " vimplenote settings.
-nnoremap <silent> <Space>vs :<C-u>VimpleNote -s<CR>
-nnoremap <silent> <Space>vd :<C-u>VimpleNote -d<CR>
-nnoremap <silent> <Space>vu :<C-u>VimpleNote -u<CR>
-nnoremap <silent> <Space>vn :<C-u>VimpleNote -n<CR>
-nnoremap <silent> <Space>vt :<C-u>VimpleNote -t<CR>
-nnoremap <silent> <Space>vl :<C-u>VimpleNote -l<CR>
-nnoremap <silent> <Space>vD :<C-u>VimpleNote -D<CR>
+" search, trash, update, new, tag setting, list, delete.
+nnoremap <Space>vs :<C-u>VimpleNote -s<Space>
+nnoremap <Space>vd :<C-u>VimpleNote -d<CR>
+nnoremap <Space>vu :<C-u>VimpleNote -u<CR>
+nnoremap <Space>vn :<C-u>VimpleNote -n<CR>
+nnoremap <Space>vt :<C-u>VimpleNote -t<Space>
+nnoremap <Space>vl :<C-u>VimpleNote -l<CR>
+nnoremap <Space>vD :<C-u>VimpleNote -D<CR>
 
 " open-browser.vim
 let g:netrw_nogx = 1

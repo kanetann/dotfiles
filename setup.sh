@@ -15,7 +15,8 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.proverc ~/.proverc
 
 # install vundle(plugin manager for Vim.)
-git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
+#git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
+git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim
 git config --global http.sslVerify false
 
 mkdir ~/dotfiles/.vim/dict
