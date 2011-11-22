@@ -208,12 +208,10 @@ nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 
 " textmanip
-vmap <C-j> <Plug>(Textmanip.move_selection_down)
-vmap <C-k> <Plug>(Textmanip.move_selection_up)
-vmap <C-h> <Plug>(Textmanip.move_selection_left)
-vmap <C-l> <Plug>(Textmanip.move_selection_right)
-vmap <M-d> <Plug>(Textmanip.duplicate_selection_v)
-nmap <M-d> <Plug>(Textmanip.duplicate_selection_n)
+vmap <C-u> <Plug>(textmanip-move-up)
+vmap <C-d> <Plug>(textmanip-move-down)
+vmap <C-h> <Plug>(textmanip-move-left)
+vmap <C-l> <Plug>(textmanip-move-right)
 
 " vim-ref
 "wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
@@ -307,7 +305,7 @@ nnoremap <silent> <Space>gv :<C-u>GitVimDiff<Space>
 nnoremap <C-i> <C-^>
 
 " quit 
-nnoremap <silent> q :<C-u>q<CR>
+nnoremap <silent> q :<C-u>q!<CR>
 
 if has('gui_macvim')
   set imdisable
