@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/.vvm/bin:/Users/aa/.vvm/vims/current/bin
 
-alias tmux="tmux -2"
+alias tmux="tmux -2 -u"
 alias v="vim"
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
