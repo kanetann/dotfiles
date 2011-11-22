@@ -329,3 +329,25 @@ nnoremap <Space>vD :<C-u>VimpleNote -D<CR>
 let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" Set augroup.
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
+" Easily edit .vimrc and .gvimrc
+nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Space>eg  :<C-u>edit $MYGVIMRC<CR>
+
+" Load .gvimrc after .vimrc edited at GVim.
+nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif \| echo "source $MYVIMRC"<CR>
+nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC \| echo "source $MYGVIMRC"<CR>
+
+" Reload .vimrc and .gvimrc automatically.
+if !has('gui_running') && !(has('win32') || has('win64'))
+  autocmd MyAutoCmd BufWritePost .vimrc nested source $MYVIMRC | echo "source $MYVIMRC"
+else
+  autocmd MyAutoCmd BufWritePost .vimrc source $MYVIMRC |
+        \if has('gui_running') | source $MYGVIMRC | echo "source $MYVIMRC"
+  autocmd MyAutoCmd BufWritePost .gvimrc if has('gui_running') | source $MYGVIMRC | echo "source $MYGVIMRC"
+endif
