@@ -43,6 +43,8 @@ Bundle 'git://github.com/Shougo/vimproc'
 Bundle 'git://github.com/mikewest/vimroom.git'
 Bundle 'git://github.com/ujihisa/unite-colorscheme.git'
 Bundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
+Bundle 'git://github.com/mattn/webapi-vim.git'
+Bundle 'git://github.com/mattn/vimplenote-vim.git'
 
 filetype plugin indent on
 
