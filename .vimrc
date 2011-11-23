@@ -38,6 +38,8 @@ NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
+NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
+NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 
 filetype plugin indent on
 
@@ -299,6 +301,7 @@ nnoremap <silent> <Space>gp :<C-u>GitPush<CR>
 nnoremap <silent> <Space>gP :<C-u>GitPull<CR>
 nnoremap <silent> <Space>go :<C-u>GitCheckout<Space>
 nnoremap <silent> <Space>gv :<C-u>GitVimDiff<Space>
+nnoremap <silent> <Space>gb :<C-u>Gblame<CR>
 
 " alternate file toggle shortcut key
 nnoremap <C-i> <C-^>
