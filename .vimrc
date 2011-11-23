@@ -7,6 +7,7 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle'))
 endif
 
+NeoBundle 'git://github.com/Shougo/neobundle.vim'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
@@ -351,3 +352,4 @@ else
         \if has('gui_running') | source $MYGVIMRC | echo "source $MYVIMRC"
   autocmd MyAutoCmd BufWritePost .gvimrc if has('gui_running') | source $MYGVIMRC | echo "source $MYGVIMRC"
 endif
+
