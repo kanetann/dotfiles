@@ -197,12 +197,10 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
 let g:unite_source_file_mru_limit = 10
-nnoremap <silent> <Space>ud :<C-u>UniteWithCurrentDir -winheight=20 file_mru file<CR>
-"nnoremap <silent> <Space>uh :<C-u>Unite -winheight=10 -start-insert help<CR>
+nnoremap <silent> <Space>ud :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
-"""""""""" nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord lines<CR>
 nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
 nnoremap <silent> <Space>urm :<C-u>Unite ref/man<CR>
 nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
