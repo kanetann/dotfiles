@@ -356,4 +356,4 @@ else
 endif
 
 " excitetranslate-vim
-vnoremap t :<C-u>ExciteTranslate<CR>
+vnoremap t :<C-u>'<,'>ExciteTranslate<CR>
