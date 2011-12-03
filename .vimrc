@@ -339,21 +339,17 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
-" Easily edit .vimrc and .gvimrc
-nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
-nnoremap <silent> <Space>eg  :<C-u>edit $MYGVIMRC<CR>
+" Easily edit .vimrc
+nnoremap <silent> <Space>ev  :<C-u>edit ~/dotfiles/.vimrc<CR>
 
 " Load .gvimrc after .vimrc edited at GVim.
-nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif \| echo "source $MYVIMRC"<CR>
-nnoremap <silent> <Space>rg :<C-u>source $MYGVIMRC \| echo "source $MYGVIMRC"<CR>
+nnoremap <silent> <Space>rv :<C-u>source ~/dotfiles/.vimrc<CR>
 
 " Reload .vimrc and .gvimrc automatically.
 if !has('gui_running') && !(has('win32') || has('win64'))
-  autocmd MyAutoCmd BufWritePost .vimrc nested source $MYVIMRC | echo "source $MYVIMRC"
+  autocmd MyAutoCmd BufWritePost .vimrc nested source ~/dotfiles/.vimrc
 else
-  autocmd MyAutoCmd BufWritePost .vimrc source $MYVIMRC |
-        \if has('gui_running') | source $MYGVIMRC | echo "source $MYVIMRC"
-  autocmd MyAutoCmd BufWritePost .gvimrc if has('gui_running') | source $MYGVIMRC | echo "source $MYGVIMRC"
+  autocmd MyAutoCmd BufWritePost .vimrc source ~/dotfiles/.vimrc
 endif
 
 " excitetranslate-vim
