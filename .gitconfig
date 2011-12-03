@@ -10,6 +10,14 @@
   interactive = auto
   grep = auto
 [alias]
+  s = status
+  ps = push
+  pl = pull
+  a = add
+  c = commit
+  l = log
+  d = diff
+
   st = status
   sh = show
   so = remote show origin
