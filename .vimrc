@@ -200,8 +200,9 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " unite.vim
 let g:unite_source_file_mru_limit = 10
-nnoremap <silent> <Space>ud :<C-u>Unite file_rec -start-insert<CR>
-nnoremap <silent> <Space>uD :<C-u>Unite file_rec -start-insert -auto-preview<CR>
+let g:unite_enable_start_insert = 1
+nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
+nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
