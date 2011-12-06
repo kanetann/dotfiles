@@ -38,6 +38,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/
 
 alias tmux="tmux -2 -u"
 alias v="vim"
+export LESS=R
+alias diff="colordiff -u"
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
 function chpwd() { ls -la }
