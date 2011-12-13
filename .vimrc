@@ -41,6 +41,7 @@ NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
 NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 NeoBundle 'git://github.com/kanetann/excitetranslate-vim.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
 
 filetype plugin indent on
 
