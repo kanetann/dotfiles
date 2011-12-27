@@ -80,6 +80,8 @@
   gn = grep -n
   sm = submodule
   smupdate = submodule foreach "git checkout master; git pull origin master"
+  cmpl = submodule foreach "git checkout master; git pull origin master"
+  cdpl = submodule foreach "git checkout master; git pull origin master"
 
   sl = stash list
   sp = stash pop
