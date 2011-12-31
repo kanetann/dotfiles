@@ -42,6 +42,7 @@ NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 NeoBundle 'git://github.com/kanetann/excitetranslate-vim.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
 
 filetype plugin indent on
 
@@ -357,3 +358,7 @@ endif
 
 " excitetranslate-vim
 vnoremap t :<C-u>'<,'>ExciteTranslate<CR>
+
+" vimfiler
+let g:vimfiler_as_default_explorer = 1
+nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
