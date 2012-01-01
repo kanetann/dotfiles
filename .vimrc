@@ -44,6 +44,7 @@ NeoBundle 'git://github.com/kanetann/excitetranslate-vim.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/vim-jp/vimdoc-ja.git'
+NeoBundle 'git://github.com/t9md/vim-quickhl.git'
 
 filetype plugin indent on
 
@@ -360,3 +361,9 @@ vnoremap t :<C-u>'<,'>ExciteTranslate<CR>
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
 nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
+
+" quickhl
+nnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR>
+vnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR> 
+nnoremap <Space>M :<C-u>QuickhlReset<CR>
+
