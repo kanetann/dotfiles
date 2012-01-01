@@ -207,12 +207,9 @@ let g:unite_source_file_mru_limit = 10
 let g:unite_enable_start_insert = 1
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
-nnoremap <silent> <Space>uh :<C-u>Unite help<CR>
+nnoremap <silent> <Space>uh :<C-u>Unite help ref/man ref/perldoc<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
-nnoremap <silent> <Space>ug :<C-u>UniteWithCursorWord grep<CR>
 nnoremap <silent> <Space>ul :<C-u>UniteWithCursorWord line<CR>
-nnoremap <silent> <Space>urm :<C-u>Unite ref/man<CR>
-nnoremap <silent> <Space>urp :<C-u>Unite ref/perldoc<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 
 " textmanip
