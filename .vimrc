@@ -225,7 +225,7 @@ inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
+"inoremap <expr><C-y>  neocomplcache#close_popup()
 "inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 
@@ -257,7 +257,8 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " zencoding-vim
 let g:use_zen_complete_tag = 1
-let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_expandabbr_key = '<C-e>'
+let g:user_zen_next_key = '<C-e><C-e>'
 
 " unite.vim
 let g:unite_source_file_mru_limit = 10
