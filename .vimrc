@@ -424,3 +424,7 @@ nnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR>
 vnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR> 
 nnoremap <Space>M :<C-u>QuickhlReset<CR>
 
+" paste mode
+nnoremap <Space>sp :<C-u>set paste<CR>
+nnoremap <Space>sn :<C-u>set nopaste<CR>
+
