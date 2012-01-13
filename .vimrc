@@ -46,6 +46,8 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/vim-jp/vimdoc-ja.git'
 NeoBundle 'git://github.com/t9md/vim-quickhl.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
+NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 
 filetype plugin indent on
 
