@@ -48,6 +48,12 @@ NeoBundle 'git://github.com/t9md/vim-quickhl.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
+NeoBundle 'git://github.com/pangloss/vim-javascript.git'
+NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
+NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
+NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
+NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 
 filetype plugin indent on
 
@@ -166,9 +172,9 @@ set hidden
 
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
-nnoremap <Space>g <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap <Space>gc <Esc>:<C-u>vimgrep // % \| cw<Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap <Space>gv <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw
+"nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+"nnoremap <Space>gc <Esc>:<C-u>vimgrep // % \| cw<Left><Left><Left><Left><Left><Left><Left><Left>
+nnoremap <Space>gg <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>

@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/.vvm/bin:/Users/aa/.vvm/vims/current/bin
 
 alias tmux="tmux -2 -u"
+[ -f ~/vim/vim73/src/vim ] && alias vim="~/vim/vim73/src/vim"
 alias v="vim"
 export LESS=R
 alias diff="colordiff -u"
