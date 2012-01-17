@@ -172,9 +172,9 @@ set hidden
 
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
-"nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 "nnoremap <Space>gc <Esc>:<C-u>vimgrep // % \| cw<Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap <Space>gg <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+"nnoremap <Space>gg <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
