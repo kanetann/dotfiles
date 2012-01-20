@@ -438,4 +438,5 @@ nnoremap <Space>sp :<C-u>set paste<CR>
 nnoremap <Space>sn :<C-u>set nopaste<CR>
 
 vnoremap v $h
+nnoremap <Space>d Di<Space>
 
