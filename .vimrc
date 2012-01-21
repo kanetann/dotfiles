@@ -440,3 +440,6 @@ nnoremap <Space>sn :<C-u>set nopaste<CR>
 vnoremap v $h
 nnoremap <Space>d Di<Space>
 
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
