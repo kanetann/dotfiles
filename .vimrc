@@ -443,3 +443,6 @@ nnoremap <Space>d Di<Space>
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
+
+vnoremap 9 $
+nnoremap 9 $
