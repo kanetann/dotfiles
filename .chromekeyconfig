@@ -1,4 +1,3 @@
-chrome keyconfig
 {
   "name": "Chrome Keyconfig",
   "version": "1.12.1",
@@ -70,6 +69,26 @@ chrome keyconfig
     },
     "C C": {
       "name": "copy url and title",
+      "args": [],
+      "and": false
+    },
+    "u": {
+      "name": "re-open closed tab",
+      "args": [],
+      "and": false
+    },
+    "G": {
+      "name": "scroll to bottom",
+      "args": [],
+      "and": false
+    },
+    "g g": {
+      "name": "scroll to top",
+      "args": [],
+      "and": false
+    },
+    "r": {
+      "name": "reload",
       "args": [],
       "and": false
     }
