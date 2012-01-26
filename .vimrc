@@ -276,6 +276,7 @@ nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite help ref/man ref/perldoc<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
+nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 
