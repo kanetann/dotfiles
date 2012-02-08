@@ -2,14 +2,6 @@
   "name": "Chrome Keyconfig",
   "version": "1.12.1",
   "normal_actions": {
-    "q q": {
-      "name": "select left tab",
-      "args": []
-    },
-    "w w": {
-      "name": "select right tab",
-      "args": []
-    },
     "j": {
       "name": "scroll down",
       "args": []
@@ -89,6 +81,16 @@
     },
     "r": {
       "name": "reload",
+      "args": [],
+      "and": false
+    },
+    "C-j": {
+      "name": "select right tab",
+      "args": [],
+      "and": false
+    },
+    "C-k": {
+      "name": "select left tab",
       "args": [],
       "and": false
     }
