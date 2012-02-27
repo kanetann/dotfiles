@@ -127,7 +127,8 @@ syntax enable
 "let g:solarized_termcolors=256
 "colorscheme wombat256
 "colorscheme wombat256mod
-colorscheme molokai
+"colorscheme molokai
+colorscheme wombat256mod
 if &diff
         colorscheme leo
 endif
