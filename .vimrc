@@ -448,3 +448,22 @@ endif
 
 vnoremap 9 $
 nnoremap 9 $
+
+if has("autocmd")
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+endif
+
+nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
+
+" TODO : skelton
+"augroup SkeletonAu
+"    　　autocmd!
+"    　　autocmd BufNewFile *.html 0r $HOME/.vim/skel.html
+"    　　autocmd BufNewFile *.pl 0r $HOME/.vim/skel.pl
+"    　　autocmd BufNewFile *.pm 0r $HOME/.vim/skel.pm
+"augroup END
+"
+"
