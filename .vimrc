@@ -273,6 +273,8 @@ let g:user_zen_next_key = '<C-e><C-e>'
 " unite.vim
 let g:unite_source_file_mru_limit = 10
 let g:unite_enable_start_insert = 1
+"let g:unite_source_grep_default_opts = '-iRHn'
+let g:unite_source_grep_max_candidates = 100
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
@@ -281,6 +283,8 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
+"nnoremap <silent> <Space>ug :<C-u>Unite grep<CR><CR>
+nnoremap <silent> <Space>ug :<C-u>Unite grep:.:-iRHn:
 
 " textmanip
 vmap <C-u> <Plug>(textmanip-move-up)
