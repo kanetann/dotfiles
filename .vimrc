@@ -54,6 +54,7 @@ NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
 NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
 NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
+NeoBundle 'git://github.com/scrooloose/syntastic.git'
 
 filetype plugin indent on
 
@@ -197,6 +198,11 @@ let g:quickrun_config = {}
 let g:quickrun_config['php.unit'] = {'command': 'phpunitrunner'}
 let g:quickrun_config['python.unit'] = {'command': 'nosetests', 'cmdopt': '-s -vv'}
 let g:quickrun_config['perl.unit'] = {'command': 'prove'}
+let g:quickrun_config['markdown'] = {
+      \ 'type': 'markdown/pandoc',
+      \ 'outputter': 'browser',
+      \ 'cmdopt': '-s'
+      \ }
 
 set splitbelow
 set splitright
@@ -358,7 +364,7 @@ let g:yankring_window_height = 13
 "endif
 
 " tagfile
-autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx silent :!ctags -R .
+autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.js,*.php silent :!ctags -R .
 
 " git-vim
 let g:git_no_map_default = 1
@@ -468,3 +474,8 @@ nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
 "augroup END
 "
 "
+"
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': ['perl', 'php', 'ruby', 'javascript'],
+                           \ 'passive_filetypes': [] }
+
