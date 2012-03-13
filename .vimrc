@@ -368,7 +368,7 @@ let g:yankring_window_height = 13
 "endif
 
 " tagfile
-autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.js,*.php silent :!ctags -R .
+autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.js,*.php silent :!ctags --exclude='*.js' -R .
 
 " git-vim
 let g:git_no_map_default = 1
