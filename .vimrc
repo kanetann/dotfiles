@@ -55,6 +55,8 @@ NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
 NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
+NeoBundle 'git://github.com/tpope/vim-rails.git'
+
 
 filetype plugin indent on
 
@@ -343,6 +345,7 @@ let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
+let g:yankring_manual_clipboard_check = 0
  
 " " indent-guides
 " let g:indent_guides_enable_on_vim_startup = 1
@@ -483,3 +486,5 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['perl', 'php', 'ruby', 'javascript'],
                            \ 'passive_filetypes': [] }
 
+inoremap <C-l> <Right>
+nnoremap <CR> o<ESC>

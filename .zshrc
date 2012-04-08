@@ -49,3 +49,5 @@ REPORTTIME=1
 PATH=${PATH}:~/dotfiles/edit-server/
 
 REPORTTIME=1
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
