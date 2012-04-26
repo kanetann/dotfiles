@@ -470,7 +470,8 @@ if has("autocmd")
     \ endif
 endif
 
-nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
+"nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
+nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
 
 " TODO : skelton
 "augroup SkeletonAu
@@ -488,3 +489,5 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 
 inoremap <C-l> <Right>
 nnoremap <CR> o<ESC>
+
+nnoremap <silent> <C-t> :<C-u>tabnew<CR>
