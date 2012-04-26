@@ -27,7 +27,7 @@ NeoBundle 'git://github.com/t9md/vim-textmanip.git'
 NeoBundle 'git://github.com/c9s/perlomni.vim'
 NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'git://github.com/vim-scripts/matchit.zip'
-NeoBundle 'git://github.com/vim-scripts/Indent-Guides'
+"NeoBundle 'git://github.com/vim-scripts/Indent-Guides'
 NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/Sixeight/unite-grep'
 NeoBundle 'git://github.com/Shougo/vimproc'
@@ -48,7 +48,6 @@ NeoBundle 'git://github.com/t9md/vim-quickhl.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
-NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
 NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
 NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
@@ -56,7 +55,8 @@ NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
-
+NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
+"NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
 
 filetype plugin indent on
 
@@ -371,7 +371,7 @@ let g:yankring_manual_clipboard_check = 0
 "endif
 
 " tagfile
-autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.js,*.php silent :!ctags --exclude='*.js' -R .
+autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' -R .
 
 " git-vim
 let g:git_no_map_default = 1
