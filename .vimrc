@@ -488,6 +488,5 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'passive_filetypes': [] }
 
 inoremap <C-l> <Right>
-nnoremap <CR> o<ESC>
 
 nnoremap <silent> <C-t> :<C-u>tabnew<CR>
