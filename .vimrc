@@ -442,7 +442,9 @@ vnoremap <C-t> :<C-u>'<,'>ExciteTranslate<CR>
 
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
-nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
+" nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
+" nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit -double<CR>
+nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit<CR>
 
 " quickhl
 nnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR>
