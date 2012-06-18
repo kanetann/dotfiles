@@ -57,6 +57,10 @@ NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
 "NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
+NeoBundle 'git://github.com/tpope/vim-markdown.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
+NeoBundle 'git://github.com/vim-scripts/perl-support.vim.gits.vim'
+NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
 
 filetype plugin indent on
 
@@ -180,6 +184,11 @@ nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left
 "nnoremap <Space>gc <Esc>:<C-u>vimgrep // % \| cw<Left><Left><Left><Left><Left><Left><Left><Left>
 "nnoremap <Space>gg <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
+autocmd BufNewFile,BufRead *.pm     set filetype=perl
+autocmd BufNewFile,BufRead *.pl     set filetype=perl
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl
+autocmd BufNewFile,BufRead *.t      set filetype=perl
+
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 
@@ -215,6 +224,7 @@ set splitright
 "set pastetoggle=,p
 
 " neocomplecache
+let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -286,7 +296,7 @@ let g:unite_source_grep_max_candidates = 100
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <Space>uh :<C-u>Unite help ref/man ref/perldoc<CR>
+nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
