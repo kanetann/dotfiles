@@ -1,15 +1,27 @@
 #!/bin/sh
 
+# ssh-keygen
+ssh-keygen -t rsa
+
+# rm files
+rm -rf  ~/.vimrc
+rm -rf  ~/.vimrc
+rm -rf  ~/.vim
+rm -rf ~/.zshrc
+rm -rf ~/.zsh
+rm -rf ~/.bashrc
+rm -rf ~/.bash_profile
+rm -rf ~/.ssh/config
+rm -rf ~/.gitconfig
+rm -rf ~/.proverc
+
 # add symlinks 
-#ln -s ~/dotfiles/.vimperatorrc ~/.vimperatorrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh ~/.zsh
-#ln -s ~/dotfiles/.screenrc ~/.screenrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-#ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.proverc ~/.proverc
@@ -37,6 +49,9 @@ wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master
 
 # install edit-server for chrome
 #git clone https://github.com/gfxmonk/edit-server.git
+
+# NeoBundleInstall
+vim
 
 # please see to below url. 
 # Bundle 'git://github.com/Shougo/vimproc write to .vimrc.
