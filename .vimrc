@@ -59,8 +59,9 @@ NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
 "NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
 NeoBundle 'git://github.com/tpope/vim-markdown.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
-NeoBundle 'git://github.com/vim-scripts/perl-support.vim.gits.vim'
+NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
 NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
+NeoBundle 'git://github.com/t9md/vim-chef.git'
 
 filetype plugin indent on
 
