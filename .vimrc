@@ -189,6 +189,7 @@ autocmd BufNewFile,BufRead *.pm     set filetype=perl
 autocmd BufNewFile,BufRead *.pl     set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
+autocmd BufNewFile,BufRead *.rb     set filetype=ruby
 
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
@@ -241,13 +242,11 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<C-k>"
+
+smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Recommended key-mappings.
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
@@ -304,6 +303,7 @@ nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 "nnoremap <silent> <Space>ug :<C-u>Unite grep<CR><CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:.:-iRHn:
+nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 
 " textmanip
 vmap <C-u> <Plug>(textmanip-move-up)
