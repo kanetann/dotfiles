@@ -179,6 +179,10 @@ set showmode
 " buffer
 set hidden
 
+" do not auto comment
+set formatoptions-=r
+set formatoptions-=o
+
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
