@@ -1,6 +1,6 @@
 {
   "name": "Chrome Keyconfig",
-  "version": "1.12.1",
+  "version": "1.13.1",
   "normal_actions": {
     "j": {
       "name": "scroll down",
@@ -60,8 +60,11 @@
       "and": false
     },
     "C C": {
-      "name": "copy url and title",
-      "args": [],
+      "name": "copy url and title by custom tag #1",
+      "args": [
+        "%TITLE% <%URL%>",
+        "with target"
+      ],
       "and": false
     },
     "u": {
