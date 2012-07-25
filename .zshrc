@@ -50,4 +50,7 @@ PATH=${PATH}:~/dotfiles/edit-server/
 
 REPORTTIME=1
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+rbenv shell 1.9.3-p194
+
