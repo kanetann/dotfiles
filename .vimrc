@@ -62,6 +62,7 @@ NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
 NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
 NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
 NeoBundle 'git://github.com/t9md/vim-chef.git'
+NeoBundle 'git://github.com/glidenote/octoeditor.vim.git'
 
 filetype plugin indent on
 
@@ -507,3 +508,10 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 inoremap <C-l> <Right>
 
 nnoremap <silent> <C-t> :<C-u>tabnew<CR>
+
+" octoeditor settings
+let g:octopress_path = '~/project/octopress'
+nnoremap <Space>on :OctopressNew<CR>
+nnoremap <Space>ol :OctopressList<CR>
+nnoremap <Space>og :OctopressGenerate<CR>
+nnoremap <Space>od :OctopressDeploy<CR>
