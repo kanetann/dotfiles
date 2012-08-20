@@ -54,3 +54,5 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv shell 1.9.3-p194
 
+unsetopt correct_all
+

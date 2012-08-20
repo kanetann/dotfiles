@@ -1,7 +1,15 @@
 #!/bin/sh
 
-# ssh-keygen
-ssh-keygen -t rsa
+# TODO: convert to chef-solo
+if [ `uname` = "Darwin" ]; then
+elif [ `uname` = "Linux" ]; then
+    ssh-keygen -t rsa
+    sudo aptitude -y install vim
+    sudo aptitude -y install zsh
+    sudo aptitude -y install git-core
+    sudo aptitude -y install make
+    sudo aptitude -y install ctags
+fi
 
 # rm files
 rm -rf  ~/.vimrc
@@ -14,17 +22,6 @@ rm -rf ~/.bash_profile
 rm -rf ~/.ssh/config
 rm -rf ~/.gitconfig
 rm -rf ~/.proverc
-
-# add symlinks 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.vim ~/.vim
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.zsh ~/.zsh
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/.ssh/config ~/.ssh/config
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.proverc ~/.proverc
 
 # install vundle(plugin manager for Vim.)
 #git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
@@ -45,7 +42,7 @@ git config --global http.sslVerify false
 #vvm use vimorg--v7-3-254
 
 # install oh-my-zsh
-wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 # install edit-server for chrome
 #git clone https://github.com/gfxmonk/edit-server.git
@@ -60,3 +57,16 @@ cd ~/.vim/bundle/vimproc
 
 # if you using macosx, make -f make_mac.mak
 make -f make_unix.mak
+
+# add symlinks 
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.vim ~/.vim
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.zsh ~/.zsh
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/.ssh/config ~/.ssh/config
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.proverc ~/.proverc
+
+

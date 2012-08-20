@@ -90,3 +90,5 @@
   chpk = cherry-pick
 [http]
   sslVerify = false
+[github]
+	user = kanetann
