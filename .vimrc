@@ -311,7 +311,8 @@ nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 "nnoremap <silent> <Space>ug :<C-u>Unite grep<CR><CR>
-nnoremap <silent> <Space>ug :<C-u>Unite grep:.:-iRHn:
+"nnoremap <silent> <Space>ug :<C-u>Unite grep:.:-iRHn:
+nnoremap <silent> <Space>ug :<C-u>Unite grep:**/*:-iRHn:<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 
 " textmanip
