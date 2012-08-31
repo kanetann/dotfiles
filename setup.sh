@@ -48,7 +48,8 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 #git clone https://github.com/gfxmonk/edit-server.git
 
 # NeoBundleInstall
-vim
+# vim
+vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/.vimrc" --cmd NeoBundleInstall! --cmd qall!
 
 # please see to below url. 
 # Bundle 'git://github.com/Shougo/vimproc write to .vimrc.
