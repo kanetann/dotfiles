@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -ex
+
 # TODO: convert to chef-solo
 if [ `uname` = "Darwin" ]; then
 elif [ `uname` = "Linux" ]; then
@@ -8,6 +10,7 @@ elif [ `uname` = "Linux" ]; then
     sudo aptitude -y install zsh
     sudo aptitude -y install git-core
     sudo aptitude -y install make
+    sudo aptitude -y install gcc
     sudo aptitude -y install ctags
 fi
 
