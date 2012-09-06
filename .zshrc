@@ -9,7 +9,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wezm"
 #ZSH_THEME="terminalparty"
-ZSH_THEME="candy"
+#ZSH_THEME="candy"
+ZSH_THEME="cloud"
 
 
 
