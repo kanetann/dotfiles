@@ -9,7 +9,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wezm"
 #ZSH_THEME="terminalparty"
-ZSH_THEME="candy"
+#ZSH_THEME="candy"
+ZSH_THEME="cloud"
 
 
 
@@ -57,3 +58,4 @@ rbenv shell 1.9.3-p194
 
 unsetopt correct_all
 
+alias rtags='/usr/local/bin/ctags -R -f ~/rtags --langmap=RUBY:.rb --sort=yes ~/.rbenv/versions/1.9.3-p194 ~/.rbenv/shims'

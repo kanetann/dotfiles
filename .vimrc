@@ -520,3 +520,9 @@ nnoremap <Space>on :OctopressNew<CR>
 nnoremap <Space>ol :OctopressList<CR>
 nnoremap <Space>og :OctopressGenerate<CR>
 nnoremap <Space>od :OctopressDeploy<CR>
+
+
+" ruby tags
+if filereadable(expand('~/rtags'))
+    au FileType ruby,eruby setl tags+=~/rtags
+endif
