@@ -43,7 +43,6 @@ alias tmux="tmux -2 -u"
 alias v="vim"
 export LESS=R
 alias diff="colordiff -u"
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
 function chpwd() { ls -la }
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
@@ -59,3 +58,10 @@ rbenv shell 1.9.3-p194
 unsetopt correct_all
 
 alias rtags='/usr/local/bin/ctags -R -f ~/rtags --langmap=RUBY:.rb --sort=yes ~/.rbenv/versions/1.9.3-p194 ~/.rbenv/shims'
+
+[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
+
+export PATH=$HOME/Library/Haskell/bin:$PATH
+
+alias ctags="/usr/local/Cellar/ctags/5.8/bin/ctags"
