@@ -43,7 +43,6 @@ alias tmux="tmux -2 -u"
 alias v="vim"
 export LESS=R
 alias diff="colordiff -u"
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
 function chpwd() { ls -la }
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
@@ -58,3 +57,4 @@ rbenv shell 1.9.3-p194
 
 unsetopt correct_all
 
+[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine

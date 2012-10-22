@@ -63,6 +63,12 @@ NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
 NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
 NeoBundle 'git://github.com/t9md/vim-chef.git'
 NeoBundle 'git://github.com/glidenote/octoeditor.vim.git'
+NeoBundle 'git://github.com/mrtazz/simplenote.vim.git'
+NeoBundle 'git://github.com/taq/vim-rspec.git'
+NeoBundle 'git://github.com/taq/vim-rspec.git'
+NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
+NeoBundle 'git://github.com/vim-scripts/DrawIt.git'
+NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 
 
@@ -183,6 +189,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 set showcmd
 set showmode
 
+
 " buffer
 set hidden
 
@@ -201,6 +208,9 @@ autocmd BufNewFile,BufRead *.pl     set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead *.rb     set filetype=ruby
+
+au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
+au FileType perl set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 
 "inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
@@ -323,10 +333,6 @@ vmap <C-d> <Plug>(textmanip-move-down)
 vmap <C-h> <Plug>(textmanip-move-left)
 vmap <C-l> <Plug>(textmanip-move-right)
 
-" vim-ref
-"wget http://www.php.net/get/php_manual_ja.tar.gz/from/jp2.php.net/mirror
-let g:ref_phpmanual_path = $HOME . '/.vim/dict/php-chunked-xhtml/'
-
 " project.vim
 "let g:proj_flags = 'imst'
 "let g:proj_window_width = 48
@@ -427,15 +433,15 @@ if has('gui_macvim')
 endif
 
 
-" vimplenote settings.
+" simplenote settings.
 " search, trash, update, new, tag setting, list, delete.
-nnoremap <Space>vs :<C-u>VimpleNote -s<Space>
-nnoremap <Space>vd :<C-u>VimpleNote -d<CR>
-nnoremap <Space>vu :<C-u>VimpleNote -u<CR>
-nnoremap <Space>vn :<C-u>VimpleNote -n<CR>
-nnoremap <Space>vt :<C-u>VimpleNote -t<Space>
-nnoremap <Space>vl :<C-u>VimpleNote -l<CR>
-nnoremap <Space>vD :<C-u>VimpleNote -D<CR>
+let g:SimplenoteVertical = 1
+nnoremap <Space>vl :<C-u>Simplenote -l<CR>
+nnoremap <Space>vu :<C-u>Simplenote -u<CR>
+nnoremap <Space>vd :<C-u>Simplenote -d<CR>
+nnoremap <Space>vD :<C-u>Simplenote -D<CR>
+nnoremap <Space>vn :<C-u>Simplenote -n<CR>
+nnoremap <Space>vt :<C-u>Simplenote -t<Space>
 
 " open-browser.vim
 let g:netrw_nogx = 1
