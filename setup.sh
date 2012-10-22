@@ -12,6 +12,7 @@ elif [ `uname` = "Linux" ]; then
     sudo aptitude -y install make
     sudo aptitude -y install gcc
     sudo aptitude -y install ctags
+    sudo aptitude -y install curl
 fi
 
 # rm files

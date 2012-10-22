@@ -58,11 +58,13 @@ NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
 "NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
 NeoBundle 'git://github.com/tpope/vim-markdown.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
+"NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
 NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
 NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
 NeoBundle 'git://github.com/t9md/vim-chef.git'
 NeoBundle 'git://github.com/glidenote/octoeditor.vim.git'
+NeoBundle 'git://github.com/Shougo/neosnippet.git'
+
 
 filetype plugin indent on
 
@@ -251,9 +253,9 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<C-k>"
+"imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<C-k>"
 
-smap <C-k> <Plug>(neocomplcache_snippets_expand)
+"smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
