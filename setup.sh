@@ -12,6 +12,7 @@ elif [ `uname` = "Linux" ]; then
     sudo aptitude -y install make
     sudo aptitude -y install gcc
     sudo aptitude -y install ctags
+    sudo aptitude -y install curl
 fi
 
 # rm files
@@ -25,6 +26,7 @@ rm -rf ~/.bash_profile
 rm -rf ~/.ssh/config
 rm -rf ~/.gitconfig
 rm -rf ~/.proverc
+rm -rf ~/.gemrc
 rm -rf ~/.inputrc
 
 # install vundle(plugin manager for Vim.)
@@ -73,6 +75,6 @@ ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.proverc ~/.proverc
+ln -s ~/dotfiles/.gemrc ~/.gemrc
 ln -s ~/dotfiles/.inputrc ~/.inputrc
-
 

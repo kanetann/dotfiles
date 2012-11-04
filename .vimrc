@@ -265,7 +265,6 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
@@ -400,7 +399,13 @@ let g:yankring_manual_clipboard_check = 0
 "endif
 
 " tagfile
-autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' -R .
+let OSTYPE = system('uname')
+if OSTYPE == "Darwin\n"
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' -R .
+elseif OSTYPE == "Linux\n"
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' -R .
+endif
+
 
 " git-vim
 let g:git_no_map_default = 1
