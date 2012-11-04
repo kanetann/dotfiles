@@ -58,7 +58,6 @@ NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
 "NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
 NeoBundle 'git://github.com/tpope/vim-markdown.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete'
 NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
 NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
 NeoBundle 'git://github.com/t9md/vim-chef.git'
@@ -69,6 +68,10 @@ NeoBundle 'git://github.com/taq/vim-rspec.git'
 NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
 NeoBundle 'git://github.com/vim-scripts/DrawIt.git'
 NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'git://github.com/basyura/TweetVim.git'
+NeoBundle 'git://github.com/tyru/open-browser.vim.git'
+NeoBundle 'git://github.com/basyura/twibill.vim.git'
+NeoBundle 'git://github.com/Shougo/neosnippet.git'
 
 
 filetype plugin indent on
@@ -262,9 +265,7 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<C-k>"
 
-smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
@@ -329,8 +330,8 @@ nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 " textmanip
 vmap <C-u> <Plug>(textmanip-move-up)
 vmap <C-d> <Plug>(textmanip-move-down)
-vmap <C-h> <Plug>(textmanip-move-left)
-vmap <C-l> <Plug>(textmanip-move-right)
+"vmap <C-h> <Plug>(textmanip-move-left)
+"vmap <C-l> <Plug>(textmanip-move-right)
 
 " project.vim
 "let g:proj_flags = 'imst'
@@ -517,7 +518,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['perl', 'php', 'ruby', 'javascript'],
                            \ 'passive_filetypes': [] }
 
-inoremap <C-l> <Right>
+"inoremap <C-l> <Right>
 
 nnoremap <silent> <C-t> :<C-u>tabnew<CR>
 
@@ -533,3 +534,19 @@ nnoremap <Space>od :OctopressDeploy<CR>
 if filereadable(expand('~/rtags'))
     au FileType ruby,eruby setl tags+=~/rtags
 endif
+
+" neosnipet
+" Plugin key-mappings.
+imap <C-l> <Plug>(neosnippet_expand_or_jump)
+smap <C-l> <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+
