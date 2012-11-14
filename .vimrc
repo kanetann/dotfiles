@@ -73,6 +73,7 @@ NeoBundle 'git://github.com/basyura/TweetVim.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/basyura/twibill.vim.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
+NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
 
 
 filetype plugin indent on
@@ -555,4 +556,17 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
+" RSense
+let g:rsenseHome = $HOME . "/dotfiles/rsense-0.3"
+" rubyの設定
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby       = '[^. *\t]\.\w*\|\h\w*::'
 
