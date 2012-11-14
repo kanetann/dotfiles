@@ -8,6 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'git://github.com/Shougo/neobundle.vim'
+
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
