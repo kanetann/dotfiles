@@ -558,6 +558,7 @@ endif
 
 " RSense
 let g:rsenseHome = $HOME . "/dotfiles/rsense-0.3"
+let g:rsenseUseOmniFunc = 1
 " rubyの設定
 if !exists('g:neocomplcache_omni_functions')
   let g:neocomplcache_omni_functions = {}
@@ -568,7 +569,7 @@ let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns.ruby       = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " NeoBundle
 nnoremap <Space>nbi :NeoBundleInstall<CR>
