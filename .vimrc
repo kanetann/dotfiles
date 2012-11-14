@@ -440,13 +440,12 @@ endif
 
 " simplenote settings.
 " search, trash, update, new, tag setting, list, delete.
-let g:SimplenoteVertical = 1
-nnoremap <Space>vl :<C-u>Simplenote -l<CR>
-nnoremap <Space>vu :<C-u>Simplenote -u<CR>
-nnoremap <Space>vd :<C-u>Simplenote -d<CR>
-nnoremap <Space>vD :<C-u>Simplenote -D<CR>
-nnoremap <Space>vn :<C-u>Simplenote -n<CR>
-nnoremap <Space>vt :<C-u>Simplenote -t<Space>
+nnoremap <Space>vl :<C-u>VimpleNote -l<CR>
+nnoremap <Space>vu :<C-u>VimpleNote -u<CR>
+nnoremap <Space>vd :<C-u>VimpleNote -d<CR>
+nnoremap <Space>vD :<C-u>VimpleNote -D<CR>
+nnoremap <Space>vn :<C-u>VimpleNote -n<CR>
+nnoremap <Space>vt :<C-u>VimpleNote -t<Space>
 
 " open-browser.vim
 let g:netrw_nogx = 1
