@@ -47,13 +47,10 @@ alias diff="colordiff -u"
 function chpwd() { ls -la }
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 REPORTTIME=1
-PATH=${PATH}:~/dotfiles/edit-server/
-
-REPORTTIME=1
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-rbenv shell 1.9.3-p194
+rbenv shell 1.9.3-p327
 
 unsetopt correct_all
 
@@ -66,3 +63,5 @@ case ${OSTYPE} in
     linux*)
         ;;
 esac
+
+export PATH="/usr/local/bin:$PATH"

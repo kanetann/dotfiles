@@ -8,6 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'git://github.com/Shougo/neobundle.vim'
+
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
@@ -210,6 +211,7 @@ autocmd BufNewFile,BufRead *.pl     set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead *.rb     set filetype=ruby
+autocmd FileType * setlocal formatoptions-=ro
 
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
 au FileType perl set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
