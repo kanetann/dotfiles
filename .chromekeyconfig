@@ -96,6 +96,11 @@
       "name": "select left tab",
       "args": [],
       "and": false
+    },
+    "C-h": {
+      "name": "back",
+      "args": [],
+      "and": false
     }
   },
   "limited_actions": {
