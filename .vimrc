@@ -74,7 +74,7 @@ NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/basyura/twibill.vim.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
-
+NeoBundle 'git://github.com/ujihisa/neco-rubymf.git'
 
 filetype plugin indent on
 
@@ -557,22 +557,61 @@ if has('conceal')
 endif
 
 " RSense
-let g:rsenseHome = $HOME . "/dotfiles/rsense-0.3"
-let g:rsenseUseOmniFunc = 1
-" rubyの設定
-if !exists('g:neocomplcache_omni_functions')
-  let g:neocomplcache_omni_functions = {}
-endif
-let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+" let g:rsenseHome = $HOME . "/dotfiles/rsense-0.3"
+" let g:rsenseUseOmniFunc = 1
+" " rubyの設定
+" if !exists('g:neocomplcache_omni_functions')
+"   let g:neocomplcache_omni_functions = {}
+" endif
+" let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+" 
+" " Enable heavy omni completion.
+" if !exists('g:neocomplcache_omni_patterns')
+"   let g:neocomplcache_omni_patterns = {}
+" endif
+" let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
-" Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:rsenseUseOmniFunc = 1
+" if filereadable(expand($HOME . '/dotfiles/rsense-0.3/bin/rsense'))
+"   let g:rsenseHome = expand($HOME . "/dotfiles/rsense-0.3")
+"   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" endif
+" if filereadable(expand('~/dotfiles/rsense-0.3/bin/rsense'))
+"   let g:rsenseHome = expand("~/dotfiles/rsense-0.3")
+"   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" endif
+if filereadable('/Users/kanetann/dotfiles/rsense-0.3/bin/rsense')
+  let g:rsenseHome = "/Users/kanetann/dotfiles/rsense-0.3"
+  let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+endif
+setlocal completefunc=RSenseComplete
+
+
 
 " NeoBundle
 nnoremap <Space>nbi :NeoBundleInstall<CR>
 nnoremap <Space>nbu :NeoBundleUpdate<CR>
 nnoremap <Space>nbc :NeoBundleClean<CR>
+
+" カーソル下のgemのrdocを開く
+function! OpenYard(...)
+  let gem = a:1 == "" ? "" : a:1
+  if gem == ""
+    call OpenBrowser("http://localhost:8808/")
+  else
+    let url = "http://localhost:8808/docs/" . tolower(gem) . "/frames/"
+    call OpenBrowser(url)
+  endif
+endfunction
+
+command!
+\   -nargs=* -complete=file
+\   OpenYard
+\   call OpenYard(<q-args>)
+
+" マッピング
+nmap <Space>y :<C-U>OpenYard <C-R><C-W><CR>
 
