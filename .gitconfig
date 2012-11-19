@@ -92,3 +92,5 @@
   sslVerify = false
 [github]
 	user = kanetann
+[push]
+	default = simple
