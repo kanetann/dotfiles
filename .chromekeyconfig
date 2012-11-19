@@ -19,12 +19,14 @@
       "args": []
     },
     "M-j": {
-      "name": "scroll down half page",
-      "args": []
+      "name": "select right tab",
+      "args": [],
+      "and": false
     },
     "M-k": {
-      "name": "scroll up half page",
-      "args": []
+      "name": "select left tab",
+      "args": [],
+      "and": false
     },
     "M-J": {
       "name": "scroll to bottom",
@@ -84,16 +86,6 @@
     },
     "r": {
       "name": "reload",
-      "args": [],
-      "and": false
-    },
-    "C-j": {
-      "name": "select right tab",
-      "args": [],
-      "and": false
-    },
-    "C-k": {
-      "name": "select left tab",
       "args": [],
       "and": false
     }
