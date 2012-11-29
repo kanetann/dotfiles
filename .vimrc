@@ -15,7 +15,7 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
-NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
+"NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
 NeoBundle 'git://github.com/harajune/git-vim.git'
 NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
@@ -577,5 +577,6 @@ nnoremap <Space>nbu :NeoBundleUpdate<CR>
 nnoremap <Space>nbc :NeoBundleClean<CR>
 
 " rails.vim
-nnoremap <Space>r :R
+nnoremap <Space>rr :R
+nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
 
