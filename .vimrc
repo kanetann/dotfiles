@@ -15,7 +15,7 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
-NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
+"NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
 NeoBundle 'git://github.com/harajune/git-vim.git'
 NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
@@ -75,6 +75,9 @@ NeoBundle 'git://github.com/basyura/twibill.vim.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
+NeoBundle 'git://github.com/ujihisa/neco-ruby.git'
+NeoBundle 'git://github.com/rhysd/unite-ruby-require.vim.git'
+NeoBundle 'git://github.com/rhysd/neco-ruby-keyword-args.git'
 
 
 filetype plugin indent on
@@ -317,6 +320,7 @@ let g:unite_source_file_mru_limit = 10
 let g:unite_enable_start_insert = 1
 "let g:unite_source_grep_default_opts = '-iRHn'
 let g:unite_source_grep_max_candidates = 100
+nnoremap          <Space>uu :<C-u>Unite 
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
@@ -578,5 +582,9 @@ nnoremap <Space>nbu :NeoBundleUpdate<CR>
 nnoremap <Space>nbc :NeoBundleClean<CR>
 
 " rails.vim
-nnoremap <Space>r :R
+nnoremap <Space>rr :R
+nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
+
+" unite-ruby-require.vim
+let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
 
