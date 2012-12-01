@@ -65,3 +65,4 @@ case ${OSTYPE} in
 esac
 
 export PATH="/usr/local/bin:$PATH"
+export RSENSE_HOME="$HOME/dotfiles/rsense-0.3"

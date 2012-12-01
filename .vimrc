@@ -74,6 +74,7 @@ NeoBundle 'git://github.com/tyru/open-browser.vim.git'
 NeoBundle 'git://github.com/basyura/twibill.vim.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
 
 
 filetype plugin indent on
