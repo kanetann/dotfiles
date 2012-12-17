@@ -78,6 +78,7 @@ NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
 NeoBundle 'git://github.com/ujihisa/neco-ruby.git'
 NeoBundle 'git://github.com/rhysd/unite-ruby-require.vim.git'
 NeoBundle 'git://github.com/rhysd/neco-ruby-keyword-args.git'
+NeoBundle 'git://github.com/tomasr/molokai.git'
 
 
 filetype plugin indent on
@@ -157,7 +158,8 @@ syntax enable
 "colorscheme wombat256
 "colorscheme wombat256mod
 "colorscheme molokai
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme molokai
 if &diff
         colorscheme leo
 endif
@@ -587,4 +589,3 @@ nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
 
 " unite-ruby-require.vim
 let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
-
