@@ -411,9 +411,9 @@ let g:yankring_manual_clipboard_check = 0
 " tagfile
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' --exclude='vendor/bundler/*' -R .
 elseif OSTYPE == "Linux\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundler/*' -R .
 endif
 
 
