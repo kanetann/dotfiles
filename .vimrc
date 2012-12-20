@@ -50,9 +50,9 @@ NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
-NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
-NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
-NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+" NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
+" NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
+" NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
@@ -516,7 +516,7 @@ if has("autocmd")
 endif
 
 "nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
-nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
+"nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
 
 " TODO : skelton
 "augroup SkeletonAu
