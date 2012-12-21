@@ -14,7 +14,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="agnoster"
 #ZSH_THEME="juanghurtado"
 #ZSH_THEME="miloshadzic"
-ZSH_THEME="dieter"
+#ZSH_THEME="dieter"
+ZSH_THEME="candy"
 
 
 
