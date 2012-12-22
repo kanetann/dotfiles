@@ -10,7 +10,12 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="wezm"
 #ZSH_THEME="terminalparty"
 #ZSH_THEME="candy"
-ZSH_THEME="cloud"
+#ZSH_THEME="cloud"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="juanghurtado"
+#ZSH_THEME="miloshadzic"
+#ZSH_THEME="dieter"
+ZSH_THEME="candy"
 
 
 

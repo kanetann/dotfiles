@@ -28,6 +28,7 @@ rm -rf ~/.gitconfig
 rm -rf ~/.proverc
 rm -rf ~/.gemrc
 rm -rf ~/.inputrc
+rm -rf ~/.pryrc
 
 # install vundle(plugin manager for Vim.)
 #git clone git://github.com/gmarik/vundle.git ~/dotfiles/.vim/bundle/vundle
@@ -77,4 +78,5 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.proverc ~/.proverc
 ln -s ~/dotfiles/.gemrc ~/.gemrc
 ln -s ~/dotfiles/.inputrc ~/.inputrc
+ln -s ~/dotfiles/.pryrc ~/.pryrc
 

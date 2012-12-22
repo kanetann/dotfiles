@@ -50,9 +50,9 @@ NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
 NeoBundle 'git://github.com/pangloss/vim-javascript.git'
 NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
-NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
-NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
-NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
+" NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
+" NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
+" NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
@@ -78,6 +78,7 @@ NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
 NeoBundle 'git://github.com/ujihisa/neco-ruby.git'
 NeoBundle 'git://github.com/rhysd/unite-ruby-require.vim.git'
 NeoBundle 'git://github.com/rhysd/neco-ruby-keyword-args.git'
+NeoBundle 'git://github.com/tomasr/molokai.git'
 
 
 filetype plugin indent on
@@ -157,7 +158,8 @@ syntax enable
 "colorscheme wombat256
 "colorscheme wombat256mod
 "colorscheme molokai
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme molokai
 if &diff
         colorscheme leo
 endif
@@ -409,9 +411,9 @@ let g:yankring_manual_clipboard_check = 0
 " tagfile
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' --exclude='vendor/bundler/*' -R .
 elseif OSTYPE == "Linux\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundler/*' -R .
 endif
 
 
@@ -514,7 +516,7 @@ if has("autocmd")
 endif
 
 "nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
-nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
+"nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
 
 " TODO : skelton
 "augroup SkeletonAu
@@ -587,4 +589,3 @@ nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
 
 " unite-ruby-require.vim
 let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
-
