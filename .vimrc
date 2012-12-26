@@ -158,8 +158,8 @@ syntax enable
 "colorscheme wombat256
 "colorscheme wombat256mod
 "colorscheme molokai
-"colorscheme wombat256mod
-colorscheme molokai
+colorscheme wombat256mod
+"colorscheme molokai
 if &diff
         colorscheme leo
 endif
