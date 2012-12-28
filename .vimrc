@@ -79,6 +79,7 @@ NeoBundle 'git://github.com/ujihisa/neco-ruby.git'
 NeoBundle 'git://github.com/rhysd/unite-ruby-require.vim.git'
 NeoBundle 'git://github.com/rhysd/neco-ruby-keyword-args.git'
 NeoBundle 'git://github.com/tomasr/molokai.git'
+NeoBundle 'git://github.com/jpalardy/vim-slime.git'
 
 
 filetype plugin indent on
@@ -589,3 +590,8 @@ nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
 
 " unite-ruby-require.vim
 let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
+
+" vim-slime
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+
