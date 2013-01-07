@@ -9,141 +9,39 @@ endif
 
 NeoBundle 'git://github.com/Shougo/neobundle.vim'
 
+NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/tpope/vim-surround.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/Sixeight/unite-grep.git'
+NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
+NeoBundle 'git://github.com/jpalardy/vim-slime.git'
+NeoBundle 'git://github.com/kana/vim-fakeclip.git'
+NeoBundle 'git://github.com/mattn/webapi-vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/scrooloose/syntastic.git'
+NeoBundle 'git://github.com/shanlalit/vim-autoclose.git'
+NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
+NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
-NeoBundle 'git://github.com/kana/vim-fakeclip.git'
-"NeoBundle 'git://github.com/vim-scripts/rails.vim.git'
-NeoBundle 'git://github.com/harajune/git-vim.git'
-NeoBundle 'git://github.com/vim-scripts/Align.git'
-NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
-NeoBundle 'git://github.com/tsukkee/unite-help.git'
-NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-NeoBundle 'git://github.com/shanlalit/vim-autoclose.git'
-NeoBundle 'git://github.com/t9md/vim-textmanip.git'
-NeoBundle 'git://github.com/c9s/perlomni.vim'
-NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
-NeoBundle 'git://github.com/vim-scripts/matchit.zip'
-"NeoBundle 'git://github.com/vim-scripts/Indent-Guides'
-NeoBundle 'git://github.com/vim-scripts/tComment'
-NeoBundle 'git://github.com/Sixeight/unite-grep'
-NeoBundle 'git://github.com/Shougo/vimproc'
-NeoBundle 'git://github.com/mikewest/vimroom.git'
-NeoBundle 'git://github.com/ujihisa/unite-colorscheme.git'
-NeoBundle 'git://github.com/vim-scripts/Color-Sampler-Pack.git'
-NeoBundle 'git://github.com/mattn/webapi-vim.git'
-NeoBundle 'git://github.com/mattn/vimplenote-vim.git'
-NeoBundle 'git://github.com/tyru/open-browser.vim.git'
-NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
-NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 NeoBundle 'git://github.com/tpope/vim-fugitive.git'
-NeoBundle 'git://github.com/kanetann/excitetranslate-vim.git'
-NeoBundle 'git://github.com/Shougo/vimshell.git'
-NeoBundle 'git://github.com/Shougo/vimfiler.git'
-NeoBundle 'git://github.com/vim-jp/vimdoc-ja.git'
-NeoBundle 'git://github.com/t9md/vim-quickhl.git'
-NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
-NeoBundle 'git://github.com/othree/javascript-syntax.vim.git'
-NeoBundle 'git://github.com/pangloss/vim-javascript.git'
-NeoBundle 'git://github.com/vim-scripts/Source-Explorer-srcexpl.vim.git'
-" NeoBundle 'git://github.com/vim-scripts/trinity.vim.git'
-" NeoBundle 'git://github.com/vim-scripts/The-NERD-tree.git'
-" NeoBundle 'git://github.com/vim-scripts/taglist.vim.git'
-NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
-NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
-NeoBundle 'git://github.com/vim-scripts/Better-Javascript-Indentation.git'
-"NeoBundle 'git://github.com/vim-scripts/OOP-javascript-indentation.git'
-NeoBundle 'git://github.com/tpope/vim-markdown.git'
-NeoBundle 'git://github.com/vim-scripts/perl-support.vim.git'
-NeoBundle 'git://github.com/hotchpotch/perldoc-vim.git'
-NeoBundle 'git://github.com/t9md/vim-chef.git'
-NeoBundle 'git://github.com/glidenote/octoeditor.vim.git'
-NeoBundle 'git://github.com/mrtazz/simplenote.vim.git'
-NeoBundle 'git://github.com/taq/vim-rspec.git'
-NeoBundle 'git://github.com/taq/vim-rspec.git'
-NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
-NeoBundle 'git://github.com/vim-scripts/DrawIt.git'
-NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
-NeoBundle 'git://github.com/basyura/TweetVim.git'
+NeoBundle 'git://github.com/tpope/vim-surround.git'
+NeoBundle 'git://github.com/tsukkee/unite-help.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
-NeoBundle 'git://github.com/basyura/twibill.vim.git'
-NeoBundle 'git://github.com/Shougo/neosnippet.git'
-NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
-NeoBundle 'git://github.com/ujihisa/neco-ruby.git'
-NeoBundle 'git://github.com/rhysd/unite-ruby-require.vim.git'
-NeoBundle 'git://github.com/rhysd/neco-ruby-keyword-args.git'
-NeoBundle 'git://github.com/tomasr/molokai.git'
-NeoBundle 'git://github.com/jpalardy/vim-slime.git'
-
+NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'git://github.com/vim-scripts/Align.git'
+NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
+NeoBundle 'git://github.com/vim-scripts/tComment'
+NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
 
 filetype plugin indent on
 
 set t_Co=256
-
-" encoding
-" to see http://www.kawaz.jp/pukiwiki/?vim#cb691f26
-" 文字コードの自動認識
-" if &encoding !=# 'utf-8'
-"   set encoding=japan
-"   set fileencoding=japan
-" endif
-" if has('iconv')
-"   let s:enc_euc = 'euc-jp'
-"   let s:enc_jis = 'iso-2022-jp'
-"   " iconvがeucJP-msに対応しているかをチェック
-"   if iconv("\x87\x64\x87\x6a", 'cp932', 'eucjp-ms') ==# "\xad\xc5\xad\xcb"
-"     let s:enc_euc = 'eucjp-ms'
-"     let s:enc_jis = 'iso-2022-jp-3'
-"   " iconvがJISX0213に対応しているかをチェック
-"   elseif iconv("\x87\x64\x87\x6a", 'cp932', 'euc-jisx0213') ==# "\xad\xc5\xad\xcb"
-"     let s:enc_euc = 'euc-jisx0213'
-"     let s:enc_jis = 'iso-2022-jp-3'
-"   endif
-"   " fileencodingsを構築
-"   if &encoding ==# 'utf-8'
-"     let s:fileencodings_default = &fileencodings
-"     let &fileencodings = s:enc_jis .','. s:enc_euc .',cp932'
-"     let &fileencodings = &fileencodings .','. s:fileencodings_default
-"     unlet s:fileencodings_default
-"   else
-"     let &fileencodings = &fileencodings .','. s:enc_jis
-"     set fileencodings+=utf-8,ucs-2le,ucs-2
-"     if &encoding =~# '^\(euc-jp\|euc-jisx0213\|eucjp-ms\)$'
-"       set fileencodings+=cp932
-"       set fileencodings-=euc-jp
-"       set fileencodings-=euc-jisx0213
-"       set fileencodings-=eucjp-ms
-"       let &encoding = s:enc_euc
-"       let &fileencoding = s:enc_euc
-"     else
-"       let &fileencodings = &fileencodings .','. s:enc_euc
-"     endif
-"   endif
-"   " 定数を処分
-"   unlet s:enc_euc
-"   unlet s:enc_jis
-" endif
-" " 日本語を含まない場合は fileencoding に encoding を使うようにする
-" if has('autocmd')
-"   function! AU_ReCheck_FENC()
-"     if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
-"       let &fileencoding=&encoding
-"     endif
-"   endfunction
-"   autocmd BufReadPost * call AU_ReCheck_FENC()
-" endif
-" " 改行コードの自動認識
-" set fileformats=unix,dos,mac
-" " □とか○の文字があってもカーソル位置がずれないようにする
-" if exists('&ambiwidth')
-"   set ambiwidth=double
-" endif
 
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,sjis,iso-2022-jp
@@ -151,18 +49,9 @@ set fileformats=unix,dos,mac
 
 " editor
 syntax enable
-"colorscheme darkblue
-"colorscheme desert
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termcolors=256
-"colorscheme wombat256
-"colorscheme wombat256mod
-"colorscheme molokai
 colorscheme wombat256mod
-"colorscheme molokai
 if &diff
-        colorscheme leo
+  colorscheme leo
 endif
 
 "set number
@@ -211,8 +100,6 @@ set formatoptions-=o
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
 nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-"nnoremap <Space>gc <Esc>:<C-u>vimgrep // % \| cw<Left><Left><Left><Left><Left><Left><Left><Left>
-"nnoremap <Space>gg <Esc>:<C-u>vimgrep /<C-r><C-w>/j **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 autocmd BufNewFile,BufRead *.pm     set filetype=perl
 autocmd BufNewFile,BufRead *.pl     set filetype=perl
@@ -224,7 +111,6 @@ autocmd FileType * setlocal formatoptions-=ro
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
 au FileType perl set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent
 
-"inoremap jj <ESC>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 
 map <C-N>   :bnext<CR>
@@ -253,11 +139,6 @@ let g:quickrun_config['markdown'] = {
 set splitbelow
 set splitright
 
-" clipboard
-"set clipboard=unnamed,autoselect
-"set paste
-"set pastetoggle=,p
-
 " neocomplecache
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
@@ -280,22 +161,8 @@ inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " Recommended key-mappings.
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-"inoremap <expr><C-y>  neocomplcache#close_popup()
-"inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-
-" AutoComplPop like behavior.
-"let g:neocomplcache_enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
-"inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -332,52 +199,11 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
-"nnoremap <silent> <Space>ug :<C-u>Unite grep<CR><CR>
-"nnoremap <silent> <Space>ug :<C-u>Unite grep:.:-iRHn:
 nnoremap <silent> <Space>ug :<C-u>Unite grep:**/*:-iRHn:<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 
-" textmanip
-vmap <C-u> <Plug>(textmanip-move-up)
-vmap <C-d> <Plug>(textmanip-move-down)
-"vmap <C-h> <Plug>(textmanip-move-left)
-"vmap <C-l> <Plug>(textmanip-move-right)
-
-" project.vim
-"let g:proj_flags = 'imst'
-"let g:proj_window_width = 48
-"nmap <silent> <Leader>P <Plug>ToggleProject
-"nmap <silent> <Leader>p :Project<CR>
-"let g:proj_run1='!git add %f'
-"let g:proj_run_fold1='*!git add %f'
-"let g:proj_run2='!git checkout --  %f'
-"let g:proj_run_fold2='*!git checkout -- %f'
-"let g:proj_run3='!git status'
-"autocmd BufAdd .vimprojects silent! %foldopen!
-"if getcwd() != $HOME
-"    if filereadable(getcwd(). '/.vimprojects')
-"        exec 'Project .vimprojects'
-"    endif
-"endif
-
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C> :nohlsearch<CR>
-
-" vimfiler
-"let g:vimfiler_as_default_explorer = 1
-" let g:vimfiler_execute_file_list = {}
-" let g:vimfiler_execute_file_list['rb']    = 'vim'
-" let g:vimfiler_execute_file_list['pl']    = 'vim'
-" let g:vimfiler_execute_file_list['pm']    = 'vim'
-" let g:vimfiler_execute_file_list['t']     = 'vim'
-" let g:vimfiler_execute_file_list['tx']    = 'vim'
-" let g:vimfiler_execute_file_list['py']    = 'vim'
-" let g:vimfiler_execute_file_list['htm']   = 'vim'
-" let g:vimfiler_execute_file_list['html']  = 'vim'
-" let g:vimfiler_execute_file_list['xhtml'] = 'vim'
-
-"foldmethod (> use Unite outline.)
-"set foldmethod=indent
 
 " YankRing(p after ctrl+p)
 let g:yankring_history_dir = expand('$HOME')
@@ -386,29 +212,6 @@ let g:yankring_max_history = 10
 let g:yankring_window_height = 13
 let g:yankring_manual_clipboard_check = 0
  
-" " indent-guides
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_color_change_percent= 30
-" let g:indent_guides_guide_size = 1
- 
-"" errormarker
-"autocmd FileType perl,cgi :compiler perl
-"let g:errormarker_errortext = '!!'
-"let g:errormarker_warningtext = '??'
-"let g:errormarker_errorgroup = 'Error'
-"let g:errormarker_warninggroup = 'Todo'
-"if !exists('g:flymake_enabled')
-"    let g:flymake_enabled = 1
-"    autocmd BufWritePost *.rb,*.pl,*.pm,*.t silent make
-"endif
-"if has('win32') || has('win64')
-"    let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
-"    let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
-"else
-"    let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
-"    let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
-"endif
-
 " tagfile
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
@@ -416,7 +219,6 @@ if OSTYPE == "Darwin\n"
 elseif OSTYPE == "Linux\n"
     autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundler/*' -R .
 endif
-
 
 " git-vim
 let g:git_no_map_default = 1
@@ -448,16 +250,6 @@ if has('gui_macvim')
   set guifont=Osaka-Mono:h14
 endif
 
-
-" simplenote settings.
-" search, trash, update, new, tag setting, list, delete.
-nnoremap <Space>vl :<C-u>VimpleNote -l<CR>
-nnoremap <Space>vu :<C-u>VimpleNote -u<CR>
-nnoremap <Space>vd :<C-u>VimpleNote -d<CR>
-nnoremap <Space>vD :<C-u>VimpleNote -D<CR>
-nnoremap <Space>vn :<C-u>VimpleNote -n<CR>
-nnoremap <Space>vt :<C-u>VimpleNote -t<Space>
-
 " open-browser.vim
 let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-smart-search)
@@ -481,19 +273,11 @@ else
   autocmd MyAutoCmd BufWritePost .vimrc source ~/dotfiles/.vimrc
 endif
 
-" excitetranslate-vim
-vnoremap <C-t> :<C-u>'<,'>ExciteTranslate<CR>
-
 " vimfiler
 let g:vimfiler_as_default_explorer = 1
 " nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
 " nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit -double<CR>
 nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit<CR>
-
-" quickhl
-nnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR>
-vnoremap <Space>m :<C-u>QuickhlAdd <C-r><C-w><CR> 
-nnoremap <Space>M :<C-u>QuickhlReset<CR>
 
 " paste mode
 nnoremap <Space>sp :<C-u>set paste<CR>
@@ -516,34 +300,11 @@ if has("autocmd")
     \ endif
 endif
 
-"nnoremap <C-t> :TrinityToggleAll<CR><C-w><C-w>
-"nnoremap <silent> <Space>t  :TrinityToggleAll<CR><C-w><C-w>
-
-" TODO : skelton
-"augroup SkeletonAu
-"    　　autocmd!
-"    　　autocmd BufNewFile *.html 0r $HOME/.vim/skel.html
-"    　　autocmd BufNewFile *.pl 0r $HOME/.vim/skel.pl
-"    　　autocmd BufNewFile *.pm 0r $HOME/.vim/skel.pm
-"augroup END
-"
-"
-"
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['perl', 'php', 'ruby', 'javascript'],
                            \ 'passive_filetypes': [] }
 
-"inoremap <C-l> <Right>
-
 nnoremap <silent> <C-t> :<C-u>tabnew<CR>
-
-" octoeditor settings
-let g:octopress_path = '~/project/octopress'
-nnoremap <Space>on :OctopressNew<CR>
-nnoremap <Space>ol :OctopressList<CR>
-nnoremap <Space>og :OctopressGenerate<CR>
-nnoremap <Space>od :OctopressDeploy<CR>
-
 
 " ruby tags
 if filereadable(expand('~/rtags'))
@@ -594,4 +355,3 @@ let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
-
