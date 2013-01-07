@@ -29,6 +29,7 @@ NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/tpope/vim-fugitive.git'
+NeoBundle 'git://github.com/tpope/vim-markdown.git'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/tsukkee/unite-help.git'
@@ -38,6 +39,7 @@ NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
+
 
 filetype plugin indent on
 
