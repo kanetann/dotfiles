@@ -22,7 +22,15 @@ run "guard init rspec"
 
 rake("db:migrate")
 
-run "cd #{Rails.application.class.parent_name}"
+
+# file 'app/components/foo.rb', <<-CODE
+#   class Foo
+#   end
+# CODE
+
+# rake("rails:freeze:gems") if yes?("Freeze rails gems?")
+
+# run "cd #{Rails.application.class.parent_name}"
 
 # git :init
 # git add: "."
