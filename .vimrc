@@ -39,6 +39,7 @@ NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
+NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
 
 
 filetype plugin indent on
@@ -203,6 +204,7 @@ nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:**/*:-iRHn:<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
+nnoremap <silent> <Space>ua :<C-u>Unite -no-quit ack<CR>
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C> :nohlsearch<CR>
@@ -357,3 +359,10 @@ let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
+
+" unite ack
+if OSTYPE == "Darwin\n"
+  let g:unite_source_ack_command = 'ack --nocolor --no-group'
+endif
+
+
