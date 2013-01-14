@@ -72,6 +72,7 @@ run "cp ~/dotfiles/rails/spec/spec_helper.rb spec/spec_helper.rb"
 
 # device
 run "rails g devise:install"
+run "rails g devise user"
 
 # scaffold
 generate(:scaffold, "article title:string content:text")
@@ -79,5 +80,10 @@ route "root to: 'articles#index'"
 
 # database
 run "rake db:migrate"
+run "rake db:migrate RAILS_ENV=test"
 
 generate("factory_girl:model", "article title:string content:text")
+
+# and more
+# add your controller 'before_filter :authenticate_user!' for device helpers.
+
