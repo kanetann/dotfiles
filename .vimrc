@@ -40,6 +40,7 @@ NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
 NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
+NeoBundle 'git://github.com/motemen/git-vim.git'
 
 
 filetype plugin indent on
