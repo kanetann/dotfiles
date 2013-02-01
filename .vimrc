@@ -194,6 +194,7 @@ let g:unite_source_file_mru_limit = 10
 let g:unite_enable_start_insert = 1
 "let g:unite_source_grep_default_opts = '-iRHn'
 let g:unite_source_grep_max_candidates = 100
+let g:unite_winheight = 10
 nnoremap          <Space>uu :<C-u>Unite 
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -auto-preview<CR>
