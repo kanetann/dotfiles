@@ -363,6 +363,7 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 
 " unite ack
+let g:unite_source_ack_ignore_case = 1
 if OSTYPE == "Darwin\n"
   let g:unite_source_ack_command = 'ack --nocolor --no-group'
 endif
