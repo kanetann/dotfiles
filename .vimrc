@@ -10,7 +10,6 @@ endif
 NeoBundle 'git://github.com/Shougo/neobundle.vim'
 
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache-rsense.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
@@ -24,7 +23,6 @@ NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'git://github.com/shanlalit/vim-autoclose.git'
-NeoBundle 'git://github.com/taichouchou2/vim-rsense.git'
 NeoBundle 'git://github.com/taka84u9/vim-ref-ri.git'
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/thinca/vim-ref.git'
@@ -330,15 +328,6 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-
-" RSense
-let g:rsenseHome = $HOME . "/dotfiles/rsense-0.3"
-let g:rsenseUseOmniFunc = 1
-" rubyの設定
-if !exists('g:neocomplcache_omni_functions')
-  let g:neocomplcache_omni_functions = {}
-endif
-let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
