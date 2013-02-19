@@ -41,12 +41,14 @@
       "args": []
     },
     "C-d": {
-      "name": "navigate form elements forward",
-      "args": []
+      "name": "scroll down half page",
+      "args": [],
+      "and": false
     },
     "C-u": {
-      "name": "navigate form elements backward",
-      "args": []
+      "name": "scroll up half page",
+      "args": [],
+      "and": false
     },
     "Esc": {
       "name": "limited mode",
@@ -86,16 +88,6 @@
     },
     "r": {
       "name": "reload",
-      "args": [],
-      "and": false
-    },
-    "C-j": {
-      "name": "select right tab",
-      "args": [],
-      "and": false
-    },
-    "C-k": {
-      "name": "select left tab",
       "args": [],
       "and": false
     }
