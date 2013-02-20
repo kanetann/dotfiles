@@ -357,4 +357,5 @@ if OSTYPE == "Darwin\n"
   let g:unite_source_ack_command = 'ack --nocolor --no-group'
 endif
 
-
+" window move
+nnoremap <TAB> <C-w><C-w>
