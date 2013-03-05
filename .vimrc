@@ -37,7 +37,7 @@ NeoBundle 'git://github.com/vim-scripts/Align.git'
 NeoBundle 'git://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
-NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
+" NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
 NeoBundle 'git://github.com/motemen/git-vim.git'
 
 
@@ -190,7 +190,9 @@ let g:user_zen_next_key = '<C-e><C-e>'
 " unite.vim
 let g:unite_source_file_mru_limit = 10
 let g:unite_enable_start_insert = 1
-"let g:unite_source_grep_default_opts = '-iRHn'
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts = '--nocolor --nogroup --ignore-case'
+let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candidates = 100
 let g:unite_winheight = 10
 nnoremap          <Space>uu :<C-u>Unite 
@@ -202,9 +204,8 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
-nnoremap <silent> <Space>ug :<C-u>Unite grep:**/*:-iRHn:<CR>
+nnoremap <silent> <Space>ug :<C-u>Unite -no-quit grep:**/*::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
-nnoremap <silent> <Space>ua :<C-u>Unite -no-quit ack<CR>
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C> :nohlsearch<CR>
@@ -350,12 +351,6 @@ let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
-
-" unite ack
-let g:unite_source_ack_ignore_case = 1
-if OSTYPE == "Darwin\n"
-  let g:unite_source_ack_command = 'ack --nocolor --no-group'
-endif
 
 " window move
 nnoremap <TAB> <C-w><C-w>
