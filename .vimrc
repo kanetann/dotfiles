@@ -208,7 +208,7 @@ nnoremap <silent> <Space>ug :<C-u>Unite -no-quit grep:**/*::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
-nnoremap <C-C><C-C> :nohlsearch<CR>
+nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
 
 " YankRing(p after ctrl+p)
 let g:yankring_history_dir = expand('$HOME')
