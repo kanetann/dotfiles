@@ -355,3 +355,9 @@ let g:slime_paste_file = "$HOME/.slime_paste"
 
 " window move
 nnoremap <TAB> <C-w><C-w>
+
+function! s:dash(...)
+  let word = len(a:000) == 0 ? input('Dash search: ') : a:1
+  call system(printf("open dash://'%s'", word))
+endfunction
+command! -nargs=? Dash call <SID>dash(<f-args>)
