@@ -44,7 +44,7 @@ execute "git clone git://github.com/sstephenson/rbenv.git ~/.rbenv"
 execute "mkdir -p ~/.rbenv/plugins"
 rbenv_install_command =  "cd ~/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git; "
 if uname == "Darwin" then 
-  execute "#{rbenv_install_command} CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline" rbenv install 1.9.3-p327"
+  execute "#{rbenv_install_command} CONFIGURE_OPTS=\"--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline\" rbenv install 1.9.3-p327"
 else
   execute "#{rbenv_install_command} rbenv install 1.9.3-p327"
 end
