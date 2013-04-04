@@ -361,5 +361,5 @@ function! s:dash(...)
 endfunction
 command! -nargs=? Dash call <SID>dash(<f-args>)
 
-nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S\%n"<CR><CR>
+nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
 
