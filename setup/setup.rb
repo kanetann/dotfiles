@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# try, below command.
+# wget --no-check-certificate -O - https://raw.github.com/kanetann/dotfiles/master/setup/setup.rb | ruby
 
 def execute(cmd)
   p `#{cmd}`
@@ -11,6 +13,8 @@ if uname == "Darwin" then
   # Command Line Toolsの手動インストール https://developer.apple.com/downloads/index.action
   # install homebrew
   execute "ruby -e \"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)\""
+else
+  execute "sudo apt-get update"
 end
 
 # install brew tools
@@ -30,6 +34,9 @@ end
 # git config
 execute "git config --global http.sslVerify false"
 
+# git clone
+execute "git clone git://github.com/kanetann/dotfiles.git ~/dotfiles"
+ 
 # add symlinks
 dotfiles = %w{.vimrc .vim .zshrc .zsh .bashrc .bash_profile .ssh/config .gitconfig .proverc .gemrc .inputrc .pryrc}
 dotfiles.each do |k|
@@ -57,4 +64,3 @@ else
   procfilename = "make_unix.mak"
 end
 execute "cd ~/.vim/bundle/vimproc && make -f #{procfilename}"
-
