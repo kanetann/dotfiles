@@ -290,7 +290,6 @@ nnoremap <Space>sp :<C-u>set paste<CR>
 nnoremap <Space>sn :<C-u>set nopaste<CR>
 
 vnoremap v $h
-nnoremap <Space>d Da
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
@@ -361,3 +360,6 @@ function! s:dash(...)
   call system(printf("open dash://'%s'", word))
 endfunction
 command! -nargs=? Dash call <SID>dash(<f-args>)
+
+nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S\%n"<CR><CR>
+
