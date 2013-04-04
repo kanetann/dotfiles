@@ -9,24 +9,19 @@ end
 
 uname = `uname`
 
+# tools install
 if uname == "Darwin" then 
   # Command Line Toolsの手動インストール https://developer.apple.com/downloads/index.action
   # install homebrew
   execute "ruby -e \"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)\""
+  tools = %w{ruby-build nkf autoconf the_silver_searcher reattach-to-user-namespace tig tmux ctags wget}
+  tools.each do |k|
+    execute "brew install #{k}"
+  end
 else
   execute "sudo apt-get update"
-end
-
-# install brew tools
-tools = %w{rbenv ruby-build tree nkf wget v8 vim zsh git make gcc ctags curl tig tmux reattach-to-user-namespace the_silver_searcher}
-
-tools.each do |k|
-  if uname == "Darwin" then 
-    k = "git-core" if k == "git"
-    execute "brew install #{k}"
-  else
-    next if k == "reattach-to-user-namespace"
-    next if k == "v8"
+  tools = %w{tree nkf wget vim zsh git-core ctags curl tig tmux the_silver_searcher}
+  tools.each do |k|
     execute "sudo aptitude -y install #{k}"
   end
 end
@@ -37,12 +32,24 @@ execute "git config --global http.sslVerify false"
 # git clone
 execute "git clone git://github.com/kanetann/dotfiles.git ~/dotfiles"
  
-# add symlinks
+# delete symlinks
 dotfiles = %w{.vimrc .vim .zshrc .zsh .bashrc .bash_profile .ssh/config .gitconfig .proverc .gemrc .inputrc .pryrc}
 dotfiles.each do |k|
   execute "rm -rf ~/#{k}"
-  execute "ln -s ~/dotfiles/#{k} ~/#{k}"
 end
+
+# setup rbenv
+execute "rm -rf ~/.rbenv"
+execute "git clone git://github.com/sstephenson/rbenv.git ~/.rbenv"
+execute "mkdir -p ~/.rbenv/plugins"
+rbenv_install_command =  "cd ~/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git; "
+if uname == "Darwin" then 
+  execute "#{rbenv_install_command} CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline" rbenv install 1.9.3-p327"
+else
+  execute "#{rbenv_install_command} rbenv install 1.9.3-p327"
+end
+execute "rbenv global 1.9.3-p327"
+execute "rbenv rehash"
 
 # gems
 gems = %w{rbenv-rehash rails vagrant virtualbox vagrant-snap awesome_print pry pry-doc refe2 heroku}
@@ -64,3 +71,8 @@ else
   procfilename = "make_unix.mak"
 end
 execute "cd ~/.vim/bundle/vimproc && make -f #{procfilename}"
+
+# add symlinks
+dotfiles.each do |k|
+  execute "ln -s ~/dotfiles/#{k} ~/#{k}"
+end
