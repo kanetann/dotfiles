@@ -7,13 +7,13 @@ def execute(cmd)
   p `#{cmd}`
 end
 
-uname = `uname`
+uname = `uname`.chomp
 
 # tools install
 if uname == "Darwin" then 
   # Command Line Toolsの手動インストール https://developer.apple.com/downloads/index.action
   # install homebrew
-  execute "ruby -e \"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)\""
+  # execute "ruby -e \"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)\""
   tools = %w{ruby-build nkf autoconf the_silver_searcher reattach-to-user-namespace tig tmux ctags wget}
   tools.each do |k|
     execute "brew install #{k}"
@@ -33,32 +33,29 @@ execute "git config --global http.sslVerify false"
 execute "git clone git://github.com/kanetann/dotfiles.git ~/dotfiles"
  
 # delete symlinks
-dotfiles = %w{.vimrc .vim .zshrc .zsh .bashrc .bash_profile .ssh/config .gitconfig .proverc .gemrc .inputrc .pryrc}
+dotfiles = %w{.bash_profile .bashrc .gemrc .gitconfig .gitignore .inputrc .proverc .pryrc .screenrc .tmux.conf .vimperatorrc .vimrc .vim .zsh .zshenv .zshrc .ssh/config .tmux.conf}
 dotfiles.each do |k|
   execute "rm -rf ~/#{k}"
 end
 
-# setup rbenv
-execute "rm -rf ~/.rbenv"
-execute "git clone git://github.com/sstephenson/rbenv.git ~/.rbenv"
-execute "mkdir -p ~/.rbenv/plugins"
-rbenv_install_command =  "cd ~/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git; "
-if uname == "Darwin" then 
-  execute "#{rbenv_install_command} CONFIGURE_OPTS=\"--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline\" rbenv install 1.9.3-p327"
-else
-  execute "#{rbenv_install_command} rbenv install 1.9.3-p327"
-end
-execute "rbenv global 1.9.3-p327"
-execute "rbenv rehash"
-
+# # setup rbenv
+# execute "rm -rf ~/.rbenv"
+# execute "git clone git://github.com/sstephenson/rbenv.git ~/.rbenv"
+# execute "mkdir -p ~/.rbenv/plugins"
+# rbenv_install_command =  "cd ~/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git; "
+# if uname == "Darwin" then 
+#   execute "#{rbenv_install_command} CONFIGURE_OPTS=\"--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline\" rbenv install 1.9.3-p327"
+# else
+#   execute "#{rbenv_install_command} rbenv install 1.9.3-p327"
+# end
+# execute "rbenv global 1.9.3-p327"
+# execute "rbenv rehash"
+ 
 # gems
-gems = %w{rbenv-rehash rails vagrant virtualbox vagrant-snap awesome_print pry pry-doc refe2 heroku}
-dotfiles.each do |k|
+gems = %w{rbenv-rehash rails vagrant virtualbox vagrant-snap awesome_print pry pry-doc refe2 heroku tmuxinator}
+gems.each do |k|
   execute "gem install #{k}"
 end
-
-# install oh-my-zsh
-execute "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
 
 # setup NeoBundle
 execute "git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim"
@@ -76,3 +73,7 @@ execute "cd ~/.vim/bundle/vimproc && make -f #{procfilename}"
 dotfiles.each do |k|
   execute "ln -s ~/dotfiles/#{k} ~/#{k}"
 end
+
+# install oh-my-zsh
+execute "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
+
