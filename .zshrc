@@ -75,3 +75,5 @@ export RSENSE_HOME="$HOME/dotfiles/rsense-0.3"
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export EDITOR=/usr/bin/vim
+
+export DISABLE_UPDATE_PROMPT=true
