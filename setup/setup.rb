@@ -52,11 +52,10 @@ else
 end
 execute "cd ~/.vim/bundle/vimproc && make -f #{procfilename}"
 
+# install oh-my-zsh
+execute "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
+
 # add symlinks
 dotfiles.each do |k|
   execute "ln -s ~/dotfiles/#{k} ~/#{k}"
 end
-
-# install oh-my-zsh
-execute "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh"
-
