@@ -20,7 +20,7 @@ if uname == "Darwin" then
   end
 else
   execute "sudo apt-get update"
-  tools = %w{tree nkf wget vim zsh git-core ctags curl tig tmux the_silver_searcher}
+  tools = %w{tree nkf wget vim zsh git-core ctags curl tig tmux the_silver_searcher make gcc}
   tools.each do |k|
     execute "sudo aptitude -y install #{k}"
   end
@@ -38,26 +38,9 @@ dotfiles.each do |k|
   execute "rm -rf ~/#{k}"
 end
 
-# # setup rbenv
-# execute "rm -rf ~/.rbenv"
-# execute "git clone git://github.com/sstephenson/rbenv.git ~/.rbenv"
-# execute "mkdir -p ~/.rbenv/plugins"
-# rbenv_install_command =  "cd ~/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git; "
-# if uname == "Darwin" then 
-#   execute "#{rbenv_install_command} CONFIGURE_OPTS=\"--with-openssl-dir=/usr/local/opt/openssl --with-readline-dir=/usr/local/opt/readline\" rbenv install 1.9.3-p327"
-# else
-#   execute "#{rbenv_install_command} rbenv install 1.9.3-p327"
-# end
-# execute "rbenv global 1.9.3-p327"
-# execute "rbenv rehash"
- 
-# gems
-gems = %w{rbenv-rehash rails vagrant virtualbox vagrant-snap awesome_print pry pry-doc refe2 heroku tmuxinator}
-gems.each do |k|
-  execute "gem install #{k}"
-end
-
 # setup NeoBundle
+execute "ln -s ~/dotfiles/.vimrc ~/.vimrc"
+execute "ln -s ~/dotfiles/.vim ~/.vim"
 execute "git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim"
 execute "vim -N -u NONE -i NONE -V1 -e -s --cmd \"source ~/.vimrc\" --cmd NeoBundleInstall! --cmd qall!"
 
