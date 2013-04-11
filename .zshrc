@@ -77,3 +77,6 @@ export RSENSE_HOME="$HOME/dotfiles/rsense-0.3"
 export EDITOR=/usr/bin/vim
 
 export DISABLE_UPDATE_PROMPT=true
+
+
+alias ag="ag --ignore-case"
