@@ -1,6 +1,6 @@
 {
   "name": "Chrome Keyconfig",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "normal_actions": {
     "j": {
       "name": "scroll down",
@@ -89,6 +89,14 @@
     "r": {
       "name": "reload",
       "args": [],
+      "and": false
+    },
+    "C-r": {
+      "name": "go to #1",
+      "args": [
+        "javascript:(function(){location.href='http://reader.livedoor.com/subscribe/'+location.href;})();",
+        "rss"
+      ],
       "and": false
     }
   },
