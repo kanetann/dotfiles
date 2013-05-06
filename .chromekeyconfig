@@ -103,72 +103,10 @@
       "name": "scroll down half page",
       "args": [],
       "and": false
-    }
-  },
-  "limited_actions": {
-    "Esc": {
-      "name": "normal mode",
-      "args": []
-    }
-  },
-  "useTabTitle": false,
-  "smooth_scroll": true,
-  "ldrize": true,
-  "chrome_vim": false,
-  "antiAutoFocus": true,
-  "vim_normal_actions": {
-    "j": {
-      "name": "Down",
-      "args": []
     },
-    "k": {
-      "name": "Up",
-      "args": []
-    },
-    "h": {
-      "name": "Left",
-      "args": []
-    },
-    "l": {
-      "name": "Right",
-      "args": []
-    },
-    "^": {
-      "name": "Line head",
-      "args": []
-    },
-    "$": {
-      "name": "Line foot",
-      "args": []
-    },
-    "Esc": {
-      "name": "normal mode",
-      "args": []
-    },
-    "i": {
-      "name": "insert mode",
-      "args": []
-    }
-  },
-  "vim_insert_actions": {
-    "Esc": {
-      "name": "normal mode",
-      "args": []
-    }
-  },
-  "vim_default_mode": "insert",
-  "vim_color_config": {
-    "normal": {
-      "background": "gray",
-      "text": "black"
-    },
-    "insert": {
-      "background": "white",
-      "text": "black"
-    }
-  }
-}
-      ],
+    "S-Space": {
+      "name": "scroll up half page",
+      "args": [],
       "and": false
     }
   },
