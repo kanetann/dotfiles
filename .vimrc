@@ -102,7 +102,7 @@ set formatoptions-=o
 
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
-nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+" nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 autocmd BufNewFile,BufRead *.pm     set filetype=perl
 autocmd BufNewFile,BufRead *.pl     set filetype=perl
@@ -363,4 +363,10 @@ endfunction
 command! -nargs=? Dash call <SID>dash(<f-args>)
 
 nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
+
+" vim-gitgutter
+let g:gitgutter_enabled = 1
+let g:gitgutter_highlight_lines = 1
+nnoremap <Space>gg :GitGutterLineHighlightsToggle
+
 
