@@ -39,6 +39,7 @@ NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
 " NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
 NeoBundle 'git://github.com/motemen/git-vim.git'
+NeoBundle 'https://github.com/airblade/vim-gitgutter.git'
 
 
 filetype plugin indent on
@@ -101,7 +102,7 @@ set formatoptions-=o
 
 " keybind
 nmap <Space>b :ls<CR>:buffer<Space>
-nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+" nnoremap <Space>gg <Esc>:<C-u>vimgrep // **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 autocmd BufNewFile,BufRead *.pm     set filetype=perl
 autocmd BufNewFile,BufRead *.pl     set filetype=perl
@@ -204,8 +205,8 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
-nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
-nnoremap <silent> <Space>uG :<C-u>Unite -no-quit grep:.::<CR>
+nnoremap <silent> <Space>ug :<C-u>Unite -no-quit grep:.::<CR>
+nnoremap <silent> <Space>uG :<C-u>Unite grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
@@ -362,4 +363,10 @@ endfunction
 command! -nargs=? Dash call <SID>dash(<f-args>)
 
 nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
+
+" vim-gitgutter
+let g:gitgutter_enabled = 1
+let g:gitgutter_highlight_lines = 1
+nnoremap <Space>gg :GitGutterLineHighlightsToggle
+
 
