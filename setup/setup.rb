@@ -60,6 +60,5 @@ dotfiles.each do |k|
   execute "ln -s ~/dotfiles/#{k} ~/#{k}"
 end
 
-rm -rf ~/.zshrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-
+execute "rm -rf ~/.zshrc"
+execute "ln -s ~/dotfiles/.zshrc ~/.zshrc"
