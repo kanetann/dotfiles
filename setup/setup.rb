@@ -59,3 +59,7 @@ execute "curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/inst
 dotfiles.each do |k|
   execute "ln -s ~/dotfiles/#{k} ~/#{k}"
 end
+
+rm -rf ~/.zshrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+
