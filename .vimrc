@@ -120,7 +120,6 @@ map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
 
 " quickrun 
-let g:quickrun_config={'*': {'split': 'below'}}
 noremap <silent> <Space>q :<C-u>QuickRun<CR>
 
 augroup QuickRunUnitTest
@@ -138,6 +137,7 @@ let g:quickrun_config['markdown'] = {
       \ 'outputter': 'browser',
       \ 'cmdopt': '-s'
       \ }
+let g:quickrun_config={'*': {'split': 'below', "runner" : "vimproc", "runner/vimproc/updatetime" : 40}}
 
 set splitbelow
 set splitright
