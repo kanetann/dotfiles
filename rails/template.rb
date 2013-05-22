@@ -9,14 +9,27 @@ config.generators do |g|
 end
 '
 
+# app server
+gem 'unicorn'
 
+# authentication, authorization
 gem 'devise'
 gem 'cancan'
+gem 'audited'
+
+# view
 gem 'twitter-bootstrap-rails'
-gem 'unicorn'
 gem 'formtastic'
 gem 'kaminari'
-gem 'resque'
+gem 'ransack'
+gem 'thinreports-rails'
+gem 'pdf-inspector'
+
+# database
+gem 'acts_as_paranoid'
+
+# configration
+gem 'rails_config'
 
 gem_group :development, :test do
   # testing framework
@@ -32,6 +45,9 @@ gem_group :development, :test do
 
   # coverage
   gem 'simplecov'
+
+  # refactoring
+  gem 'rubocop'
 
   # pry
   gem 'pry'
@@ -53,12 +69,13 @@ gem_group :development, :test do
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
-  gem 'guard-spork'
+  gem 'guard-spring'
   gem 'guard-rails'
   gem 'guard-livereload'
   gem 'rb-fsevent'
   gem 'rails-clean-logs'
   gem 'awesome_print'
+  gem 'quiet_assets'
 end
 
 run "bundle install"
