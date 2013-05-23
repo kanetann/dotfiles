@@ -9,7 +9,7 @@ endif
 
 NeoBundle 'git://github.com/Shougo/neobundle.vim'
 
-NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
+" NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neosnippet.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
@@ -369,4 +369,7 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_highlight_lines = 1
 nnoremap <Space>gg :GitGutterLineHighlightsToggle
 
+
+" normal mode enter
+nnoremap <CR> i<CR><Esc>
 
