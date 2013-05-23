@@ -17,19 +17,29 @@ gem 'devise'
 gem 'cancan'
 gem 'audited'
 
+# controller
+gem 'action_args'
+
 # view
+gem 'slim-rails'
+gem 'html2slim'
 gem 'twitter-bootstrap-rails'
 gem 'formtastic'
 gem 'kaminari'
 gem 'ransack'
 gem 'thinreports-rails'
 gem 'pdf-inspector'
+gem 'chosen-rails'
 
 # database
-gem 'acts_as_paranoid'
+gem "acts_as_paranoid", "~> 0.4.1"
 
 # configration
 gem 'rails_config'
+
+# seed data
+gem "seed-fu"
+
 
 gem_group :development, :test do
   # testing framework
@@ -41,13 +51,14 @@ gem_group :development, :test do
   gem 'database_cleaner'
 
   # client notify
-  gem 'growl'
+  gem 'terminal-notifier-guard'
 
   # coverage
   gem 'simplecov'
 
   # refactoring
   gem 'rubocop'
+  gem 'rails_best_practices'
 
   # pry
   gem 'pry'
@@ -64,6 +75,9 @@ gem_group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
 
+  # document generator
+  gem 'sdoc'
+
   # useful gems 
   gem 'spork'
   gem 'guard'
@@ -76,6 +90,12 @@ gem_group :development, :test do
   gem 'rails-clean-logs'
   gem 'awesome_print'
   gem 'quiet_assets'
+  gem 'annotate', :git => 'https://github.com/ctran/annotate_models'
+  gem 'letter_opener'
+end
+
+gem_group :test do
+  gem 'test_after_commit'
 end
 
 run "bundle install"
