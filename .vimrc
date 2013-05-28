@@ -92,6 +92,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 set showcmd
 set showmode
 
+set ambiwidth=double
 
 " buffer
 set hidden
