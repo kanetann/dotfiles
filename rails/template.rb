@@ -31,6 +31,13 @@ gem 'thinreports-rails'
 gem 'pdf-inspector'
 gem 'chosen-rails'
 
+# chart
+gem 'chartkick'
+gem 'groupdate'
+
+# i18n
+gem 'rails-i18n'
+
 # database
 gem "acts_as_paranoid", "~> 0.4.1"
 
