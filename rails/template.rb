@@ -35,6 +35,9 @@ gem 'chosen-rails'
 gem 'chartkick'
 gem 'groupdate'
 
+# bread crumb
+gem 'crummy'
+
 # i18n
 gem 'rails-i18n'
 
@@ -103,6 +106,8 @@ end
 
 gem_group :test do
   gem 'test_after_commit'
+  gem 'timecop'
+  gem 'parallel_tests'
 end
 
 run "bundle install"
