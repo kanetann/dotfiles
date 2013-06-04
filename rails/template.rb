@@ -10,15 +10,15 @@ end
 '
 
 # app server
-gem 'unicorn'
+# gem 'unicorn'
 
 # authentication, authorization
 gem 'devise'
-gem 'cancan'
-gem "audited-activerecord", "~> 3.0"
+# gem 'cancan'
+# gem "audited-activerecord", "~> 3.0"
 
 # controller
-gem 'action_args'
+# gem 'action_args'
 
 # view
 # gem 'slim-rails'
@@ -28,6 +28,7 @@ gem_group :assets do
   gem 'therubyracer'
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
+
   gem 'formtastic'
   gem 'kaminari'
   gem 'ransack'
@@ -37,14 +38,14 @@ gem_group :assets do
 end
 
 # chart
-gem 'chartkick'
-gem 'groupdate'
+# gem 'chartkick'
+# gem 'groupdate'
 
 # bread crumb
-gem 'crummy'
+# gem 'crummy'
 
 # i18n
-gem 'rails-i18n'
+# gem 'rails-i18n'
 
 # database
 gem "acts_as_paranoid", "~> 0.4.1"
@@ -88,7 +89,7 @@ gem_group :development do
   gem 'guard'
   # gem 'guard-bundler'
   gem 'guard-rspec'
-  # gem 'guard-spring'
+  gem 'guard-spring'
   gem 'guard-rails'
   gem 'guard-livereload'
   gem 'rb-fsevent'
@@ -96,17 +97,17 @@ gem_group :development do
   gem 'awesome_print'
   gem 'quiet_assets'
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models'
-  gem 'letter_opener'
+  # gem 'letter_opener'
 
-  gem 'magic-commenter'
+  # gem 'magic-commenter'
 end
 
 gem_group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
+  # gem 'rspec-rails'
+  # gem 'capybara'
   gem 'test_after_commit'
   gem 'timecop'
-  gem 'parallel_tests'
+  # gem 'parallel_tests'
   gem 'database_cleaner'
   gem 'simplecov'
 end
@@ -123,8 +124,8 @@ generate "devise User"
 # cancan
 
 # audited
-generate "audited:install"
-gsub_file 'app/models/user.rb', /class User < ActiveRecord::Base/, "class User < ActiveRecord::Base\n  audited"
+# generate "audited:install"
+# gsub_file 'app/models/user.rb', /class User < ActiveRecord::Base/, "class User < ActiveRecord::Base\n  audited"
 
 # action_args
 # slim-rails
@@ -185,7 +186,7 @@ run "bundle exec capify ."
 run "guard init"
 
 # guard-bundler
-run "guard init bundler"
+# run "guard init bundler"
 
 # guard-rspec
 run "guard init rspec"
@@ -236,7 +237,17 @@ rake "db:migrate RAILS_ENV=test"
 
 # git
 git :init
+run "wget -O .gitignore https://raw.github.com/github/gitignore/master/Rails.gitignore"
 git :add => '.'
 git :commit => "-aqm 'first commit.'"
 
-
+# devise/application.html.erb
+# <% if user_signed_in? %>
+#    <%= link_to(destroy_user_session_path) do %>
+#      Sign Out
+#    <% end %>
+#  <% else %>
+#    <%= link_to(new_user_session_path) do %>
+#      Sign In
+#    <% end %>
+#  <% end %>
