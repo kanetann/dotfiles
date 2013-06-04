@@ -15,21 +15,26 @@ gem 'unicorn'
 # authentication, authorization
 gem 'devise'
 gem 'cancan'
-gem 'audited'
+gem "audited-activerecord", "~> 3.0"
 
 # controller
 gem 'action_args'
 
 # view
-gem 'slim-rails'
-gem 'html2slim'
-gem 'twitter-bootstrap-rails'
-gem 'formtastic'
-gem 'kaminari'
-gem 'ransack'
-gem 'thinreports-rails'
-gem 'pdf-inspector'
-gem 'chosen-rails'
+# gem 'slim-rails'
+# gem 'html2slim'
+
+gem_group :assets do 
+  gem 'therubyracer'
+  gem 'less-rails'
+  gem 'twitter-bootstrap-rails'
+  gem 'formtastic'
+  gem 'kaminari'
+  gem 'ransack'
+  gem 'thinreports-rails'
+  gem 'pdf-inspector'
+  gem 'chosen-rails'
+end
 
 # chart
 gem 'chartkick'
@@ -50,30 +55,20 @@ gem 'rails_config'
 # seed data
 gem "seed-fu"
 
-
 gem_group :development, :test do
-  # testing framework
-  gem 'rspec-rails'
-  gem 'capybara'
-
-  # fixture
   gem 'factory_girl_rails'
-  gem 'database_cleaner'
-
-  # client notify
-  gem 'terminal-notifier-guard'
-
-  # coverage
-  gem 'simplecov'
-
-  # refactoring
   gem 'rubocop'
   gem 'rails_best_practices'
+end
 
-  # pry
+gem_group :development do
+
+  gem 'terminal-notifier-guard'
+
   gem 'pry'
   gem 'pry-doc'
-  gem 'pry-debugger' # binding.pry
+  # binding.pry
+  gem 'pry-debugger'
   gem 'pry-rails'
 
   # deploy
@@ -91,9 +86,9 @@ gem_group :development, :test do
   # useful gems 
   gem 'spork'
   gem 'guard'
-  gem 'guard-bundler'
+  # gem 'guard-bundler'
   gem 'guard-rspec'
-  gem 'guard-spring'
+  # gem 'guard-spring'
   gem 'guard-rails'
   gem 'guard-livereload'
   gem 'rb-fsevent'
@@ -102,37 +97,146 @@ gem_group :development, :test do
   gem 'quiet_assets'
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models'
   gem 'letter_opener'
+
+  gem 'magic-commenter'
 end
 
 gem_group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
   gem 'test_after_commit'
   gem 'timecop'
   gem 'parallel_tests'
+  gem 'database_cleaner'
+  gem 'simplecov'
 end
 
-run "bundle install"
+run "bundle install --path vendor/bundle"
 
-run "rails g rspec:install"
+rake "db:drop"
+rake "db:create"
+
+# devise 
+generate "devise:install"
+generate "devise User"
+
+# cancan
+
+# audited
+generate "audited:install"
+gsub_file 'app/models/user.rb', /class User < ActiveRecord::Base/, "class User < ActiveRecord::Base\n  audited"
+
+# action_args
+# slim-rails
+# html2slim
+
+# therubyracer
+# less-rails
+# twitter-bootstrap-rails
+generate "bootstrap:install less"
+generate "bootstrap:layout application fluid"
+
+# formtastic
+generate "formtastic:install"
+
+# kaminari
+# ransack
+# thinreports-rails
+# pdf-inspector
+# chosen-rails
+# chartkick
+# groupdate
+# crummy
+# rails-i18n
+# acts_as_paranoid
+run "rails g migration AddDeletedAtToUsers deleted_at:datetime"
+run 'gsed -i -e "2i   acts_as_paranoid" app/models/user.rb'
+
+# rails_config
+generate 'rails_config:install'
+
+# seed-fu
+# factory_girl_rails
+# rubocop
+# $ rubocop app spec lib/something.rb
+
+# rails_best_practices
+# terminal-notifier-guard
+# pry
+# pry-doc
+# pry-debugger
+# pry-rails
+
+
+# TODO: rails3 application template
+# capistrano
+# capistrano-ext
+# capistrano_colors
+run "bundle exec capify ."
+
+# better_errors
+# binding_of_caller
+
+# sdoc
+# $ sdoc projectdir
+
+# spork
+# guard
+run "guard init"
+
+# guard-bundler
+run "guard init bundler"
+
+# guard-rspec
 run "guard init rspec"
-run "bundle exec spork --bootstrap"
 
+# guard-spring
+run "guard init spring"
+
+# guard-rails
+run "guard init rails"
+
+# guard-livereload
+run "guard init livereload"
+
+# rb-fsevent
+# rails-clean-logs
+# awesome_print
+# quiet_assets
+
+# annotate
+# $ cd /path/to/app
+# $ annotate
+generate "annotate:install"
+
+# letter_opener
+# magic-commenter
+# rspec-rails
+generate "rspec:install"
+
+run "bundle exec spork --bootstrap"
 run "cp ~/dotfiles/rails/.rspec .rspec"
 run "cp ~/dotfiles/rails/spec/spec_helper.rb spec/spec_helper.rb"
 
-# device
-run "rails g devise:install"
-run "rails g devise user"
+# capybara
+# test_after_commit
+# timecop
+# parallel_tests
+# database_cleaner
+# simplecov
 
 # scaffold
-generate(:scaffold, "article title:string content:text")
-route "root to: 'articles#index'"
+generate(:controller, "dashboard index")
+route "root to: 'dashboard#index'"
+gsub_file 'app/controllers/dashboard_controller.rb', /def index/, "before_filter :authenticate_user!\n  def index"
 
 # database
-run "rake db:migrate"
-run "rake db:migrate RAILS_ENV=test"
+rake "db:migrate"
+rake "db:migrate RAILS_ENV=test"
 
-generate("factory_girl:model", "article title:string content:text")
+# git
+git :init
+git :add => '.'
+git :commit => "-aqm 'first commit.'"
 
-# and more
-# add your controller 'before_filter :authenticate_user!' for device helpers.
 
