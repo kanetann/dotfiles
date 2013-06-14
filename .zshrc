@@ -83,3 +83,5 @@ alias ag="ag --ignore-case"
 
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
+
+alias ts="tig status"
