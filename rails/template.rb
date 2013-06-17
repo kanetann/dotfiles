@@ -29,12 +29,12 @@ gem_group :assets do
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
 
-  gem 'formtastic'
+  # gem 'formtastic'
   gem 'kaminari'
   gem 'ransack'
-  gem 'thinreports-rails'
-  gem 'pdf-inspector'
-  gem 'chosen-rails'
+  # gem 'thinreports-rails'
+  # gem 'pdf-inspector'
+  # gem 'chosen-rails'
 end
 
 # chart
@@ -51,20 +51,20 @@ end
 gem "acts_as_paranoid", "~> 0.4.1"
 
 # configration
-gem 'rails_config'
+# gem 'rails_config'
 
 # seed data
-gem "seed-fu"
+# gem "seed-fu"
 
-gem_group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rubocop'
-  gem 'rails_best_practices'
-end
+# gem_group :development, :test do
+#   gem 'factory_girl_rails'
+#   gem 'rubocop'
+#   gem 'rails_best_practices'
+# end
 
 gem_group :development do
 
-  gem 'terminal-notifier-guard'
+  # gem 'terminal-notifier-guard'
 
   gem 'pry'
   gem 'pry-doc'
@@ -72,46 +72,46 @@ gem_group :development do
   gem 'pry-debugger'
   gem 'pry-rails'
 
-  # deploy
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'capistrano_colors'
+  # # deploy
+  # gem 'capistrano'
+  # gem 'capistrano-ext'
+  # gem 'capistrano_colors'
 
   # browser debug
   gem 'better_errors'
   gem 'binding_of_caller'
 
-  # document generator
-  gem 'sdoc'
+  # # document generator
+  # gem 'sdoc'
 
   # useful gems 
   gem 'spork'
   gem 'guard'
   # gem 'guard-bundler'
-  gem 'guard-rspec'
-  gem 'guard-spring'
+  # gem 'guard-rspec'
+  # gem 'guard-spring'
   gem 'guard-rails'
   gem 'guard-livereload'
   gem 'rb-fsevent'
   gem 'rails-clean-logs'
   gem 'awesome_print'
   gem 'quiet_assets'
-  gem 'annotate', :git => 'https://github.com/ctran/annotate_models'
-  gem 'rails-erd'
+  # gem 'annotate', :git => 'https://github.com/ctran/annotate_models'
+  # gem 'rails-erd'
   # gem 'letter_opener'
 
   # gem 'magic-commenter'
 end
 
-gem_group :test do
-  # gem 'rspec-rails'
-  # gem 'capybara'
-  gem 'test_after_commit'
-  gem 'timecop'
-  # gem 'parallel_tests'
-  gem 'database_cleaner'
-  gem 'simplecov'
-end
+# gem_group :test do
+#   # gem 'rspec-rails'
+#   # gem 'capybara'
+#   gem 'test_after_commit'
+#   gem 'timecop'
+#   # gem 'parallel_tests'
+#   gem 'database_cleaner'
+#   gem 'simplecov'
+# end
 
 run "bundle install --path vendor/bundle"
 
@@ -138,8 +138,8 @@ generate "devise User"
 generate "bootstrap:install less"
 generate "bootstrap:layout application fluid"
 
-# formtastic
-generate "formtastic:install"
+# # formtastic
+# generate "formtastic:install"
 
 # kaminari
 # ransack
@@ -151,11 +151,11 @@ generate "formtastic:install"
 # crummy
 # rails-i18n
 # acts_as_paranoid
-run "rails g migration AddDeletedAtToUsers deleted_at:datetime"
-run 'gsed -i -e "2i   acts_as_paranoid" app/models/user.rb'
+# run "rails g migration AddDeletedAtToUsers deleted_at:datetime"
+# run 'gsed -i -e "2i   acts_as_paranoid" app/models/user.rb'
 
 # rails_config
-generate 'rails_config:install'
+# generate 'rails_config:install'
 
 # seed-fu
 # factory_girl_rails
@@ -174,7 +174,7 @@ generate 'rails_config:install'
 # capistrano
 # capistrano-ext
 # capistrano_colors
-run "bundle exec capify ."
+# run "bundle exec capify ."
 
 # better_errors
 # binding_of_caller
@@ -184,42 +184,43 @@ run "bundle exec capify ."
 
 # spork
 # guard
-run "guard init"
+# run "guard init"
+run "bundle exec guard init"
 
 # guard-bundler
 # run "guard init bundler"
 
-# guard-rspec
-run "guard init rspec"
+# # guard-rspec
+# run "guard init rspec"
+# 
+# # guard-spring
+# run "guard init spring"
+# 
+# # guard-rails
+# run "guard init rails"
+# 
+# # guard-livereload
+# run "guard init livereload"
+# 
+# # rb-fsevent
+# # rails-clean-logs
+# # awesome_print
+# # quiet_assets
 
-# guard-spring
-run "guard init spring"
+# # annotate
+# # $ cd /path/to/app
+# # $ annotate
+# generate "annotate:install"
+# 
+# # letter_opener
+# # magic-commenter
+# # rspec-rails
+# generate "rspec:install"
 
-# guard-rails
-run "guard init rails"
-
-# guard-livereload
-run "guard init livereload"
-
-# rb-fsevent
-# rails-clean-logs
-# awesome_print
-# quiet_assets
-
-# annotate
-# $ cd /path/to/app
-# $ annotate
-generate "annotate:install"
-
-# letter_opener
-# magic-commenter
-# rspec-rails
-generate "rspec:install"
-
-run "bundle exec spork --bootstrap"
-run "cp ~/dotfiles/rails/.rspec .rspec"
-run "cp ~/dotfiles/rails/spec/spec_helper.rb spec/spec_helper.rb"
-
+# run "bundle exec spork --bootstrap"
+# run "cp ~/dotfiles/rails/.rspec .rspec"
+# run "cp ~/dotfiles/rails/spec/spec_helper.rb spec/spec_helper.rb"
+# 
 # capybara
 # test_after_commit
 # timecop
@@ -234,7 +235,7 @@ gsub_file 'app/controllers/dashboard_controller.rb', /def index/, "before_filter
 
 # database
 rake "db:migrate"
-rake "db:migrate RAILS_ENV=test"
+# rake "db:migrate RAILS_ENV=test"
 
 # git
 git :init
