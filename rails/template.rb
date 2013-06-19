@@ -3,6 +3,7 @@
 # Ruby on Rails Guides: Rails Application Templates <http://edgeguides.rubyonrails.org/rails_application_templates.html>
 
 run "rm public/index.html"
+run "cp public/favicon.ico app/assets/images/."
 environment '
 config.generators do |g|
     g.fixture_replacement :factory_girl
