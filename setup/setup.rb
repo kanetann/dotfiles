@@ -33,7 +33,7 @@ execute "git config --global http.sslVerify false"
 execute "git clone git://github.com/kanetann/dotfiles.git ~/dotfiles"
  
 # delete symlinks
-dotfiles = %w{.bash_profile .bashrc .gemrc .gitconfig .gitignore .inputrc .proverc .pryrc .screenrc .tmux.conf .vimperatorrc .vimrc .vim .zsh .zshenv .zshrc .ssh/config .tmux.conf}
+dotfiles = %w{.bash_profile .bashrc .gemrc .gitconfig .gitignore .inputrc .proverc .pryrc .screenrc .tmux.conf .vimperatorrc .vimrc .vim .zsh .zshenv .zshrc .ssh/config .tmux.conf .agignore}
 dotfiles.each do |k|
   execute "rm -rf ~/#{k}"
 end
