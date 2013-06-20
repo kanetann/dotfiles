@@ -86,3 +86,4 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 
 alias ts="tig status"
 alias tig="tig status"
+alias agt="ag todo"
