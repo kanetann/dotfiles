@@ -17,7 +17,7 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/Sixeight/unite-grep.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
-NeoBundle 'git://github.com/jpalardy/vim-slime.git'
+" NeoBundle 'git://github.com/jpalardy/vim-slime.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
@@ -350,10 +350,6 @@ nnoremap <Space>rp :w<CR>:Rpre<CR><CR>
 
 " unite-ruby-require.vim
 let g:unite_source_ruby_require_ruby_command = '$HOME/.rbenv/shims/ruby'
-
-" vim-slime
-let g:slime_target = "tmux"
-let g:slime_paste_file = "$HOME/.slime_paste"
 
 " window move
 nnoremap <TAB> <C-w><C-w>
