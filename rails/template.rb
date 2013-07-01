@@ -86,7 +86,7 @@ gem_group :development do
   # gem 'sdoc'
 
   # useful gems 
-  gem 'spork'
+  # gem 'spork'
   gem 'guard'
   # gem 'guard-bundler'
   # gem 'guard-rspec'
@@ -116,8 +116,10 @@ end
 
 run "bundle install --path vendor/bundle"
 
-rake "db:drop"
-rake "db:create"
+# rake "db:drop"
+# rake "db:create"
+run "bundle exec rake db:drop"
+run "bundle exec rake db:create"
 
 # devise 
 generate "devise:install"
@@ -229,13 +231,19 @@ run "bundle exec guard init"
 # database_cleaner
 # simplecov
 
+# http://memo.yomukaku.net/entries/XUogyWh
+gsub_file 'config/application.rb', /  end/, "config.generators.stylesheets = false\n  end"
+gsub_file 'config/application.rb', /  end/, "config.generators.javascripts = false\n  end"
+gsub_file 'config/application.rb', /  end/, "config.generators.helper = false     \n  end"
+
 # scaffold
 generate(:controller, "dashboard index")
 route "root to: 'dashboard#index'"
 gsub_file 'app/controllers/dashboard_controller.rb', /def index/, "before_filter :authenticate_user!\n  def index"
 
 # database
-rake "db:migrate"
+# rake "db:migrate"
+run "bundle exec rake db:migrate"
 # rake "db:migrate RAILS_ENV=test"
 
 # git
