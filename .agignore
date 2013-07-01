@@ -2,4 +2,4 @@
 ./vendor/bundle/
 ./log/
 ./tmp/
-./tags/
+./tags
