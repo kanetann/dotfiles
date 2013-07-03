@@ -41,6 +41,7 @@ NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
 NeoBundle 'git://github.com/motemen/git-vim.git'
 NeoBundle 'https://github.com/airblade/vim-gitgutter.git'
 NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
+NeoBundle 'git://github.com/bling/vim-airline.git'
 
 
 filetype plugin indent on
