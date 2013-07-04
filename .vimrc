@@ -39,7 +39,7 @@ NeoBundle 'git://github.com/vim-scripts/tComment'
 NeoBundle 'git://github.com/vim-scripts/wombat256.vim'
 " NeoBundle 'git://github.com/t9md/vim-unite-ack.git'
 NeoBundle 'git://github.com/motemen/git-vim.git'
-NeoBundle 'https://github.com/airblade/vim-gitgutter.git'
+" NeoBundle 'https://github.com/airblade/vim-gitgutter.git'
 NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
 " NeoBundle 'git://github.com/bling/vim-airline.git'
 
@@ -363,10 +363,10 @@ command! -nargs=? Dash call <SID>dash(<f-args>)
 
 nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
 
-" vim-gitgutter
-let g:gitgutter_enabled = 1
-let g:gitgutter_highlight_lines = 1
-nnoremap <Space>gg :GitGutterLineHighlightsToggle
+" " vim-gitgutter
+" let g:gitgutter_enabled = 1
+" let g:gitgutter_highlight_lines = 1
+" nnoremap <Space>gg :GitGutterLineHighlightsToggle
 
 
 " normal mode enter
