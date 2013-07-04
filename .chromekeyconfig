@@ -50,10 +50,6 @@
       "args": [],
       "and": false
     },
-    "Esc": {
-      "name": "limited mode",
-      "args": []
-    },
     "c o n f i g": {
       "name": "Keyconfig",
       "args": []
@@ -108,12 +104,18 @@
       "name": "scroll up half page",
       "args": [],
       "and": false
+    },
+    "C-c": {
+      "name": "reload",
+      "args": [],
+      "and": false
     }
   },
   "limited_actions": {
-    "Esc": {
+    "C-c": {
       "name": "normal mode",
-      "args": []
+      "args": [],
+      "and": false
     }
   },
   "useTabTitle": false,
