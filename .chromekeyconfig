@@ -106,7 +106,7 @@
       "and": false
     },
     "C-c": {
-      "name": "reload",
+      "name": "limited mode",
       "args": [],
       "and": false
     }
