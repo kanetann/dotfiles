@@ -25,18 +25,16 @@ gem 'devise'
 # gem 'slim-rails'
 # gem 'html2slim'
 
-gem_group :assets do 
-  gem 'therubyracer'
-  gem 'less-rails'
-  gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
-  # gem 'formtastic'
-  gem 'kaminari'
-  gem 'ransack'
-  # gem 'thinreports-rails'
-  # gem 'pdf-inspector'
-  # gem 'chosen-rails'
-end
+# gem 'formtastic'
+gem 'kaminari'
+gem 'ransack'
+# gem 'thinreports-rails'
+# gem 'pdf-inspector'
+# gem 'chosen-rails'
 
 # chart
 # gem 'chartkick'
