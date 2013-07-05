@@ -89,7 +89,7 @@ gem_group :development do
   # gem 'guard-bundler'
   # gem 'guard-rspec'
   # gem 'guard-spring'
-  gem 'guard-rails'
+  # gem 'guard-rails'
   gem 'guard-livereload'
   gem 'rb-fsevent'
   gem 'rails-clean-logs'
