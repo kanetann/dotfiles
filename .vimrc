@@ -123,7 +123,7 @@ map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
 
 " quickrun 
-noremap <silent> <Space>q :<C-u>QuickRun<CR>
+noremap <silent> <Space>q :<C-u>w<CR>:QuickRun<CR>
 
 augroup QuickRunUnitTest
   autocmd!
@@ -135,6 +135,7 @@ let g:quickrun_config = {}
 let g:quickrun_config['php.unit'] = {'command': 'phpunitrunner'}
 let g:quickrun_config['python.unit'] = {'command': 'nosetests', 'cmdopt': '-s -vv'}
 let g:quickrun_config['perl.unit'] = {'command': 'prove'}
+let g:quickrun_config['ruby.spec'] = {'command': 'spec'}
 let g:quickrun_config['markdown'] = {
       \ 'type': 'markdown/pandoc',
       \ 'outputter': 'browser',
@@ -371,4 +372,5 @@ nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
 
 " normal mode enter
 nnoremap <CR> i<CR><Esc>
+
 
