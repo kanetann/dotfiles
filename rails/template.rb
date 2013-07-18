@@ -87,7 +87,7 @@ gem_group :development do
   # gem 'spork'
   gem 'guard'
   # gem 'guard-bundler'
-  # gem 'guard-rspec'
+  gem 'guard-rspec'
   # gem 'guard-spring'
   # gem 'guard-rails'
   gem 'guard-livereload'
@@ -102,15 +102,20 @@ gem_group :development do
   # gem 'magic-commenter'
 end
 
-# gem_group :test do
-#   # gem 'rspec-rails'
+gem_group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 #   # gem 'capybara'
 #   gem 'test_after_commit'
 #   gem 'timecop'
 #   # gem 'parallel_tests'
 #   gem 'database_cleaner'
 #   gem 'simplecov'
-# end
+end
+
+gem_group :development, :test do
+  gem 'spring'
+end
 
 run "bundle install --path vendor/bundle"
 
@@ -191,9 +196,9 @@ run "bundle exec guard init"
 # guard-bundler
 # run "guard init bundler"
 
-# # guard-rspec
-# run "guard init rspec"
-# 
+# guard-rspec
+run "guard init rspec"
+ 
 # # guard-spring
 # run "guard init spring"
 # 
@@ -215,8 +220,8 @@ run "bundle exec guard init"
 # 
 # # letter_opener
 # # magic-commenter
-# # rspec-rails
-# generate "rspec:install"
+# rspec-rails
+generate "rspec:install"
 
 # run "bundle exec spork --bootstrap"
 # run "cp ~/dotfiles/rails/.rspec .rspec"
@@ -242,6 +247,7 @@ gsub_file 'app/controllers/dashboard_controller.rb', /def index/, "before_filter
 # database
 # rake "db:migrate"
 run "bundle exec rake db:migrate"
+run "bundle exec rake db:test:prepare"
 # rake "db:migrate RAILS_ENV=test"
 
 # git
