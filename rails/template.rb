@@ -256,13 +256,10 @@ run "wget -O .gitignore https://raw.github.com/github/gitignore/master/Rails.git
 git :add => '.'
 git :commit => "-aqm 'first commit.'"
 
+                                                                                 
 # devise/application.html.erb
 # <% if user_signed_in? %>
-#    <%= link_to(destroy_user_session_path) do %>
-#      Sign Out
-#    <% end %>
-#  <% else %>
-#    <%= link_to(new_user_session_path) do %>
-#      Sign In
-#    <% end %>
-#  <% end %>
+#   <%= link_to "sign out", destroy_user_session_path, :method => :delete %>
+# <% else %>
+#   <%= link_to "sign in", new_user_session_path %>
+# <% end %>
