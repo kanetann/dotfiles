@@ -17,7 +17,7 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/Sixeight/unite-grep.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
-" NeoBundle 'git://github.com/jpalardy/vim-slime.git'
+NeoBundle 'git://github.com/jpalardy/vim-slime.git'
 NeoBundle 'git://github.com/kana/vim-fakeclip.git'
 NeoBundle 'git://github.com/mattn/webapi-vim.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
@@ -373,4 +373,7 @@ nnoremap <Space>d :r !date "+\%Y-\%m-\%d \%H:\%M:\%S"<CR><CR>
 " normal mode enter
 nnoremap <CR> i<CR><Esc>
 
+" vim-slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 
