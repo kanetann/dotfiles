@@ -3,3 +3,6 @@
 ./log/
 ./tmp/
 ./tags
+./coverage/
+*.min.css
+*.min.js

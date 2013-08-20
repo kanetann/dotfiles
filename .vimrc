@@ -42,6 +42,7 @@ NeoBundle 'git://github.com/motemen/git-vim.git'
 " NeoBundle 'https://github.com/airblade/vim-gitgutter.git'
 NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
 " NeoBundle 'git://github.com/bling/vim-airline.git'
+NeoBundle 'git://github.com/editorconfig/editorconfig-vim.git'
 
 
 filetype plugin indent on
@@ -226,9 +227,9 @@ let g:yankring_manual_clipboard_check = 0
 " tagfile
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' --exclude='vendor/bundle/*' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' --exclude='vendor/bundle/*' --exclude='libraries' -R .
 elseif OSTYPE == "Linux\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundle/*' -R .
+    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundle/*' --exclude='libraries' -R .
 endif
 
 " git-vim
