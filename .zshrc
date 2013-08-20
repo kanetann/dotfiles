@@ -55,7 +55,7 @@ REPORTTIME=1
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-rbenv shell 1.9.3-p327
+rbenv shell 2.0.0-p247
 
 unsetopt correct_all
 
@@ -87,3 +87,5 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 alias ts="tig status"
 alias tig="tig status"
 alias agt="ag todo"
+
+export PATH="$PATH:$HOME/project/sandbox/lithium/my_app/libraries/lithium/console"
