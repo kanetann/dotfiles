@@ -43,6 +43,7 @@ NeoBundle 'git://github.com/motemen/git-vim.git'
 NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
 " NeoBundle 'git://github.com/bling/vim-airline.git'
 NeoBundle 'git://github.com/editorconfig/editorconfig-vim.git'
+NeoBundle 'git://github.com/itchyny/lightline.vim'
 
 
 filetype plugin indent on
