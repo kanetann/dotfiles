@@ -44,6 +44,7 @@ NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
 " NeoBundle 'git://github.com/bling/vim-airline.git'
 NeoBundle 'git://github.com/editorconfig/editorconfig-vim.git'
 NeoBundle 'git://github.com/itchyny/lightline.vim'
+NeoBundle 'git://github.com/tsukkee/unite-tag.git'
 
 
 filetype plugin indent on
@@ -214,6 +215,7 @@ nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite -no-quit grep:.::<CR>
 nnoremap <silent> <Space>uG :<C-u>Unite grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
+nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
@@ -225,13 +227,13 @@ let g:yankring_max_history = 10
 let g:yankring_window_height = 13
 let g:yankring_manual_clipboard_check = 0
  
-" tagfile
-let OSTYPE = system('uname')
-if OSTYPE == "Darwin\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --exclude='*.js' --exclude='vendor/bundle/*' --exclude='libraries' -R .
-elseif OSTYPE == "Linux\n"
-    autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --exclude='vendor/bundle/*' --exclude='libraries' -R .
-endif
+" " tagfile
+" let OSTYPE = system('uname')
+" if OSTYPE == "Darwin\n"
+"     autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!/usr/local/Cellar/ctags/5.8/bin/ctags --append=yes --exclude='*.js' --exclude='vendor/bundle/*' -R .
+" elseif OSTYPE == "Linux\n"
+"     autocmd BufWritePost *.rb,*.pl,*.pm,*.t,*.tx,*.php silent :!ctags --exclude='*.js' --append=yes --exclude='vendor/bundle/*' -R .
+" endif
 
 " git-vim
 let g:git_no_map_default = 1
@@ -379,3 +381,4 @@ nnoremap <CR> i<CR><Esc>
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 
+nnoremap <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
