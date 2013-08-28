@@ -45,6 +45,8 @@ NeoBundle 'git://github.com/matschaffer/vim-islime2.git'
 NeoBundle 'git://github.com/editorconfig/editorconfig-vim.git'
 NeoBundle 'git://github.com/itchyny/lightline.vim'
 NeoBundle 'git://github.com/tsukkee/unite-tag.git'
+NeoBundle 'git://github.com/tsaleh/vim-matchit.git'
+NeoBundle 'git://github.com/ecomba/vim-ruby-refactoring.git'
 
 
 filetype plugin indent on
@@ -93,7 +95,7 @@ set autoindent
 set cindent
 set backspace=indent,eol,start
 set showmatch
-set whichwrap=b,s,h,l,<,>,[,] 
+set whichwrap=b,s,h,l,<,>,[,]
 set showcmd
 set showmode
 
@@ -125,7 +127,7 @@ inoremap <ESC> <ESC>:set iminsert=0<CR>
 map <C-N>   :bnext<CR>
 map <C-P>   :bprevious<CR>
 
-" quickrun 
+" quickrun
 noremap <silent> <Space>q :<C-u>w<CR>:QuickRun<CR>
 
 augroup QuickRunUnitTest
@@ -203,7 +205,7 @@ let g:unite_source_grep_default_opts = '--nocolor --nogroup --ignore-case --igno
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candidates = 100
 let g:unite_winheight = 10
-nnoremap          <Space>uu :<C-u>Unite 
+nnoremap          <Space>uu :<C-u>Unite
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
@@ -226,7 +228,7 @@ let g:yankring_history_file = '.yankring_history'
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
 let g:yankring_manual_clipboard_check = 0
- 
+
 " " tagfile
 " let OSTYPE = system('uname')
 " if OSTYPE == "Darwin\n"
@@ -255,7 +257,7 @@ nnoremap <silent> <Space>gb :<C-u>Gblame<CR>
 " alternate file toggle shortcut key
 nnoremap <C-i> <C-^>
 
-" quit 
+" quit
 nnoremap <silent> q :<C-u>q!<CR>
 
 if has('gui_macvim')
