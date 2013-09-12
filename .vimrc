@@ -117,6 +117,7 @@ autocmd BufNewFile,BufRead *.pl     set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead *.rb     set filetype=ruby
+autocmd BufNewFile,BufRead *.html.php     set filetype=html
 autocmd FileType * setlocal formatoptions-=ro
 
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
@@ -182,6 +183,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType html.php setlocal omnifunc=htmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
@@ -295,6 +297,15 @@ let g:vimfiler_as_default_explorer = 1
 " nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
 " nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit -double<CR>
 nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit<CR>
+autocmd VimEnter * VimFilerExplorer
+let g:vimfiler_as_default_explorer = 1
+" let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_file_icon = '-'
+let g:vimfiler_marked_file_icon = '*'
+
 
 " paste mode
 nnoremap <Space>sp :<C-u>set paste<CR>
