@@ -47,7 +47,7 @@ NeoBundle 'git://github.com/editorconfig/editorconfig-vim.git'
 NeoBundle 'git://github.com/tsukkee/unite-tag.git'
 NeoBundle 'git://github.com/tsaleh/vim-matchit.git'
 NeoBundle 'git://github.com/ecomba/vim-ruby-refactoring.git'
-
+NeoBundle 'git://github.com/osyo-manga/vim-anzu.git'
 
 filetype plugin indent on
 
@@ -183,14 +183,14 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType html.php setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType html.php setlocal omnifunc=htmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+" let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
@@ -297,8 +297,8 @@ let g:vimfiler_as_default_explorer = 1
 " nnoremap <Space>vf :<C-u>VimFilerSplit<CR>
 " nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit -double<CR>
 nnoremap <Space>vf :<C-u>VimFiler -buffer-name=explorer -split -simple -winwidth=35 -toggle -no-quit<CR>
-autocmd VimEnter * VimFilerExplorer
-let g:vimfiler_as_default_explorer = 1
+" autocmd VimEnter * VimFilerExplorer
+" let g:vimfiler_as_default_explorer = 1
 " let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = '▾'
@@ -454,3 +454,17 @@ endfunction
 function! MyMode()
   return winwidth('.') > 60 ? lightline#mode() : ''
 endfunction
+
+
+" anzu.vim
+" mapping
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+
+" clear status
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+
+" statusline
+set statusline=%{anzu#search_status()}
