@@ -468,3 +468,6 @@ nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 
 " statusline
 set statusline=%{anzu#search_status()}
+
+
+set clipboard=unnamed
