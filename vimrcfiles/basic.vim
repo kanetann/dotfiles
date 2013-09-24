@@ -58,3 +58,5 @@ nnoremap <TAB> <C-w><C-w>
 
 " normal mode enter
 nnoremap <CR> i<CR><Esc>
+
+set clipboard=unnamed
