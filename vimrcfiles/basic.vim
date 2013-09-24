@@ -60,3 +60,7 @@ nnoremap <TAB> <C-w><C-w>
 nnoremap <CR> i<CR><Esc>
 
 set clipboard=unnamed
+
+" tmux + vim scrolling slowly
+set lazyredraw
+set ttyfast
