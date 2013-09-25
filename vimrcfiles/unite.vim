@@ -20,5 +20,3 @@ nnoremap <silent> <Space>uG :<C-u>Unite grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 
-nnoremap <ESC><ESC> :nohlsearch<CR>
-nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
