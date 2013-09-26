@@ -34,6 +34,7 @@ NeoBundle 'tsukkee/unite-tag.git'
 NeoBundle 'tsaleh/vim-matchit.git'
 NeoBundle 'ecomba/vim-ruby-refactoring.git'
 NeoBundle 'osyo-manga/vim-anzu.git'
+NeoBundle 'majutsushi/tagbar.git'
 
 filetype plugin indent on
 
@@ -50,3 +51,4 @@ source ~/dotfiles/vimrcfiles/rails.vim
 source ~/dotfiles/vimrcfiles/syntastic.vim
 source ~/dotfiles/vimrcfiles/unite.vim
 source ~/dotfiles/vimrcfiles/vimfiler.vim
+source ~/dotfiles/vimrcfiles/tagbar.vim
