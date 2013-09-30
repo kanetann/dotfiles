@@ -35,6 +35,8 @@ NeoBundle 'tsaleh/vim-matchit.git'
 NeoBundle 'ecomba/vim-ruby-refactoring.git'
 NeoBundle 'osyo-manga/vim-anzu.git'
 NeoBundle 'majutsushi/tagbar.git'
+NeoBundle 'ujihisa/unite-colorscheme.git'
+NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
 
 filetype plugin indent on
 
