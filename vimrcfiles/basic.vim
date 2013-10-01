@@ -73,3 +73,4 @@ set ttyfast
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
+vnoremap v $
