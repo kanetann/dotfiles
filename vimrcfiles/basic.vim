@@ -8,9 +8,10 @@ syntax enable
 " colorscheme wombat256mod
 " colorscheme darkburn
 " colorscheme desertEx
-colorscheme herald
+" colorscheme herald
 " colorscheme molokai
 " colorscheme railscasts
+colorscheme jellybeans
 
 if &diff
   colorscheme leo
