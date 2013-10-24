@@ -10,7 +10,7 @@ end
 uname = `uname`.chomp
 
 # tools install
-if uname == "Darwin" then 
+if uname == "Darwin" then
   # Command Line Toolsの手動インストール https://developer.apple.com/downloads/index.action
   # install homebrew
   # execute "ruby -e \"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)\""
@@ -31,9 +31,9 @@ execute "git config --global http.sslVerify false"
 
 # git clone
 execute "git clone git://github.com/kanetann/dotfiles.git ~/dotfiles"
- 
+
 # delete symlinks
-dotfiles = %w{.bash_profile .bashrc .gemrc .gitconfig .gitignore .inputrc .proverc .pryrc .screenrc .tmux.conf .vimperatorrc .vimrc .vim .zsh .zshenv .zshrc .ssh/config .tmux.conf .agignore}
+dotfiles = %w{.bash_profile .bashrc .gemrc .gitconfig .gitignore .inputrc .proverc .pryrc .screenrc .tmux.conf .vimperatorrc .vimrc .vim .zsh .zshenv .zshrc .ssh/config .tmux.conf .agignore .ctags}
 dotfiles.each do |k|
   execute "rm -rf ~/#{k}"
 end
@@ -45,7 +45,7 @@ execute "git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/
 execute "vim -N -u NONE -i NONE -V1 -e -s --cmd \"source ~/.vimrc\" --cmd NeoBundleInstall! --cmd qall!"
 
 # setup vimproc
-if uname == "Darwin" then 
+if uname == "Darwin" then
   procfilename = "make_mac.mak"
 else
   procfilename = "make_unix.mak"
