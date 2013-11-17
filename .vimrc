@@ -8,7 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache.git'
+NeoBundle 'Shougo/neocomplete.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/vimfiler.git'
@@ -45,7 +45,7 @@ NeoBundleCheck
 source ~/dotfiles/vimrcfiles/anzu.vim
 source ~/dotfiles/vimrcfiles/basic.vim
 source ~/dotfiles/vimrcfiles/filetype.vim
-source ~/dotfiles/vimrcfiles/neocomplecache.vim
+source ~/dotfiles/vimrcfiles/neocomplete.vim
 source ~/dotfiles/vimrcfiles/neosnippet.vim
 source ~/dotfiles/vimrcfiles/open-browser.vim
 source ~/dotfiles/vimrcfiles/quickrun.vim
