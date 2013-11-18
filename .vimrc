@@ -37,6 +37,7 @@ NeoBundle 'osyo-manga/vim-anzu.git'
 NeoBundle 'majutsushi/tagbar.git'
 NeoBundle 'ujihisa/unite-colorscheme.git'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
+NeoBundle 'osyo-manga/vim-over.git'
 
 filetype plugin indent on
 
@@ -54,3 +55,4 @@ source ~/dotfiles/vimrcfiles/syntastic.vim
 source ~/dotfiles/vimrcfiles/unite.vim
 source ~/dotfiles/vimrcfiles/vimfiler.vim
 source ~/dotfiles/vimrcfiles/tagbar.vim
+source ~/dotfiles/vimrcfiles/vim-over.vim
