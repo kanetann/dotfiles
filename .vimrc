@@ -38,6 +38,7 @@ NeoBundle 'majutsushi/tagbar.git'
 NeoBundle 'ujihisa/unite-colorscheme.git'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
 NeoBundle 'osyo-manga/vim-over.git'
+NeoBundle 'brookhong/DBGPavim.git'
 
 filetype plugin indent on
 
@@ -56,3 +57,5 @@ source ~/dotfiles/vimrcfiles/unite.vim
 source ~/dotfiles/vimrcfiles/vimfiler.vim
 source ~/dotfiles/vimrcfiles/tagbar.vim
 source ~/dotfiles/vimrcfiles/vim-over.vim
+source ~/dotfiles/vimrcfiles/DBGPavim.vim
+
