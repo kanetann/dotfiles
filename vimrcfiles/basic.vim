@@ -51,6 +51,8 @@ set hidden
 set formatoptions-=r
 set formatoptions-=o
 
+set showtabline=2
+
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
@@ -77,3 +79,10 @@ nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
 vnoremap v $
 nnoremap <Space>sp :set paste<CR>
 nnoremap <Space>sn :set nopaste<CR>
+
+" " ノーマルモード時に自動でペーストモードを解除する
+autocmd InsertLeave * set nopaste
+
+nnoremap gf <C-w>gf
+nnoremap gg gT
+
