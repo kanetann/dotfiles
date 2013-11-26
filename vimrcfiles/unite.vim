@@ -9,6 +9,7 @@ let g:unite_winheight = 40
 nnoremap          <Space>uu :<C-u>Unite
 nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite file_rec/async<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
@@ -20,3 +21,5 @@ nnoremap <silent> <Space>uG :<C-u>Unite grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 
+call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|jpg\)$')
+let g:unite_source_rec_max_cache_files = 5000
