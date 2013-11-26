@@ -7,9 +7,9 @@ let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candidates = 100
 let g:unite_winheight = 40
 nnoremap          <Space>uu :<C-u>Unite
-nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
-nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
-nnoremap <silent> <Space>uf :<C-u>Unite file_rec/async<CR>
+" nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
+" nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite file_rec/async -no-quit<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
