@@ -11,7 +11,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.git'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'Shougo/unite.vim.git'
-NeoBundle 'Shougo/vimfiler.git'
+" NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Sixeight/unite-grep.git'
 NeoBundle 'kana/vim-fakeclip.git'
@@ -56,7 +56,7 @@ source ~/dotfiles/vimrcfiles/quickrun.vim
 source ~/dotfiles/vimrcfiles/rails.vim
 source ~/dotfiles/vimrcfiles/syntastic.vim
 source ~/dotfiles/vimrcfiles/unite.vim
-source ~/dotfiles/vimrcfiles/vimfiler.vim
+" source ~/dotfiles/vimrcfiles/vimfiler.vim
 source ~/dotfiles/vimrcfiles/tagbar.vim
 source ~/dotfiles/vimrcfiles/vim-over.vim
 source ~/dotfiles/vimrcfiles/DBGPavim.vim
