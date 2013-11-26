@@ -39,8 +39,8 @@ NeoBundle 'ujihisa/unite-colorscheme.git'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
 NeoBundle 'osyo-manga/vim-over.git'
 NeoBundle 'brookhong/DBGPavim.git'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv.git'
+" NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'gregsexton/gitv.git'
 
 filetype plugin indent on
 
