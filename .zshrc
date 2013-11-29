@@ -89,3 +89,24 @@ alias tig="tig status"
 alias agt="ag todo"
 
 export PATH="$PATH:$HOME/project/sandbox/lithium/my_app/libraries/lithium/console"
+
+
+
+
+# Qiita に1年振りくらいに投稿してみた - hamaco's blog <http://blog.hamaco.org/blog/2013/11/27/qiita/>
+HARDCOPYFILE=/tmp/tmux-hardcopy
+touch $HARDCOPYFILE
+
+dabbrev-complete () {
+  local reply lines=80
+
+  tmux capture-pane && tmux save-buffer -b 0 $HARDCOPYFILE && tmux delete-buffer -b 0
+  reply=($(sed '/^$/d' $HARDCOPYFILE | sed '$ d' | tail -$lines))
+
+  compadd -Q - "${reply[@]%[*/=@|]}"
+}
+
+zle -C dabbrev-complete menu-complete dabbrev-complete
+bindkey '^o' dabbrev-complete
+bindkey '^o^_' reverse-menu-complete
+
