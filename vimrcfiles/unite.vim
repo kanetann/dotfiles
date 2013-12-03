@@ -17,8 +17,8 @@ nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
-nnoremap <silent> <Space>ug :<C-u>Unite -no-quit -auto-preview grep:.::<CR>
-nnoremap <silent> <Space>uG :<C-u>Unite grep:.::<CR>
+nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
+nnoremap <silent> <Space>uG :<C-u>Unite -no-quit grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
