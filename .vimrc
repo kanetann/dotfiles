@@ -41,6 +41,7 @@ NeoBundle 'osyo-manga/vim-over.git'
 NeoBundle 'brookhong/DBGPavim.git'
 " NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'gregsexton/gitv.git'
+NeoBundle 'vim-scripts/RST-Tables.git'
 
 filetype plugin indent on
 
@@ -60,4 +61,5 @@ source ~/dotfiles/vimrcfiles/unite.vim
 source ~/dotfiles/vimrcfiles/tagbar.vim
 source ~/dotfiles/vimrcfiles/vim-over.vim
 source ~/dotfiles/vimrcfiles/DBGPavim.vim
+source ~/dotfiles/vimrcfiles/RST-Tables.vim
 
