@@ -42,7 +42,7 @@ NeoBundle 'brookhong/DBGPavim.git'
 " NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'gregsexton/gitv.git'
 NeoBundle 'vim-scripts/RST-Tables.git'
-NeoBundle 'mhinz/vim-startify.git'
+" NeoBundle 'mhinz/vim-startify.git'
 
 filetype plugin indent on
 
