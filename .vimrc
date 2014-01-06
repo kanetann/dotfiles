@@ -39,10 +39,11 @@ NeoBundle 'ujihisa/unite-colorscheme.git'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
 NeoBundle 'osyo-manga/vim-over.git'
 NeoBundle 'brookhong/DBGPavim.git'
-" NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'gregsexton/gitv.git'
 NeoBundle 'vim-scripts/RST-Tables.git'
 " NeoBundle 'mhinz/vim-startify.git'
+
 
 filetype plugin indent on
 
@@ -63,4 +64,5 @@ source ~/dotfiles/vimrcfiles/tagbar.vim
 source ~/dotfiles/vimrcfiles/vim-over.vim
 source ~/dotfiles/vimrcfiles/DBGPavim.vim
 source ~/dotfiles/vimrcfiles/RST-Tables.vim
+source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 
