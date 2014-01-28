@@ -43,6 +43,7 @@ NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'gregsexton/gitv.git'
 NeoBundle 'vim-scripts/RST-Tables.git'
 " NeoBundle 'mhinz/vim-startify.git'
+NeoBundle 'fundon/vim-mou.git'
 
 
 filetype plugin indent on
@@ -65,4 +66,5 @@ source ~/dotfiles/vimrcfiles/vim-over.vim
 source ~/dotfiles/vimrcfiles/DBGPavim.vim
 source ~/dotfiles/vimrcfiles/RST-Tables.vim
 source ~/dotfiles/vimrcfiles/vim-fugitive.vim
+source ~/dotfiles/vimrcfiles/vim-mou.vim
 
