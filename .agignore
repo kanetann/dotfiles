@@ -6,3 +6,10 @@
 ./coverage/
 *.min.css
 *.min.js
+*.main.css
+./*/webroot/scripts/*
+./*/webroot/css/*
+./*/webroot/styles/*
+./*/webroot/js/*
+./*/webroot/fonts/*
+*jquery.*.js*
