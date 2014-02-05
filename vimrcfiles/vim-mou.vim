@@ -1,1 +1,1 @@
-nnoremap <silent> <Space>vm :<C-u>MouOpen<CR>
+nnoremap <silent> <Space>vm :MouQuit<CR>:MouOpen<CR>
