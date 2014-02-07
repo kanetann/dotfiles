@@ -60,8 +60,6 @@ cask install skype
 cask install spectacle
 cask install tuxguitar
 cask install vagrant
-cask install vagrant
-cask install virtualbox
 cask install virtualbox
 cask install vmware-fusion
 cask install wireshark
