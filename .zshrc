@@ -56,6 +56,7 @@ REPORTTIME=1
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv shell 2.0.0-p247
+rbenv global 2.0.0-p247
 
 unsetopt correct_all
 
