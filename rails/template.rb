@@ -83,7 +83,7 @@ gem_group :development do
   # # document generator
   # gem 'sdoc'
 
-  # useful gems 
+  # useful gems
   # gem 'spork'
   gem 'guard'
   # gem 'guard-bundler'
@@ -100,6 +100,8 @@ gem_group :development do
   # gem 'letter_opener'
 
   # gem 'magic-commenter'
+
+  gem 'tapp'
 end
 
 gem_group :test do
@@ -124,7 +126,7 @@ run "bundle install --path vendor/bundle"
 run "bundle exec rake db:drop"
 run "bundle exec rake db:create"
 
-# devise 
+# devise
 generate "devise:install"
 generate "devise User"
 
@@ -198,16 +200,16 @@ run "bundle exec guard init"
 
 # guard-rspec
 run "guard init rspec"
- 
+
 # # guard-spring
 # run "guard init spring"
-# 
+#
 # # guard-rails
 # run "guard init rails"
-# 
+#
 # # guard-livereload
 # run "guard init livereload"
-# 
+#
 # # rb-fsevent
 # # rails-clean-logs
 # # awesome_print
@@ -217,7 +219,7 @@ run "guard init rspec"
 # # $ cd /path/to/app
 # # $ annotate
 # generate "annotate:install"
-# 
+#
 # # letter_opener
 # # magic-commenter
 # rspec-rails
@@ -226,7 +228,7 @@ generate "rspec:install"
 # run "bundle exec spork --bootstrap"
 # run "cp ~/dotfiles/rails/.rspec .rspec"
 # run "cp ~/dotfiles/rails/spec/spec_helper.rb spec/spec_helper.rb"
-# 
+#
 # capybara
 # test_after_commit
 # timecop
@@ -256,7 +258,7 @@ run "wget -O .gitignore https://raw.github.com/github/gitignore/master/Rails.git
 git :add => '.'
 git :commit => "-aqm 'first commit.'"
 
-                                                                                 
+
 # devise/application.html.erb
 # <% if user_signed_in? %>
 #   <%= link_to "sign out", destroy_user_session_path, :method => :delete %>
