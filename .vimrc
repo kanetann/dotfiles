@@ -44,6 +44,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/RST-Tables.git'
 " NeoBundle 'mhinz/vim-startify.git'
 NeoBundle 'fundon/vim-mou.git'
+NeoBundle 'tpope/vim-endwise.git'
 
 
 filetype plugin indent on
