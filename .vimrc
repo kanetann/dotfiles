@@ -44,8 +44,10 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/RST-Tables.git'
 " NeoBundle 'mhinz/vim-startify.git'
 NeoBundle 'fundon/vim-mou.git'
+NeoBundle 'rcyrus/snipmate-snippets-rubymotion.git'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'tpope/vim-endwise.git'
-
 
 filetype plugin indent on
 
@@ -68,4 +70,5 @@ source ~/dotfiles/vimrcfiles/DBGPavim.vim
 source ~/dotfiles/vimrcfiles/RST-Tables.vim
 source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 source ~/dotfiles/vimrcfiles/vim-mou.vim
+source ~/dotfiles/vimrcfiles/dash.vim
 
