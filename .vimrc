@@ -48,6 +48,10 @@ NeoBundle 'rcyrus/snipmate-snippets-rubymotion.git'
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'tpope/vim-endwise.git'
+NeoBundle 'gcmt/wildfire.vim.git'
+NeoBundle 'nelstrom/vim-textobj-rubyblock.git'
+NeoBundle 'vim-scripts/matchit.zip.git'
+NeoBundle 'kana/vim-textobj-user.git'
 
 filetype plugin indent on
 
@@ -71,4 +75,5 @@ source ~/dotfiles/vimrcfiles/RST-Tables.vim
 source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 source ~/dotfiles/vimrcfiles/vim-mou.vim
 source ~/dotfiles/vimrcfiles/dash.vim
-
+source ~/dotfiles/vimrcfiles/matchit.vim
+source ~/dotfiles/vimrcfiles/wildfire.vim
