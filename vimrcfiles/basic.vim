@@ -5,13 +5,16 @@ set fileencodings=utf-8,euc-jp,sjis,iso-2022-jp
 set fileformats=unix,dos,mac
 
 syntax enable
-colorscheme wombat256mod
+" colorscheme wombat256mod
 " colorscheme darkburn
 " colorscheme desertEx
 " colorscheme herald
 " colorscheme molokai
 " colorscheme railscasts
 " colorscheme jellybeans
+" colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
 
 if &diff
   colorscheme leo
