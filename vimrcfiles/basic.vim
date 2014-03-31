@@ -69,7 +69,8 @@ nnoremap <TAB> <C-w><C-w>
 " normal mode enter
 nnoremap <CR> i<CR><Esc>
 
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard+=unnamed
 
 " tmux + vim scrolling slowly
 set lazyredraw
