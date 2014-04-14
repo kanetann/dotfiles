@@ -86,9 +86,9 @@ nnoremap <Space>sn :set nopaste<CR>
 autocmd InsertLeave * set nopaste
 
 
-" limit of 80 characters
-set textwidth=0
-if exists('&colorcolumn')
-    set colorcolumn=+1
-    autocmd FileType sh,cpp,perl,vim,ruby,python,php setlocal textwidth=80
-endif
+" " limit of 80 characters
+" set textwidth=0
+" if exists('&colorcolumn')
+"     set colorcolumn=+1
+"     autocmd FileType sh,cpp,perl,vim,ruby,python,php setlocal textwidth=80
+" endif
