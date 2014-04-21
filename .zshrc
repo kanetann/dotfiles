@@ -17,14 +17,14 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="dieter"
 #ZSH_THEME="steeef"
 #ZSH_THEME="candy"
-#ZSH_THEME="random"
+ZSH_THEME="random"
 #ZSH_THEME="sporty_256"
 #ZSH_THEME="tjkirch"
 #ZSH_THEME="crcandy"
 #ZSH_THEME="trapd00r"
 #ZSH_THEME="linuxonly"
 #ZSH_THEME="blinks"
-ZSH_THEME="tjkirch"
+#ZSH_THEME="tjkirch"
 
 
 
