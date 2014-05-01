@@ -2,7 +2,7 @@
 
 set -ex
 
-RUBY_VERSION="1.9.3-p327"
+RUBY_VERSION="2.1.1"
 
 rm -rf ~/.rbenv
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
