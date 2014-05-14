@@ -92,3 +92,9 @@ autocmd InsertLeave * set nopaste
 "     set colorcolumn=+1
 "     autocmd FileType sh,cpp,perl,vim,ruby,python,php setlocal textwidth=80
 " endif
+
+hi! DiffAdd    ctermfg=black ctermbg=green
+hi! DiffChange ctermfg=black ctermbg=yellow
+hi! DiffDelete ctermfg=black ctermbg=red
+hi! DiffText   ctermfg=black ctermbg=white
+
