@@ -53,6 +53,7 @@ NeoBundle 'nelstrom/vim-textobj-rubyblock.git'
 NeoBundle 'vim-scripts/matchit.zip.git'
 NeoBundle 'kana/vim-textobj-user.git'
 NeoBundle 'chriskempson/vim-tomorrow-theme.git'
+NeoBundle 'AndrewRadev/linediff.vim.git'
 
 filetype plugin indent on
 
