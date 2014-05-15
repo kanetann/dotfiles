@@ -10,6 +10,7 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.git'
 NeoBundle 'Shougo/neosnippet.git'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/vimfiler.git'
 NeoBundle 'Shougo/vimproc.git'
@@ -54,6 +55,7 @@ NeoBundle 'vim-scripts/matchit.zip.git'
 NeoBundle 'kana/vim-textobj-user.git'
 NeoBundle 'chriskempson/vim-tomorrow-theme.git'
 NeoBundle 'AndrewRadev/linediff.vim.git'
+
 
 filetype plugin indent on
 
