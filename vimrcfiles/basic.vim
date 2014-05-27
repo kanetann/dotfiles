@@ -14,7 +14,8 @@ syntax enable
 " colorscheme jellybeans
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
+colorscheme monokai
 
 if &diff
   colorscheme leo
