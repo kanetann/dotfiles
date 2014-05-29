@@ -57,6 +57,7 @@ NeoBundle 'kana/vim-textobj-user.git'
 NeoBundle 'chriskempson/vim-tomorrow-theme.git'
 NeoBundle 'AndrewRadev/linediff.vim.git'
 NeoBundle 'sickill/vim-monokai.git'
+NeoBundle 'pangloss/vim-javascript.git'
 
 
 filetype plugin indent on
