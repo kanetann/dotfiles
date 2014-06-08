@@ -121,3 +121,4 @@ zle -C dabbrev-complete menu-complete dabbrev-complete
 bindkey '^o' dabbrev-complete
 bindkey '^o^_' reverse-menu-complete
 
+export BUNDLER_EDITOR="vim +VimFiler"
