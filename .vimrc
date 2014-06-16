@@ -59,6 +59,9 @@ NeoBundle 'AndrewRadev/linediff.vim.git'
 NeoBundle 'sickill/vim-monokai.git'
 NeoBundle 'pangloss/vim-javascript.git'
 
+NeoBundle 'alpaca-tc/alpaca_tags.git'
+
+
 
 filetype plugin indent on
 
@@ -84,3 +87,4 @@ source ~/dotfiles/vimrcfiles/vim-mou.vim
 source ~/dotfiles/vimrcfiles/dash.vim
 source ~/dotfiles/vimrcfiles/matchit.vim
 source ~/dotfiles/vimrcfiles/wildfire.vim
+source ~/dotfiles/vimrcfiles/alpaca_tags.vim
