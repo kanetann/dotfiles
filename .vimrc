@@ -58,6 +58,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme.git'
 NeoBundle 'AndrewRadev/linediff.vim.git'
 NeoBundle 'sickill/vim-monokai.git'
 NeoBundle 'pangloss/vim-javascript.git'
+NeoBundle 'alpaca-tc/alpaca_tags.git'
 NeoBundle 'kannokanno/previm.git'
 
 
@@ -86,4 +87,5 @@ source ~/dotfiles/vimrcfiles/vim-mou.vim
 source ~/dotfiles/vimrcfiles/dash.vim
 source ~/dotfiles/vimrcfiles/matchit.vim
 source ~/dotfiles/vimrcfiles/wildfire.vim
+source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
