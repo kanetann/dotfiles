@@ -55,6 +55,8 @@ set hidden
 set formatoptions-=r
 set formatoptions-=o
 
+set number
+
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
