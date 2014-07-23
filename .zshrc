@@ -122,3 +122,8 @@ bindkey '^o' dabbrev-complete
 bindkey '^o^_' reverse-menu-complete
 
 export BUNDLER_EDITOR="vim +VimFiler"
+
+
+dic () {
+  w3m "http://ejje.weblio.jp/content/$1" | grep "用例"
+}
