@@ -127,3 +127,5 @@ export BUNDLER_EDITOR="vim +VimFiler"
 dic () {
   w3m "http://ejje.weblio.jp/content/$1" | grep "用例"
 }
+
+alias phpd="php -dxdebug.remote_autostart=1 -dxdebug.remote_port=9009"
