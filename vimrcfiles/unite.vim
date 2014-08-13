@@ -12,13 +12,15 @@ nnoremap          <Space>uu :<C-u>Unite
 nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uF :<C-u>Unite file_rec -no-quit<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
+nnoremap <silent> <C-b>     :<C-u>Unite -buffer-name=buffer buffer<CR>
 nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
 nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
 nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
 nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
-nnoremap <silent> <Space>uG :<C-u>Unite -no-quit -keep-focus -no-start-insert grep:.::<CR>
+nnoremap <silent> <Space>uG :<C-u>Unite -buffer-name=grep -no-quit -keep-focus -no-start-insert grep:.::<CR>
+nnoremap <silent> <C-g>     :<C-u>Unite -buffer-name=grep -no-quit -keep-focus -no-start-insert grep:.::<CR>
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
