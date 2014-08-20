@@ -62,6 +62,7 @@ NeoBundle 'alpaca-tc/alpaca_tags.git'
 NeoBundle 'kannokanno/previm.git'
 NeoBundle 'AndrewRadev/switch.vim.git'
 
+NeoBundle 'wesleyche/SrcExpl.git'
 
 
 filetype plugin indent on
