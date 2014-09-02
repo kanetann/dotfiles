@@ -20,14 +20,15 @@
 # gem 'unicorn'
 
 gem_group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'bullet'
   # gem 'capistrano'
   # gem 'capistrano-bundler'
   # gem 'capistrano-rbenv'
   # gem 'capistrano-unicorn'
   # gem 'capistrano3-unicorn'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'coffeelint'
   gem 'factory_girl_rails'
   gem 'guard'
   gem 'guard-bundler'
@@ -46,6 +47,7 @@ gem_group :development do
   gem 'rails_best_practices'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'scss-lint'
   gem 'simplecov'
   gem 'what_methods'
 end
