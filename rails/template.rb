@@ -18,6 +18,9 @@
 # gem 'turnout'
 # gem 'ui_datepicker-rails3'
 # gem 'unicorn'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem "rack-dev-mark"
 
 gem_group :development do
   # gem 'capistrano'
@@ -29,7 +32,6 @@ gem_group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'coffeelint'
-  gem 'factory_girl_rails'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-delayed'
@@ -45,15 +47,15 @@ gem_group :development do
   gem 'rails-erd'
   gem 'rails-footnotes'
   gem 'rails_best_practices'
-  gem 'rspec-rails'
+  gem 'rspec-rails', group: 'development'
   gem 'rubocop'
   gem 'scss-lint'
-  gem 'simplecov'
   gem 'what_methods'
 end
 
 gem_group :test do
   gem 'database_rewinder'
+  gem 'simplecov'
 end
 
 run "bundle install --path vendor/bundle"
