@@ -41,6 +41,7 @@ gem_group :development do
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'letter_opener'
+  gem 'pry-rails'
   gem 'pry-byebug'
   gem 'quiet_assets'
   gem 'rack-mini-profiler'
