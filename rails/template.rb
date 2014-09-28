@@ -48,10 +48,11 @@ gem_group :development do
   gem 'rails-erd'
   gem 'rails-footnotes'
   gem 'rails_best_practices'
-  gem 'rspec-rails', group: 'development'
+  gem 'rspec-rails', group: 'test'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'what_methods'
+  gem 'did_you_mean', group: 'test'
 end
 
 gem_group :test do
