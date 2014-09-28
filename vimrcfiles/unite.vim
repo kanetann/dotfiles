@@ -10,7 +10,7 @@ nnoremap          <Space>uu :<C-u>Unite
 " nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 " nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
-nnoremap <silent> <C-l>     :<C-u>Unite file_rec<CR>
+" nnoremap <silent> <C-l>     :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uF :<C-u>Unite file_rec -no-quit<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <C-b>     :<C-u>Unite -buffer-name=buffer buffer<CR>
