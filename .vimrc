@@ -63,6 +63,7 @@ NeoBundle 'kannokanno/previm.git'
 NeoBundle 'AndrewRadev/switch.vim.git'
 
 NeoBundle 'wesleyche/SrcExpl.git'
+NeoBundle 'airblade/vim-gitgutter.git'
 
 
 filetype plugin indent on
@@ -92,3 +93,4 @@ source ~/dotfiles/vimrcfiles/wildfire.vim
 source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
 source ~/dotfiles/vimrcfiles/switch.vim
+source ~/dotfiles/vimrcfiles/vim-gitgutter.vim

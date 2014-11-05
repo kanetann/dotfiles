@@ -100,6 +100,7 @@ hi! DiffAdd    ctermfg=black ctermbg=green
 hi! DiffChange ctermfg=black ctermbg=yellow
 hi! DiffDelete ctermfg=black ctermbg=red
 hi! DiffText   ctermfg=black ctermbg=white
+hi! SignColumn ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 
 " save cursor
 if has("autocmd")

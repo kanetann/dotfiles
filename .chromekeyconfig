@@ -90,7 +90,7 @@
     "C-r": {
       "name": "go to #1",
       "args": [
-        "javascript:(function(){location.href='http://reader.livedoor.com/subscribe/'+location.href;})();",
+        "javascript:(function(){location.href='https://feedly.com/#spotlight/'+location.href;})();",
         "rss"
       ],
       "and": false
@@ -108,6 +108,14 @@
     "C-c": {
       "name": "limited mode",
       "args": [],
+      "and": false
+    },
+    "C-b": {
+      "name": "go to #1",
+      "args": [
+        "javascript:(function(){location.href='http://b.hatena.ne.jp/entry/'+location.href;})();",
+        "hatena bookmark"
+      ],
       "and": false
     }
   },
