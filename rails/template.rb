@@ -31,6 +31,7 @@ gem_group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'rails-flog', :require => "flog"
   gem 'coffeelint'
   gem 'guard'
   gem 'guard-bundler'
