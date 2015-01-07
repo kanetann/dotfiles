@@ -65,6 +65,7 @@ NeoBundle 'AndrewRadev/switch.vim.git'
 NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'airblade/vim-gitgutter.git'
 
+NeoBundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
