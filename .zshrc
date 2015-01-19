@@ -130,3 +130,6 @@ dic () {
 
 alias phpd="php -dxdebug.remote_autostart=1 -dxdebug.remote_port=9009"
 alias ctags='ctags --exclude="*.js" --exclude=".git*" -R .'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
