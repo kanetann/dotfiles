@@ -1,11 +1,14 @@
-" vundle settings
-set nocompatible
-filetype plugin indent off
+if !1 | finish | endif
 
 if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.git'
@@ -67,8 +70,9 @@ NeoBundle 'airblade/vim-gitgutter.git'
 
 NeoBundle 'kchmck/vim-coffee-script'
 
-filetype plugin indent on
+call neobundle#end()
 
+filetype plugin indent on
 NeoBundleCheck
 
 source ~/dotfiles/vimrcfiles/anzu.vim
@@ -95,3 +99,4 @@ source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
 source ~/dotfiles/vimrcfiles/switch.vim
 source ~/dotfiles/vimrcfiles/vim-gitgutter.vim
+source ~/dotfiles/vimrcfiles/vim-coffee-script.vim
