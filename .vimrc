@@ -69,6 +69,7 @@ NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'airblade/vim-gitgutter.git'
 
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'slim-template/vim-slim'
 
 call neobundle#end()
 
