@@ -21,6 +21,7 @@ nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
 nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
 nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
 nnoremap <expr>   <C-g>    ':Unite -no-quit -keep-focus -no-start-insert -auto-highlight grep:.::<CR>' . expand('<cword>')
+vnoremap          <C-g>     y:Unite -no-quit -keep-focus -no-start-insert -auto-highlight grep:.::<CR><C-R>"
 nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
