@@ -27,3 +27,4 @@ vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
 nnoremap gf :xccmd jumpToDefinition<CR>
+nnoremap gh :xhelp<CR>
