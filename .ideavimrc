@@ -15,16 +15,16 @@ set incsearch
 set ignorecase
 set smartcase
 set wrapscan
-
+"
 " replace
 set gdefault
 
 " clipboard
 set clipboard=unnamed
-
+"
 " original key bindings.
-vnoremap 9 $
-nnoremap 9 $
-vnoremap v $
-nnoremap gf :xccmd jumpToDefinition<CR>
-nnoremap gh :xhelp<CR>
+" vnoremap 9 $
+" nnoremap 9 $
+" vnoremap v $
+" nnoremap gf :xccmd jumpToDefinition<CR>
+" nnoremap gh :xhelp<CR>
