@@ -116,5 +116,5 @@ if has("autocmd")
 endif
 
 
-nnoremap j jzz
-nnoremap k kzz
+" nnoremap j jzz
+" nnoremap k kzz
