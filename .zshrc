@@ -133,3 +133,8 @@ alias ctags='ctags --exclude="*.js" --exclude=".git*" -R .'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+export GOROOT=`go env GOROOT`
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
