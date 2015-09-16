@@ -30,3 +30,5 @@ nnoremap <silent> <C-]>     :<C-u>UniteWithCursorWord -immediately tag<CR>
 
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|jpg\)$')
 let g:unite_source_rec_max_cache_files = 5000
+let g:unite_source_tag_max_fname_length = 100
+
