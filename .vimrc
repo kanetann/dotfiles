@@ -71,6 +71,7 @@ NeoBundle 'airblade/vim-gitgutter.git'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'Shougo/neomru.vim'
 
 call neobundle#end()
 

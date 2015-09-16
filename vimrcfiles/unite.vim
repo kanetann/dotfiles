@@ -6,25 +6,27 @@ let g:unite_source_grep_default_opts = '--nocolor --nogroup --ignore-case --igno
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_max_candidates = 100
 let g:unite_winheight = 20
-nnoremap          <Space>uu :<C-u>Unite
+" nnoremap          <Space>uu :<C-u>Unite
 " nnoremap <silent> <Space>ud :<C-u>Unite file_rec<CR>
 " nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
 " nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
 nnoremap <silent> <C-l>     :<C-u>Unite file_rec<CR>
 nnoremap <silent> <Space>uF :<C-u>Unite file_rec -no-quit<CR>
-nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <C-b>     :<C-u>Unite -buffer-name=buffer buffer<CR>
-nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
-nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
-nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
-nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
-nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
-nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
+" nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
+" nnoremap <silent> <C-b>     :<C-u>Unite -buffer-name=buffer buffer<CR>
+nnoremap <silent> <C-b>     :<C-u>Unite file_mru<CR>
+" nnoremap <silent> <Space>uh :<C-u>Unite ref/perldoc help ref/man<CR>
+" nnoremap <silent> <Space>uo :<C-u>Unite outline<CR>
+" nnoremap <silent> <Space>uO :<C-u>Unite -auto-preview outline<CR>
+" nnoremap <silent> <Space>ul :<C-u>Unite line<CR>
+" nnoremap <silent> <Space>uc :<C-u>Unite -auto-preview colorscheme<CR>
+" nnoremap <silent> <Space>ug :<C-u>Unite grep:.::<CR>
 nnoremap <expr>   <C-g>    ':Unite -no-quit -keep-focus -no-start-insert -auto-highlight grep:.::<CR>' . expand('<cword>')
 vnoremap          <C-g>     y:Unite -no-quit -keep-focus -no-start-insert -auto-highlight grep:.::<CR><C-R>"
-nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
-nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
-nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
+" nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
+" nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
+" nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
+nnoremap <silent> <C-]>     :<C-u>UniteWithCursorWord -immediately tag<CR>
 
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|jpg\)$')
 let g:unite_source_rec_max_cache_files = 5000
