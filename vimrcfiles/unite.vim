@@ -32,3 +32,8 @@ call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|
 let g:unite_source_rec_max_cache_files = 5000
 let g:unite_source_tag_max_fname_length = 100
 
+" https://github.com/Shougo/neomru.vim/blob/master/doc/neomru.txt#L212-L220
+call unite#custom#source(
+  \ 'file_mru', 'matchers',
+  \ ['matcher_project_files', 'matcher_fuzzy'])
+
