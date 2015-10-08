@@ -26,7 +26,7 @@ vnoremap          <C-g>     y:Unite -no-quit -keep-focus -no-start-insert -auto-
 " nnoremap <silent> <Space>us :<C-u>Unite snippet<CR>
 " nnoremap <silent> <Space>ut :<C-u>UniteWithCursorWord -immediately tag<CR>
 " nnoremap <silent> <Space>um :<C-u>Unite mapping<CR>
-nnoremap <silent> <C-]>     :<C-u>UniteWithCursorWord -immediately tag<CR>
+nnoremap <silent> <C-]>     :<C-u>UniteWithCursorWord -no-start-insert -immediately tag<CR>
 
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\(png\|gif\|jpeg\|jpg\)$')
 let g:unite_source_rec_max_cache_files = 5000
