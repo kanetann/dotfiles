@@ -73,6 +73,7 @@ dotfiles = [
   '.zshrc',
   '.xvimrc',
   '.ideavimrc',
+  '.tigrc',
 ]
 dotfiles.each do |k|
     execute "rm -rf ~/#{k}"
