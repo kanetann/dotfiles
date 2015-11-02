@@ -4,6 +4,7 @@ autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead *.rb     set filetype=ruby
 autocmd BufNewFile,BufRead *.html.php     set filetype=html
+autocmd BufNewFile,BufRead *.tpl     set filetype=html
 autocmd FileType * setlocal formatoptions-=ro
 
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
