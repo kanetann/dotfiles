@@ -5,6 +5,7 @@
 ./tags
 ./coverage/
 *.min.css
+*.min.css.map
 *.min.js
 *.main.css
 ./*/webroot/scripts/*
