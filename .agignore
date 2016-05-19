@@ -5,6 +5,7 @@
 ./tags
 ./coverage/
 *.min.css
+*.css.map
 *.min.js
 *.main.css
 ./*/webroot/scripts/*
@@ -13,3 +14,4 @@
 ./*/webroot/js/*
 ./*/webroot/fonts/*
 *jquery.*.js*
+templates_c/*
