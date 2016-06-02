@@ -11,7 +11,7 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('honza/vim-snippets.git')
 call dein#add('Shougo/unite.vim.git')
 call dein#add('Shougo/vimfiler.git')
-call dein#add('Shougo/vimproc.git')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('Sixeight/unite-grep.git')
 call dein#add('kana/vim-fakeclip.git')
 call dein#add('mattn/webapi-vim.git')
@@ -63,9 +63,6 @@ call dein#add('mustache/vim-mustache-handlebars')
 call dein#add('Shougo/neomru.vim')
 call dein#end()
 
-if dein#check_install(['vimproc'])
-  call dein#install(['vimproc'])
-endif
 if dein#check_install()
   call dein#install()
 endif
