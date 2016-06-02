@@ -44,7 +44,6 @@ call dein#add('rcyrus/snipmate-snippets-rubymotion.git')
 call dein#add('rizzatti/funcoo.vim')
 call dein#add('rizzatti/dash.vim')
 call dein#add('tpope/vim-endwise.git')
-call dein#add('gcmt/wildfire.vim.git')
 call dein#add('nelstrom/vim-textobj-rubyblock.git')
 call dein#add('vim-scripts/matchit.zip.git')
 call dein#add('kana/vim-textobj-user.git')
@@ -88,7 +87,6 @@ source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 source ~/dotfiles/vimrcfiles/vim-mou.vim
 source ~/dotfiles/vimrcfiles/dash.vim
 source ~/dotfiles/vimrcfiles/matchit.vim
-source ~/dotfiles/vimrcfiles/wildfire.vim
 source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
 source ~/dotfiles/vimrcfiles/switch.vim
