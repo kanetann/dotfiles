@@ -1,1 +1,2 @@
-nnoremap <Space>da :Dash<CR>
+nnoremap <Space>d :Dash<CR>
+vnoremap <Space>d :Dash<CR>

@@ -1,82 +1,72 @@
-if !1 | finish | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath^=~/dotfiles/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin(expand('~/.cache/dein'))
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet.git')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('honza/vim-snippets.git')
+call dein#add('Shougo/unite.vim.git')
+call dein#add('Shougo/vimfiler.git')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('Sixeight/unite-grep.git')
+call dein#add('kana/vim-fakeclip.git')
+call dein#add('mattn/webapi-vim.git')
+call dein#add('scrooloose/syntastic.git')
+call dein#add('shanlalit/vim-autoclose.git')
+call dein#add('taka84u9/vim-ref-ri.git')
+call dein#add('thinca/vim-quickrun.git')
+call dein#add('thinca/vim-ref.git')
+call dein#add('tpope/vim-rails.git')
+call dein#add('tpope/vim-surround.git')
+call dein#add('tsukkee/unite-help.git')
+call dein#add('tyru/open-browser.vim.git')
+call dein#add('vim-ruby/vim-ruby.git')
+call dein#add('vim-scripts/Align.git')
+call dein#add('vim-scripts/tComment')
+call dein#add('vim-scripts/wombat256.vim')
+call dein#add('editorconfig/editorconfig-vim.git')
+call dein#add('tsukkee/unite-tag.git')
+call dein#add('ecomba/vim-ruby-refactoring.git')
+call dein#add('osyo-manga/vim-anzu.git')
+call dein#add('majutsushi/tagbar.git')
+call dein#add('ujihisa/unite-colorscheme.git')
+call dein#add('vim-scripts/Colour-Sampler-Pack.git')
+call dein#add('osyo-manga/vim-over.git')
+call dein#add('brookhong/DBGPavim.git')
+call dein#add('tpope/vim-fugitive')
+call dein#add('vim-scripts/RST-Tables.git')
+call dein#add('fundon/vim-mou.git')
+call dein#add('rcyrus/snipmate-snippets-rubymotion.git')
+call dein#add('rizzatti/funcoo.vim')
+call dein#add('rizzatti/dash.vim')
+call dein#add('tpope/vim-endwise.git')
+call dein#add('nelstrom/vim-textobj-rubyblock.git')
+call dein#add('vim-scripts/matchit.zip.git')
+call dein#add('kana/vim-textobj-user.git')
+call dein#add('chriskempson/vim-tomorrow-theme.git')
+call dein#add('AndrewRadev/linediff.vim.git')
+call dein#add('sickill/vim-monokai.git')
+call dein#add('pangloss/vim-javascript.git')
+call dein#add('alpaca-tc/alpaca_tags.git')
+call dein#add('kannokanno/previm.git')
+call dein#add('AndrewRadev/switch.vim.git')
+call dein#add('wesleyche/SrcExpl.git')
+call dein#add('airblade/vim-gitgutter.git')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('slim-template/vim-slim')
+call dein#add('mustache/vim-mustache-handlebars')
+call dein#add('Shougo/neomru.vim')
+call dein#end()
 
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete.git'
-NeoBundle 'Shougo/neosnippet.git'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'honza/vim-snippets.git'
-NeoBundle 'Shougo/unite.vim.git'
-NeoBundle 'Shougo/vimfiler.git'
-NeoBundle 'Shougo/vimproc.git'
-NeoBundle 'Sixeight/unite-grep.git'
-NeoBundle 'kana/vim-fakeclip.git'
-NeoBundle 'mattn/webapi-vim.git'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'shanlalit/vim-autoclose.git'
-NeoBundle 'taka84u9/vim-ref-ri.git'
-NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'thinca/vim-ref.git'
-NeoBundle 'tpope/vim-rails.git'
-NeoBundle 'tpope/vim-surround.git'
-NeoBundle 'tsukkee/unite-help.git'
-NeoBundle 'tyru/open-browser.vim.git'
-NeoBundle 'vim-ruby/vim-ruby.git'
-NeoBundle 'vim-scripts/Align.git'
-NeoBundle 'vim-scripts/tComment'
-NeoBundle 'vim-scripts/wombat256.vim'
-NeoBundle 'editorconfig/editorconfig-vim.git'
-NeoBundle 'tsukkee/unite-tag.git'
-" NeoBundle 'tsaleh/vim-matchit.git'
-NeoBundle 'ecomba/vim-ruby-refactoring.git'
-NeoBundle 'osyo-manga/vim-anzu.git'
-NeoBundle 'majutsushi/tagbar.git'
-NeoBundle 'ujihisa/unite-colorscheme.git'
-NeoBundle 'vim-scripts/Colour-Sampler-Pack.git'
-NeoBundle 'osyo-manga/vim-over.git'
-NeoBundle 'brookhong/DBGPavim.git'
-NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'gregsexton/gitv.git'
-NeoBundle 'vim-scripts/RST-Tables.git'
-" NeoBundle 'mhinz/vim-startify.git'
-NeoBundle 'fundon/vim-mou.git'
-NeoBundle 'rcyrus/snipmate-snippets-rubymotion.git'
-NeoBundle 'rizzatti/funcoo.vim'
-NeoBundle 'rizzatti/dash.vim'
-NeoBundle 'tpope/vim-endwise.git'
-NeoBundle 'gcmt/wildfire.vim.git'
-NeoBundle 'nelstrom/vim-textobj-rubyblock.git'
-NeoBundle 'vim-scripts/matchit.zip.git'
-NeoBundle 'kana/vim-textobj-user.git'
-NeoBundle 'chriskempson/vim-tomorrow-theme.git'
-NeoBundle 'AndrewRadev/linediff.vim.git'
-NeoBundle 'sickill/vim-monokai.git'
-NeoBundle 'pangloss/vim-javascript.git'
-NeoBundle 'alpaca-tc/alpaca_tags.git'
-NeoBundle 'kannokanno/previm.git'
-NeoBundle 'AndrewRadev/switch.vim.git'
-
-NeoBundle 'wesleyche/SrcExpl.git'
-NeoBundle 'airblade/vim-gitgutter.git'
-
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'Shougo/neomru.vim'
-
-call neobundle#end()
+if dein#check_install()
+  call dein#install()
+endif
 
 filetype plugin indent on
-NeoBundleCheck
 
 source ~/dotfiles/vimrcfiles/anzu.vim
 source ~/dotfiles/vimrcfiles/basic.vim
@@ -97,7 +87,6 @@ source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 source ~/dotfiles/vimrcfiles/vim-mou.vim
 source ~/dotfiles/vimrcfiles/dash.vim
 source ~/dotfiles/vimrcfiles/matchit.vim
-source ~/dotfiles/vimrcfiles/wildfire.vim
 source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
 source ~/dotfiles/vimrcfiles/switch.vim

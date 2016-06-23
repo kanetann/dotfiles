@@ -118,3 +118,8 @@ endif
 
 " nnoremap j jzz
 " nnoremap k kzz
+
+
+" conceal double quote for .json file.
+" <http://yuzuemon.hatenablog.com/entry/2015/01/15/035759>
+autocmd Filetype json setl conceallevel=0
