@@ -11,7 +11,7 @@ let g:unite_winheight = 20
 " nnoremap <silent> <Space>uD :<C-u>Unite file_rec -no-quit<CR>
 " nnoremap <silent> <Space>uf :<C-u>Unite file_rec<CR>
 nnoremap <silent> <C-l>     :<C-u>Unite file_rec<CR>
-nnoremap <silent> <Space>uF :<C-u>Unite file_rec -no-quit<CR>
+" nnoremap <silent> <Space>uF :<C-u>Unite file_rec -no-quit<CR>
 " nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 " nnoremap <silent> <C-b>     :<C-u>Unite -buffer-name=buffer buffer<CR>
 nnoremap <silent> <C-b>     :<C-u>Unite file_mru buffer -no-start-insert<CR>
@@ -37,3 +37,6 @@ call unite#custom#source(
   \ 'file_mru', 'matchers',
   \ ['matcher_project_files', 'matcher_fuzzy'])
 
+call unite#custom#source('file_rec', 'ignore_pattern', '\.git')
+call unite#custom#source('file_rec', 'ignore_pattern', 'vendor/bundle/')
+call unite#custom#source('file_rec', 'ignore_pattern', 'tmp/')
