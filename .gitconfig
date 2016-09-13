@@ -1,8 +1,8 @@
 [core]
   editor = vim
 [user]
-  name = kanetann
-  email = kanetann@gmail.com
+	name = kanetann
+	email = kanetann@gmail.com
 [color]
   status = auto
   diff = auto
