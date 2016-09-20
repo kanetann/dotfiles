@@ -138,3 +138,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOROOT=`go env GOROOT`
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
