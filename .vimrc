@@ -6,31 +6,38 @@ set runtimepath^=~/dotfiles/dein/repos/github.com/Shougo/dein.vim
 call dein#begin(expand('~/.cache/dein'))
 call dein#add('Shougo/dein.vim')
 
+" grep
 call dein#add('Shougo/unite.vim.git')
 call dein#add('Sixeight/unite-grep.git')
-" call dein#add('Shougo/vimfiler.git')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
-call dein#add('tyru/open-browser.vim')
-call dein#add('kana/vim-fakeclip.git')
+" finder
+call dein#add('ctrlpvim/ctrlp.vim')
 
+" utility
+call dein#add('sickill/vim-monokai.git')
+call dein#add('kana/vim-fakeclip.git')
+call dein#add('tyru/open-browser.vim')
+call dein#add('kannokanno/previm.git')
+
+
+" ruby plugins
 call dein#add('vim-ruby/vim-ruby.git')
 call dein#add('tpope/vim-rails.git')
+call dein#add('slim-template/vim-slim')
+" call dein#add('ecomba/vim-ruby-refactoring.git')
 
 call dein#add('scrooloose/syntastic.git')
 call dein#add('vim-scripts/tComment')
 call dein#add('tpope/vim-surround.git')
 call dein#add('editorconfig/editorconfig-vim.git')
-call dein#add('slim-template/vim-slim')
 " call dein#add('tpope/vim-endwise.git')
 " call dein#add('nelstrom/vim-textobj-rubyblock.git')
 " call dein#add('shanlalit/vim-autoclose.git')
-" call dein#add('ecomba/vim-ruby-refactoring.git')
 
-call dein#add('sickill/vim-monokai.git')
-call dein#add('kannokanno/previm.git')
+" git plugins
 call dein#add('airblade/vim-gitgutter.git')
-call dein#add('ctrlpvim/ctrlp.vim')
+
 call dein#end()
 
 if dein#check_install()
