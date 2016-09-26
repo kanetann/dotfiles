@@ -38,6 +38,7 @@ call dein#add('editorconfig/editorconfig-vim.git')
 
 " git plugins
 call dein#add('airblade/vim-gitgutter.git')
+call dein#add('rizzatti/dash.vim')
 
 call dein#end()
 
@@ -59,7 +60,7 @@ source ~/dotfiles/vimrcfiles/vimfiler.vim
 " source ~/dotfiles/vimrcfiles/RST-Tables.vim
 " source ~/dotfiles/vimrcfiles/vim-fugitive.vim
 " source ~/dotfiles/vimrcfiles/vim-mou.vim
-" source ~/dotfiles/vimrcfiles/dash.vim
+source ~/dotfiles/vimrcfiles/dash.vim
 " source ~/dotfiles/vimrcfiles/matchit.vim
 " source ~/dotfiles/vimrcfiles/alpaca_tags.vim
 source ~/dotfiles/vimrcfiles/previm.vim
