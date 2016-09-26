@@ -135,8 +135,8 @@ alias ctags='ctags --exclude="*.js" --exclude=".git*" -R .'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 
-export GOROOT=`go env GOROOT`
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export GOROOT=`go env GOROOT`
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
