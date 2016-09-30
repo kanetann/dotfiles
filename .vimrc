@@ -7,10 +7,10 @@ call dein#begin(expand('~/.cache/dein'))
 call dein#add('Shougo/dein.vim')
 
 " grep
-" call dein#add('Shougo/unite.vim.git')
+call dein#add('Shougo/unite.vim.git')
 " call dein#add('Sixeight/unite-grep.git')
-" call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-" call dein#add('Shougo/vimfiler.vim')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('Shougo/vimfiler.vim')
 
 " finder
 call dein#add('ctrlpvim/ctrlp.vim')
@@ -55,7 +55,7 @@ source ~/dotfiles/vimrcfiles/open-browser.vim
 source ~/dotfiles/vimrcfiles/rails.vim
 source ~/dotfiles/vimrcfiles/syntastic.vim
 " source ~/dotfiles/vimrcfiles/unite.vim
-" source ~/dotfiles/vimrcfiles/vimfiler.vim
+source ~/dotfiles/vimrcfiles/vimfiler.vim
 " source ~/dotfiles/vimrcfiles/tagbar.vim
 " source ~/dotfiles/vimrcfiles/vim-over.vim
 " source ~/dotfiles/vimrcfiles/DBGPavim.vim
