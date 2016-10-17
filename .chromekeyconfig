@@ -62,7 +62,7 @@
     "C C": {
       "name": "copy url and title by custom tag #1",
       "args": [
-        "%TITLE% <%URL%>",
+        "%TITLE% %URL%",
         "with target"
       ],
       "and": false
