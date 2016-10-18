@@ -15,7 +15,8 @@ syntax enable
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
 " colorscheme Tomorrow-Night-Bright
-colorscheme monokai
+" colorscheme monokai
+colorscheme stereokai
 
 if &diff
   colorscheme leo
