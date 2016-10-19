@@ -140,3 +140,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
+
+# for aws-cli
+export PATH="~/bin:$PATH"
