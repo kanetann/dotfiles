@@ -41,6 +41,7 @@ call dein#add('editorconfig/editorconfig-vim.git')
 call dein#add('airblade/vim-gitgutter.git')
 call dein#add('rizzatti/dash.vim')
 
+call dein#add('gummesson/stereokai.vim')
 
 call dein#end()
 
