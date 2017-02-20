@@ -1,30 +1,11 @@
-" editor
-set number
-set nowrap
-
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
-set autoindent
-
-" search
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set wrapscan
-"
-" replace
-set gdefault
-
 " clipboard
 set clipboard=unnamed
-"
-" original key bindings.
-" vnoremap 9 $
-" nnoremap 9 $
-" vnoremap v $
-" nnoremap gf :xccmd jumpToDefinition<CR>
-" nnoremap gh :xhelp<CR>
+
+" keymap
+nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
+vnoremap 9 $
+nnoremap 9 $
+vnoremap v $
+nnoremap j jzz
+nnoremap k kzz
