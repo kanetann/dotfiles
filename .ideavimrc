@@ -7,5 +7,5 @@ nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
-nnoremap j jzz
-nnoremap k kzz
+" nnoremap j jzz
+" nnoremap k kzz
