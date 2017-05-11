@@ -1,6 +1,6 @@
 {
   "name": "Chrome Keyconfig",
-  "version": "1.14.0",
+  "version": "1.15.1",
   "normal_actions": {
     "j": {
       "name": "scroll down",
@@ -115,6 +115,14 @@
       "args": [
         "javascript:(function(){window.open('https://feedly.com/#spotlight/'+location.href);})();",
         "rss"
+      ],
+      "and": false
+    },
+    "C-g": {
+      "name": "go to #1",
+      "args": [
+        "javascript:(function(){window.open('https://www.google.co.jp/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q='+window.getSelection());})();",
+        "google(I'm feeling lucky)"
       ],
       "and": false
     }
