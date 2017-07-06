@@ -1,11 +1,28 @@
-" clipboard
 set clipboard=unnamed
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set showmatch
+set showcmd
+set display=lastline
 
-" keymap
-nnoremap <ESC><ESC> :nohlsearch<CR>
-nnoremap <C-C><C-C><C-C> :nohlsearch<CR>
-vnoremap 9 $
-nnoremap 9 $
-vnoremap v $
-" nnoremap j jzz
-" nnoremap k kzz
+
+" Home row beginning / end of line
+noremap <C-h> ^
+noremap <C-l> $
+
+" Previous / next word
+noremap <C-k> #
+noremap <C-j> *
+
+" Yank to end of line
+nnoremap Y y$
+
+" in normal mode then disable IME
+" set noimdisable
+" set iminsert=0 imsearch=0
+" set noimcmdline
+" inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+" inoremap <silent> <ESC> <ESC><D-Space>
+" inoremap <silent> <ESC> <ESC><D-Space>
