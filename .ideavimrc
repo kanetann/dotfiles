@@ -20,3 +20,8 @@ noremap <C-j> *
 nnoremap Y y$
 
 vnoremap v $
+
+" From :actionlist
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <C-r> :action DebugClass<CR>
+nnoremap <C-e> :action GotoRelated<CR>
