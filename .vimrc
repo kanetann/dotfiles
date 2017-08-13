@@ -42,6 +42,7 @@ call dein#add('airblade/vim-gitgutter.git')
 call dein#add('rizzatti/dash.vim')
 
 call dein#add('gummesson/stereokai.vim')
+call dein#add('tsukkee/unite-tag.git')
 
 call dein#end()
 
@@ -72,3 +73,4 @@ source ~/dotfiles/vimrcfiles/vim-gitgutter.vim
 " source ~/dotfiles/vimrcfiles/vim-coffee-script.vim
 source ~/dotfiles/vimrcfiles/ctrlp.vim
 source ~/dotfiles/vimrcfiles/ack.vim
+source ~/dotfiles/vimrcfiles/unite-tag.vim

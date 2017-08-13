@@ -72,13 +72,13 @@ unsetopt correct_all
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
-case ${OSTYPE} in
-    darwin*)
-        alias ctags="/usr/local/Cellar/ctags/5.8/bin/ctags"
-        ;;
-    linux*)
-        ;;
-esac
+# case ${OSTYPE} in
+#     darwin*)
+#         alias ctags="/usr/local/Cellar/ctags/5.8/bin/ctags"
+#         ;;
+#     linux*)
+#         ;;
+# esac
 
 export PATH="/usr/local/bin:$PATH"
 export RSENSE_HOME="$HOME/dotfiles/rsense-0.3"
@@ -129,7 +129,9 @@ dic () {
 }
 
 alias phpd="php -dxdebug.remote_autostart=1 -dxdebug.remote_port=9009"
-alias ctags='ctags --exclude="*.js" --exclude=".git*" -R .'
+# alias ctags='ctags --exclude="*.js" --exclude=".git*" -R .'
+alias ctags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R .'
+
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
