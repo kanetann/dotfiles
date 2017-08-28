@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  nnoremap <C-f> :<C-u>NerdTree<CR>
+  nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
 '''
 
 [[plugins]]
