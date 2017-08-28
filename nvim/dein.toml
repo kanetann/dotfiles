@@ -21,11 +21,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'mattn/ctrlp-filer'
-hook_add = '''
-'''
-
-[[plugins]]
 repo = 'ompugao/ctrlp-grep'
 hook_add = '''
   nnoremap <C-g> :<C-u>CtrlPGrep<CR>
