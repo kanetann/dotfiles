@@ -1,0 +1,85 @@
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <C-f> :<C-u>NerdTree<CR>
+'''
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+  let g:ctrlp_max_height = 25
+  let g:ctrlp_lazy_update = 100
+'''
+
+[[plugins]]
+repo = 'ivalkeen/vim-ctrlp-tjump'
+hook_add = '''
+  nnoremap <c-]> :CtrlPtjump<cr>
+  vnoremap <c-]> :CtrlPtjumpVisual<cr>
+  let g:ctrlp_tjump_only_silent = 1
+'''
+
+[[plugins]]
+repo = 'mattn/ctrlp-filer'
+hook_add = '''
+'''
+
+[[plugins]]
+repo = 'ompugao/ctrlp-grep'
+hook_add = '''
+  nnoremap <C-g> :<C-u>CtrlPGrep<CR>
+'''
+
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+  syntax enable
+  colorscheme tender
+'''
+
+[[plugins]]
+repo = 'neomake/neomake'
+hook_add = '''
+  autocmd! BufEnter,BufWritePost * Neomake
+  let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+'''
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby.git'
+
+[[plugins]]
+repo = 'tpope/vim-rails.git'
+hook_add = '''
+  nnoremap <Space>aa :A
+'''
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+
+[[plugins]]
+repo = 'vim-scripts/tComment'
+
+[[plugins]]
+repo = 'tpope/vim-surround.git'
+
+[[plugins]]
+repo = 'kana/vim-fakeclip.git'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim.git'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+  let g:netrw_nogx = 1
+  nmap gx <Plug>(openbrowser-smart-search)
+  vmap gx <Plug>(openbrowser-smart-search)
+'''
