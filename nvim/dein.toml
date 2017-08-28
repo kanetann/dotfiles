@@ -37,11 +37,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'neomake/neomake'
-hook_add = '''
-  autocmd! BufEnter,BufWritePost * Neomake
-  let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-'''
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'w0rp/ale'
