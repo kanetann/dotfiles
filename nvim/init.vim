@@ -42,7 +42,8 @@ set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
 
-nnoremap <silent> q :<C-u>q!<CR>
+nnoremap <silent> q     :<C-u>q!<CR>
+nnoremap <Tab> <C-w>w
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
