@@ -3,12 +3,18 @@
 Pry.config.pager = true
 Pry.config.editor = proc { |file, line| "vim #{file} +#{line}" }
 
-Pry.commands.alias_command 'c', 'continue'
-Pry.commands.alias_command 's', 'step'
-Pry.commands.alias_command 'n', 'next'
-Pry.commands.alias_command 'f', 'finish'
-Pry.commands.alias_command 'l', 'ls -l'
+if defined?(PryByebug)
+  Pry.commands.alias_command 'c', 'continue'
+  Pry.commands.alias_command 's', 'step'
+  Pry.commands.alias_command 'n', 'next'
+  Pry.commands.alias_command 'f', 'finish'
+end
 
+# awesome_print
+require 'awesome_print'
+AwesomePrint.pry!
+
+# hirb
 begin
   require 'hirb'
 rescue LoadError
