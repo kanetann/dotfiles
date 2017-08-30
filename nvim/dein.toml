@@ -68,6 +68,9 @@ repo = 'tpope/vim-surround.git'
 repo = 'kana/vim-fakeclip.git'
 
 [[plugins]]
+repo = 'tpope/vim-endwise.git'
+
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim.git'
 
 [[plugins]]
