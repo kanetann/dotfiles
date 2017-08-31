@@ -75,3 +75,6 @@ nnoremap <silent> q :<C-u>q!<CR>
 nnoremap <Tab> <C-w>w
 vnoremap 9 $
 nnoremap 9 $
+vnoremap v $
+nnoremap <C-b> obinding.pry<CR><ESC>
+
