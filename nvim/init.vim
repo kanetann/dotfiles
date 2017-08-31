@@ -44,7 +44,7 @@ Plug 'kana/vim-fakeclip'
 Plug 'tpope/vim-endwise'
 
 Plug 'rizzatti/dash.vim'
-nnoremap <S-k> :Dash<CR>
+nnoremap <C-k> :Dash<CR>
 
 Plug 'editorconfig/editorconfig-vim'
 
@@ -77,4 +77,10 @@ vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
 nnoremap <C-b> obinding.pry<CR><ESC>
-
+nnoremap <C-e> j
+nnoremap <C-h> j
+nnoremap <C-m> j
+nnoremap <C-n> j
+nnoremap <C-q> j
+nnoremap <C-s> j
+nnoremap <C-y> j
