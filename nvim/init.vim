@@ -1,37 +1,65 @@
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" Required:
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+Plug 'scrooloose/nerdtree'
+nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
 
-" Required:
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_max_height = 25
+let g:ctrlp_lazy_update = 100
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+Plug 'ivalkeen/vim-ctrlp-tjump'
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+let g:ctrlp_tjump_only_silent = 1
 
-  call dein#load_toml('~/.config/nvim/dein.toml',{'lazy': 0})
-  " call dein#load_toml('~/.config/nvim/dein_lazy.toml',{'lazy': 1})
+Plug 'ompugao/ctrlp-grep'
+nnoremap <C-g> :<C-u>CtrlPGrep<CR>
 
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
+Plug 'tomasr/molokai'
+Plug 'jacoborus/tender.vim'
 
-" Required:
-filetype plugin indent on
-syntax enable
+Plug 'vim-airline/vim-airline'
 
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+Plug 'w0rp/ale'
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
 
-"End dein Scripts-------------------------
+Plug 'vim-ruby/vim-ruby'
+
+Plug 'tpope/vim-rails'
+nnoremap <C-r> :A
+
+Plug 'slim-template/vim-slim'
+
+Plug 'vim-scripts/tComment'
+
+Plug 'tpope/vim-surround'
+
+Plug 'kana/vim-fakeclip'
+
+Plug 'tpope/vim-endwise'
+
+Plug 'rizzatti/dash.vim'
+nnoremap <S-k> :Dash<CR>
+
+Plug 'editorconfig/editorconfig-vim'
+
+Plug 'cespare/vim-toml'
+
+Plug 'tyru/open-browser.vim'
+let g:netrw_nogx = 1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
+call plug#end()
+
+
+
+colorscheme tender
 
 set clipboard+=unnamed
 set ignorecase
