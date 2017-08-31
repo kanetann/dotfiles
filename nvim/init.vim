@@ -3,7 +3,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -19,7 +19,7 @@ let g:ctrlp_tjump_only_silent = 1
 Plug 'ompugao/ctrlp-grep'
 nnoremap <C-g> :<C-u>CtrlPGrep<CR>
 
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 Plug 'jacoborus/tender.vim'
 
 Plug 'vim-airline/vim-airline'
@@ -28,12 +28,12 @@ Plug 'w0rp/ale'
 let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
 
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 
 Plug 'tpope/vim-rails'
 nnoremap <C-r> :A
 
-Plug 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 Plug 'vim-scripts/tComment'
 
@@ -58,7 +58,8 @@ vmap gx <Plug>(openbrowser-smart-search)
 call plug#end()
 
 
-
+" options
+"----------------------------
 colorscheme tender
 
 set clipboard+=unnamed
@@ -70,8 +71,7 @@ set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
 
-nnoremap <silent> q     :<C-u>q!<CR>
+nnoremap <silent> q :<C-u>q!<CR>
 nnoremap <Tab> <C-w>w
 vnoremap 9 $
 nnoremap 9 $
-vnoremap v $
