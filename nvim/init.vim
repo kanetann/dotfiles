@@ -76,7 +76,7 @@ nnoremap <Tab> <C-w>w
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
-nnoremap <C-b> obinding.pry<CR><ESC>
+nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
 nnoremap <C-e> j
 nnoremap <C-h> j
 nnoremap <C-m> j
