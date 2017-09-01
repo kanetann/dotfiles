@@ -102,18 +102,10 @@
       "args": [],
       "and": false
     },
-    "C-b": {
-      "name": "go to #1",
-      "args": [
-        "javascript:(function(){window.open('http://b.hatena.ne.jp/entry/'+location.href);})();",
-        "hatena bookmark"
-      ],
-      "and": false
-    },
     "C-r": {
       "name": "go to #1",
       "args": [
-        "javascript:(function(){window.open('https://feedly.com/#spotlight/'+location.href);})();",
+        "javascript:(function(){window.open('https://feedly.com/i/discover/sources/search/'+location.href);})();",
         "rss"
       ],
       "and": false
@@ -123,6 +115,14 @@
       "args": [
         "javascript:(function(){window.open('https://www.google.co.jp/search?ie=UTF-8&oe=UTF-8&sourceid=navclient&gfns=1&q='+window.getSelection());})();",
         "google(I'm feeling lucky)"
+      ],
+      "and": false
+    },
+    "C-b": {
+      "name": "go to #1",
+      "args": [
+        "javascript:(function(){window.open('http://b.hatena.ne.jp/entry/'+location.href);})();",
+        "hatena"
       ],
       "and": false
     }
