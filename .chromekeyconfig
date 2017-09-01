@@ -125,6 +125,11 @@
         "hatena"
       ],
       "and": false
+    },
+    "g u": {
+      "name": "go to parent dir",
+      "args": [],
+      "and": false
     }
   },
   "limited_actions": {
