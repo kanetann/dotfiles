@@ -86,3 +86,5 @@ nnoremap <C-n> j
 nnoremap <C-q> j
 nnoremap <C-s> j
 nnoremap <C-y> j
+
+autocmd BufReadPost * exe "normal! g'\""
