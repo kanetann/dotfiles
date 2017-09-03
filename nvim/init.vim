@@ -55,7 +55,7 @@ let g:netrw_nogx = 1
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
-Plug 'kanetann/vim-speeddating'
+" Plug 'kanetann/vim-speeddating'
 
 Plug 'vim-syntastic/syntastic'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript'] }
