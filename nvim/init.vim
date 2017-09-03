@@ -69,6 +69,8 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set nobackup
+set noswapfile
 set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
