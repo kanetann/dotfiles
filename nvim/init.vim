@@ -24,9 +24,9 @@ Plug 'jacoborus/tender.vim'
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'w0rp/ale'
-let g:ale_sign_column_always = 1
-let g:airline#extensions#ale#enabled = 1
+" Plug 'w0rp/ale'
+" let g:ale_sign_column_always = 1
+" let g:airline#extensions#ale#enabled = 1
 
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 
@@ -56,6 +56,11 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 Plug 'kanetann/vim-speeddating'
+
+Plug 'vim-syntastic/syntastic'
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 
 call plug#end()
 
