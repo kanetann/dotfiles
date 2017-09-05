@@ -32,7 +32,7 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/.vvm/bin:/Users/aa/.vvm/vims/current/bin
 
 ### neovim
-alias vim="nvim"
+# alias vim="nvim"
 
 ### rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
