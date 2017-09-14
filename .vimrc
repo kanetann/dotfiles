@@ -86,12 +86,12 @@ vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
 nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
-nnoremap <C-e> j
-nnoremap <C-h> j
-nnoremap <C-m> j
-nnoremap <C-n> j
-nnoremap <C-q> j
-nnoremap <C-s> j
-nnoremap <C-y> j
+nnoremap <C-e> <C-e>
+nnoremap <C-h> <C-h>
+nnoremap <C-m> <C-m>
+nnoremap <C-n> <C-n>
+nnoremap <C-q> <C-q>
+nnoremap <C-s> <C-s>
+nnoremap <C-y> <C-y>
 
 autocmd BufReadPost * exe "normal! g'\""
