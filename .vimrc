@@ -69,6 +69,10 @@ let g:quickrun_config = {
       \   }
       \}
 
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 call plug#end()
 
 
