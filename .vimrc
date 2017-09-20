@@ -62,11 +62,20 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'ja
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
 
+Plug 'thinca/vim-quickrun'
+let g:quickrun_config = {
+      \   "_" : {
+      \       "outputter/buffer/split" : ":botright 16sp",
+      \   }
+      \}
+
 call plug#end()
 
 
 " options
 "----------------------------
+let mapleader = "\<Space>"
+
 colorscheme tender
 
 set clipboard+=unnamed
