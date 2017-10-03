@@ -16,8 +16,8 @@ nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 let g:ctrlp_tjump_only_silent = 1
 
-Plug 'ompugao/ctrlp-grep'
-nnoremap <C-g> :<C-u>CtrlPGrep<CR>
+" Plug 'ompugao/ctrlp-grep'
+" nnoremap <C-g> :<C-u>CtrlPGrep<CR>
 
 " Plug 'tomasr/molokai'
 Plug 'jacoborus/tender.vim'
@@ -61,6 +61,9 @@ Plug 'vim-syntastic/syntastic'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
+
+Plug 'rking/ag.vim'
+nnoremap <expr> <C-g> ':Ag ' . expand('<cword>')
 
 call plug#end()
 
