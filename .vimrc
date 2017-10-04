@@ -65,11 +65,24 @@ let g:syntastic_javascript_checkers = ['eslint']
 Plug 'rking/ag.vim'
 nnoremap <expr> <C-g> ':Ag ' . expand('<cword>')
 
+Plug 'thinca/vim-quickrun'
+let g:quickrun_config = {
+      \   "_" : {
+      \       "outputter/buffer/split" : ":botright 16sp",
+      \   }
+      \}
+
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 call plug#end()
 
 
 " options
 "----------------------------
+let mapleader = "\<Space>"
+
 colorscheme tender
 
 set clipboard+=unnamed
