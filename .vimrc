@@ -76,6 +76,9 @@ Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+Plug 'kannokanno/previm'
+nnoremap <C-m> :PrevimOpen<CR>
+
 call plug#end()
 
 
@@ -104,7 +107,7 @@ vnoremap v $
 nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
 nnoremap <C-e> <C-e>
 nnoremap <C-h> <C-h>
-nnoremap <C-m> <C-m>
+" nnoremap <C-m> <C-m>
 nnoremap <C-n> <C-n>
 nnoremap <C-q> <C-q>
 nnoremap <C-s> <C-s>
