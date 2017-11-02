@@ -79,6 +79,9 @@ nmap ga <Plug>(EasyAlign)
 Plug 'kannokanno/previm'
 nnoremap <C-m> :PrevimOpen<CR>
 
+Plug 'iberianpig/tig-explorer.vim'
+nnoremap <silent> <C-e> :<C-u>TigOpenCurrentFile<CR>
+
 call plug#end()
 
 
@@ -105,12 +108,12 @@ vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
 nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
-nnoremap <C-e> <C-e>
+" nnoremap <C-e> <C-e>
 nnoremap <C-h> <C-h>
 " nnoremap <C-m> <C-m>
 nnoremap <C-n> <C-n>
-nnoremap <C-q> <C-q>
-nnoremap <C-s> <C-s>
+" nnoremap <C-q> <C-q>
+" nnoremap <C-s> <C-s>
 nnoremap <C-y> <C-y>
 
 autocmd BufReadPost * exe "normal! g'\""
