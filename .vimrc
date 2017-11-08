@@ -81,7 +81,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 Plug 'kannokanno/previm'
-nnoremap <C-m> :PrevimOpen<CR>
+" nnoremap <C-m> :PrevimOpen<CR>
 
 Plug 'iberianpig/tig-explorer.vim'
 nnoremap <silent> <C-e> :<C-u>TigOpenCurrentFile<CR>
