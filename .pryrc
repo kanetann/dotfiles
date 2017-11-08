@@ -8,6 +8,8 @@ if defined?(PryByebug)
   Pry.commands.alias_command 's', 'step'
   Pry.commands.alias_command 'n', 'next'
   Pry.commands.alias_command 'f', 'finish'
+  Pry.commands.alias_command 'e', 'exit'
+  Pry.commands.alias_command 'l', 'ls -l'
 
   # Hit Enter to repeat last command
   Pry::Commands.command /^$/, "repeat last command" do
