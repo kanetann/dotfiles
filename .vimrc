@@ -62,8 +62,12 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'ja
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
 
-Plug 'rking/ag.vim'
-nnoremap <expr> <C-g> ':Ag ' . expand('<cword>')
+" Plug 'rking/ag.vim'
+" nnoremap <expr> <C-g> ':Ag ' . expand('<cword>')
+
+Plug 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep --smart-case'
+nnoremap <expr> <C-g> ':Ack ' . expand('<cword>')
 
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = {
