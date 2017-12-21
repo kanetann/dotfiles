@@ -46,3 +46,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### for C-s, C-q
 stty stop undef
 stty start undef
+
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+alias repos='cd $(ghq list -p | peco)'
