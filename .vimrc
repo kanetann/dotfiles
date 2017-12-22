@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
+nnoremap <C-n> :<C-u>NERDTreeFind<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -130,11 +131,11 @@ nnoremap <Tab> <C-w>w
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
-nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
+" nnoremap <C-b> ibinding.pry<CR><ESC>:w<CR>
 " nnoremap <C-e> <C-e>
-nnoremap <C-h> <C-h>
+" nnoremap <C-h> <C-h>
 " nnoremap <C-m> <C-m>
-nnoremap <C-n> <C-n>
+" nnoremap <C-n> <C-n>
 " nnoremap <C-q> <C-q>
 " nnoremap <C-s> <C-s>
 nnoremap <C-y> <C-y>
