@@ -52,3 +52,4 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias repos='cd $(ghq list -p | peco)'
+alias ficd='cd $(find . -type d | peco)'
