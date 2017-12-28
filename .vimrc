@@ -141,3 +141,4 @@ vnoremap v $
 nnoremap <C-y> <C-y>
 
 autocmd BufReadPost * exe "normal! g'\""
+nnoremap <Leader>sp :<C-u>set paste<CR>
