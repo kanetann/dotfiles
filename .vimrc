@@ -85,9 +85,12 @@ let g:ale_set_quickfix = 1
 " Plug 'rking/ag.vim'
 " nnoremap <expr> <C-g> ':Ag ' . expand('<cword>')
 
-Plug 'mileszs/ack.vim'
-let g:ackprg = 'ag --vimgrep --smart-case'
-nnoremap <expr> <C-g> ':Ack ' . expand('<cword>')
+" Plug 'mileszs/ack.vim'
+" let g:ackprg = 'ag --vimgrep --smart-case'
+" " nnoremap <expr> <C-g> ':Ack ' . expand('<cword>')
+
+Plug 'mhinz/vim-grepper'
+nnoremap <expr> <C-g> ':GrepperAg ' . expand('<cword>')
 
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = {
