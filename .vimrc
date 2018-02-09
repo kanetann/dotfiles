@@ -72,7 +72,7 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 Plug 'w0rp/ale'
 let g:ale_linters = {
-\   'javascript': ['standard'],
+\   'javascript': ['eslint'],
 \   'ruby': ['rubocop', 'rails_best_practices'],
 \}
 let g:ale_sign_column_always = 1
