@@ -33,7 +33,6 @@ Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 
 Plug 'tpope/vim-rails'
 nnoremap <C-r> :R
-nnoremap <C-a> :A
 
 Plug 'slim-template/vim-slim', {'for': 'slim'}
 
