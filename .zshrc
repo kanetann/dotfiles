@@ -53,3 +53,17 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias repos='cd $(ghq list -p | peco)'
 alias ficd='cd $(find . -type d | peco)'
+
+
+# https://postd.cc/how-to-boost-your-vim-productivity/
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
