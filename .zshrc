@@ -29,7 +29,7 @@ ZSH_THEME="crcandy"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/aa/.vvm/bin:/Users/aa/.vvm/vims/current/bin
+export PATH=$PATH:/usr/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 ### neovim
 # alias vim="nvim"
