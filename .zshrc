@@ -53,7 +53,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias repos='cd $(ghq list -p | peco)'
 alias ficd='cd $(find . -type d | peco)'
-
+alias tmuxp='tmuxinator start project workspace=$(ghq list -p | peco)'
 
 # https://postd.cc/how-to-boost-your-vim-productivity/
 fancy-ctrl-z () {
