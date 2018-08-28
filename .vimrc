@@ -109,6 +109,10 @@ Plug 'kannokanno/previm'
 Plug 'iberianpig/tig-explorer.vim'
 nnoremap <silent> <C-e> :<C-u>TigOpenCurrentFile<CR>
 
+Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
+
 call plug#end()
 
 
