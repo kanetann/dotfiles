@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-REFE_ROOT="$HOME/dotfiles/refe/ruby-refm-1.9.3-dynamic-20120829"
-exec ruby -Ke -I $REFE_ROOT/bitclust/lib $REFE_ROOT/bitclust/bin/refe --encoding=euc -d $REFE_ROOT/db-1_9_3 "$@"
