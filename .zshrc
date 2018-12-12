@@ -41,7 +41,7 @@ eval "$(rbenv init -)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ### for C-s, C-q
 stty stop undef
@@ -52,21 +52,21 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias repos='cd $(ghq list -p | peco)'
-alias ficd='cd $(find . -type d | peco)'
-alias tmuxp='tmuxinator start project workspace=$(ghq list -p | peco)'
+# alias ficd='cd $(find . -type d | peco)'
+# alias tmuxp='tmuxinator start project workspace=$(ghq list -p | peco)'
 
-# https://postd.cc/how-to-boost-your-vim-productivity/
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
+# # https://postd.cc/how-to-boost-your-vim-productivity/
+# fancy-ctrl-z () {
+#   if [[ $#BUFFER -eq 0 ]]; then
+#     BUFFER="fg"
+#     zle accept-line
+#   else
+#     zle push-input
+#     zle clear-screen
+#   fi
+# }
+# zle -N fancy-ctrl-z
+# bindkey '^Z' fancy-ctrl-z
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
