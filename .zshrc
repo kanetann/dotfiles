@@ -70,3 +70,10 @@ alias repos='cd $(ghq list -p | peco)'
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# mysql 5.7
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib
+export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
+export DYLD_LIBRARY_PATH="/usr/local/opt/mysql@5.7/:$DYLD_LIBRARY_PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
