@@ -1,10 +1,10 @@
 # setup macos
 
 ```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install mas
 mas install 497799835 # Xcode
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew cask install iterm2
 brew cask install google-chrome
@@ -43,6 +43,8 @@ rbenv global 2.5.1
 rbenv rehash
 gem install bundler
 gem install rails
+
+git clone https://github.com/rbenv/rbenv-vars.git $(rbenv root)/plugins/rbenv-vars
 
 git clone git://github.com/kanetann/dotfiles.git ~/dotfiles
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
