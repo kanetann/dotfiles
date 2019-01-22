@@ -113,6 +113,16 @@ Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_no_default_key_mappings = 1
 
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+let g:vim_jsx_pretty_colorful_config = 1
+
+" Plug 'mxw/vim-jsx'
+" Plug 'othree/yajs.vim'
+" Plug 'othree/es.next.syntax.vim'
+
+Plug 'cohama/lexima.vim'
+
 call plug#end()
 
 
