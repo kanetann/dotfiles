@@ -16,6 +16,8 @@ brew cask install psequel
 brew cask install mysqlworkbench
 brew cask install microsoft-office
 brew cask install marp
+brew cask install dropbox
+brew cask install spotify
 
 brew install vim
 brew install ctags
