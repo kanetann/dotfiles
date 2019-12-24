@@ -3,19 +3,19 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
-nnoremap <C-n> :<C-u>NERDTreeFind<CR>
+" Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+" nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
+" nnoremap <C-n> :<C-u>NERDTreeFind<CR>
 
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_max_height = 25
-let g:ctrlp_lazy_update = 100
+" Plug 'ctrlpvim/ctrlp.vim'
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_max_height = 25
+" let g:ctrlp_lazy_update = 100
 
-Plug 'ivalkeen/vim-ctrlp-tjump'
-nnoremap <c-]> :CtrlPtjump<cr>
-vnoremap <c-]> :CtrlPtjumpVisual<cr>
-let g:ctrlp_tjump_only_silent = 1
+" Plug 'ivalkeen/vim-ctrlp-tjump'
+" nnoremap <c-]> :CtrlPtjump<cr>
+" vnoremap <c-]> :CtrlPtjumpVisual<cr>
+" let g:ctrlp_tjump_only_silent = 1
 
 " Plug 'ompugao/ctrlp-grep'
 " nnoremap <C-g> :<C-u>CtrlPGrep<CR>
@@ -95,6 +95,7 @@ let g:ale_lint_on_enter = 0
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
+nnoremap <expr> <C-f> ':Files<CR>'
 
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = {
@@ -126,6 +127,8 @@ let g:vim_jsx_pretty_colorful_config = 1
 " Plug 'othree/es.next.syntax.vim'
 
 Plug 'cohama/lexima.vim'
+
+
 
 call plug#end()
 
