@@ -92,7 +92,7 @@ let g:ale_lint_on_enter = 0
 " Plug 'mhinz/vim-grepper'
 " nnoremap <expr> <C-g> ':GrepperAg ' . expand('<cword>')
 
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
 nnoremap <expr> <C-f> ':Files<CR>'
