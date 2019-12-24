@@ -89,8 +89,12 @@ let g:ale_lint_on_enter = 0
 " let g:ackprg = 'ag --vimgrep --smart-case'
 " " nnoremap <expr> <C-g> ':Ack ' . expand('<cword>')
 
-Plug 'mhinz/vim-grepper'
-nnoremap <expr> <C-g> ':GrepperAg ' . expand('<cword>')
+" Plug 'mhinz/vim-grepper'
+" nnoremap <expr> <C-g> ':GrepperAg ' . expand('<cword>')
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
 
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = {

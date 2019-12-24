@@ -29,6 +29,8 @@ brew install peco
 brew install tmux
 brew install reattach-to-user-namespace
 brew install the_silver_searcher
+brew install ripgrep
+brew install fzf
 brew install postgresql
 brew install mysql
 brew install redis
