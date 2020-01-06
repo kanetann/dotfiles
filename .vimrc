@@ -3,8 +3,8 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-" nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+nnoremap <C-f> :<C-u>NERDTreeToggle<CR>
 " nnoremap <C-n> :<C-u>NERDTreeFind<CR>
 
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -95,7 +95,7 @@ let g:ale_lint_on_enter = 0
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
-nnoremap <expr> <C-f> ':Files<CR>'
+nnoremap <expr> <C-p> ':Files<CR>'
 
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = {
