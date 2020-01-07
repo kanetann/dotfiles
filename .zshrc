@@ -51,7 +51,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-alias repos='cd $(ghq list -p | peco)'
+alias repos='cd $(ghq list -p | fzf)'
 # alias ficd='cd $(find . -type d | peco)'
 # alias tmuxp='tmuxinator start project workspace=$(ghq list -p | peco)'
 
@@ -77,3 +77,5 @@ export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib
 export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
 export DYLD_LIBRARY_PATH="/usr/local/opt/mysql@5.7/:$DYLD_LIBRARY_PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
