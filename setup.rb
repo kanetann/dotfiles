@@ -3,9 +3,9 @@ if macos?
   `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
   `brew install mas`
   `mas install 497799835`
-  formulas = %w(iterm2 google-chrome google-japanese-ime alfred spectacle dash psequel mysqlworkbench microsoft-office marp dropbox spotify)
-  formulas.each do |formula|
-    `brew cask install #{formula}`
+  apps = %w(iterm2 google-chrome google-japanese-ime alfred spectacle dash psequel mysqlworkbench microsoft-office marp dropbox spotify)
+  apps.each do |app|
+    `brew cask install #{app}`
   end
 
   # font
@@ -16,12 +16,12 @@ if macos?
 end
 
 # terminal apps
-formulas = %w(vim ctags git tig golang ghq tmux ripgrep fzf)
-formulas.each do |formula|
+apps = %w(vim ctags git tig golang ghq tmux ripgrep fzf)
+apps.each do |app|
   if macos?
-    `brew install #{formula}`
+    `brew install #{app}`
   else
-    `sudo apt-get install -y #{formula}`
+    `sudo apt-get install -y #{app}`
   end
 end
 
