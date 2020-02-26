@@ -1,3 +1,7 @@
+def macos?
+  RUBY_PLATFORM.match(/darwin/)
+end
+
 if macos?
   # homebrew, xcode, applications
   `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -25,20 +29,13 @@ apps.each do |app|
   end
 end
 
-`git clone git://github.com/kanetann/dotfiles.git ~/dotfiles`
 `curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh`
 
 dotfiles = %w(.agignore .editorconfig .pryrc .tigrc .tmux.conf .vimrc .zshrc)
 dotfiles.each do |dotfile|
-  `ln -sf ~/dotfiles/#{dotfile} #{dotfile}`
+  `ln -sf ~/dotfiles/#{dotfile} ~/#{dotfile}`
 end
 
 # and open vim + :PlugInstall
 `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 
-
-
-
-def macos?
-  RUBY_PLATFORM.match(/darwin/)
-end
