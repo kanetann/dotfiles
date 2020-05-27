@@ -94,7 +94,7 @@ let g:ale_lint_on_enter = 0
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
-nnoremap <expr> <C-g> ':Rg '
+nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
 nnoremap <expr> <C-p> ':Files<CR>'
 let $FZF_DEFAULT_OPTS = '--height 50% --layout=reverse --border'
 
