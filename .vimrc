@@ -123,6 +123,8 @@ let g:quickrun_config = {
       \       "outputter/buffer/split" : ":botright 16sp",
       \   }
       \}
+nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
+inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
 
 Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
