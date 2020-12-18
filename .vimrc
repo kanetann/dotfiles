@@ -96,8 +96,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
 nnoremap <expr> <C-p> ':Files<CR>'
-let $FZF_DEFAULT_OPTS = '--height 50% --layout=reverse --border'
+nnoremap <expr> <C-b> ':Buffers<CR>'
+" let $FZF_DEFAULT_OPTS = '--height 50% --layout=reverse --border'
+let g:fzf_preview_window = ''
 
+
+" command! -bang -nargs=* Rg
+"  \ call fzf#vim#grep(
+"  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+"  \   <bang>0)
 " command! -bang -nargs=? -complete=dir Files
 "     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 "
