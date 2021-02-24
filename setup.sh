@@ -7,6 +7,7 @@ brew install google-chrome
 brew install google-japanese-ime
 brew install spectacle
 brew install dropbox
+brew install visual-studio-code
 
 brew install vim
 brew install ctags
