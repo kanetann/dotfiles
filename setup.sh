@@ -21,12 +21,12 @@ brew install ghq
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-ln -sf ~/dotfiles/ ~/.agignore
-ln -sf ~/dotfiles/ ~/.editorconfig
-ln -sf ~/dotfiles/ ~/.pryrc
-ln -sf ~/dotfiles/ ~/.tigrc
-ln -sf ~/dotfiles/ ~/.tmux.conf
-ln -sf ~/dotfiles/ ~/.vimrc
-ln -sf ~/dotfiles/ ~/.zshrc
+ln -sf ~/dotfiles/.agignore ~/.agignore
+ln -sf ~/dotfiles/.editorconfig ~/.editorconfig
+ln -sf ~/dotfiles/.pryrc ~/.pryrc
+ln -sf ~/dotfiles/.tigrc ~/.tigrc
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
