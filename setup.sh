@@ -30,3 +30,36 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# chsh
+# ssh-keygen -t rsa -b 4096
+# sudo update-alternatives --config editor
+# sudo visudo
+#
+# git clone https://github.com/kanetann/dotfiles.git
+# cd dotfiles
+# sh setup.sh
+#
+# go get github.com/x-motemen/ghq
+#
+# sudo apt install rbenv
+# mkdir -p "$(rbenv root)"/plugins
+# git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+# rbenv install <version>
+# rbenv global <version>
+# gem instal bundler
+#
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+# nvm install <version>
+#
+# sudo apt-get install mysql-server
+# sudo mysql_secure_installation
+# sudo mysql -uroot -p
+# CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+# GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+# FLUSH PRIVILEGES;
+# mysql -uusername -p
+#
+# sh docker-compose.sh
+# git config --global user.email 'username@example.com'
+# git config --global user.name 'username'
