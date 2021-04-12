@@ -162,6 +162,8 @@ Plug 'cohama/lexima.vim'
 " let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 " " let g:auto_save_silent = 1  " do not display the auto-save notification
 
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 
