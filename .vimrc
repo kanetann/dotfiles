@@ -164,7 +164,7 @@ Plug 'cohama/lexima.vim'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'brglng/vim-im-select'
+" Plug 'brglng/vim-im-select'
 " if has("mac")
 "   let g:im_select_default = 'com.apple.keylayout.ABC'
 " endif
