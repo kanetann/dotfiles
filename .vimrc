@@ -125,13 +125,11 @@ let g:fzf_preview_window = ''
 
 
 Plug 'thinca/vim-quickrun'
-let g:quickrun_config = {
-      \   "_" : {
-      \       "outputter/buffer/split" : ":botright 16sp",
-      \   }
-      \}
+set splitbelow
+set splitright
 nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
 inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
+vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 
 Plug 'junegunn/vim-easy-align'
 xmap ga <Plug>(EasyAlign)
