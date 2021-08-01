@@ -173,6 +173,7 @@ Plug 'tpope/vim-fugitive'
 " endif
 inoremap <C-c> <ESC>
 
+Plug 'fatih/vim-go'
 
 call plug#end()
 
