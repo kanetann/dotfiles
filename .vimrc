@@ -173,6 +173,23 @@ inoremap <C-c> <ESC>
 
 Plug 'fatih/vim-go'
 
+Plug 'thinca/vim-quickrun'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+
+let g:quickrun_config = {}
+let g:quickrun_config['_'] = {
+  \ 'runner': 'vimproc',
+  \ 'runner/vimproc/updatetime' : 100
+  \ }
+let g:quickrun_config['ruby.rspec'] = {
+  \ 'command': 'bundle',
+  \ 'cmdopt': 'exec rspec',
+  \ }
+augroup QuickRunRspec
+  autocmd!
+  autocmd BufEnter *_spec.rb set filetype=ruby.rspec
+augroup END
+
 call plug#end()
 
 
@@ -212,4 +229,3 @@ nnoremap <Leader>sp :<C-u>set paste<CR>
 
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> <ESC>:w<CR>
-
