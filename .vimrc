@@ -68,9 +68,12 @@ augroup QuickRunRspec
   autocmd!
   autocmd BufEnter *_spec.rb set filetype=ruby.rspec
 augroup END
-nnoremap <silent> <leader>q :<C-u>QuickRun<CR>
-inoremap <silent> <leader>q <ESC>:<C-u>QuickRun<CR>
-vnoremap <silent> <leader>q <ESC>:'<,'>QuickRun<CR>
+" nnoremap <silent> <leader>q :<C-u>QuickRun<CR>
+" inoremap <silent> <leader>q <ESC>:<C-u>QuickRun<CR>
+" vnoremap <silent> <leader>q <ESC>:'<,'>QuickRun<CR>
+nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
+inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
+vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
