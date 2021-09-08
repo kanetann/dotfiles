@@ -296,3 +296,5 @@ vnoremap v $
 
 autocmd BufReadPost * exe "normal! g'\""
 nnoremap <Leader>sp :<C-u>set paste<CR>
+
+nnoremap <Leader>t :terminal<CR>
