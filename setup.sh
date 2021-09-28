@@ -29,6 +29,7 @@ ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
 ln -sf ~/dotfiles/my.zsh-theme ~/.oh-my-zsh/custom/themes/my.zsh-theme
 # TODO:import to iTerm2 color setting.
 curl -O https://raw.githubusercontent.com/tombell/tender-iterm2/main/Tender.itermcolors
