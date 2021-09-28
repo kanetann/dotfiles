@@ -265,6 +265,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 Plug 'slim-template/vim-slim'
+syntax enable
+filetype plugin indent on
 
 
 call plug#end()
