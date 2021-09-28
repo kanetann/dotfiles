@@ -264,6 +264,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 
+Plug 'slim-template/vim-slim'
+
+
 call plug#end()
 
 
