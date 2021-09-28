@@ -267,6 +267,7 @@ let g:UltiSnipsEditSplit="vertical"
 Plug 'slim-template/vim-slim'
 syntax enable
 filetype plugin indent on
+autocmd BufNewFile,BufRead *.slim  set filetype=slim
 
 
 call plug#end()
