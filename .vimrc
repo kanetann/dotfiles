@@ -269,6 +269,7 @@ syntax enable
 filetype plugin indent on
 autocmd BufNewFile,BufRead *.slim  set filetype=slim
 
+Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
