@@ -49,7 +49,7 @@ case ${OSTYPE} in
     darwin*)
         ;;
     linux*)
-        source /usr/share/doc/fzf/examples/ke-bindings.zsh
+        source /usr/share/doc/fzf/examples/key-bindings.zsh
         ;;
 esac
 
