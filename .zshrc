@@ -44,15 +44,32 @@ eval "$(rbenv init -)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+case ${OSTYPE} in
+    darwin*)
+        ;;
+    linux*)
+        source /usr/share/doc/fzf/examples/ke-bindings.zsh
+        ;;
+esac
 
 ### for C-s, C-q
 stty stop undef
 stty start undef
 
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+case ${OSTYPE} in
+    darwin*)
+	export GOROOT=/usr/local/opt/go/libexec
+	export GOPATH=$HOME
+	export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+        ;;
+    linux*)
+	export GOPATH=$HOME/go
+	export PATH=$PATH:/usr/lib/go/bin
+	export PATH=$PATH:$GOPATH/bin
+        ;;
+esac
+
 
 alias repos='cd $(ghq list -p | fzf)'
 # alias ficd='cd $(find . -type d | peco)'
@@ -82,3 +99,7 @@ export DYLD_LIBRARY_PATH="/usr/local/opt/mysql@5.7/:$DYLD_LIBRARY_PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
