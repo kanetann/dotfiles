@@ -43,6 +43,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
 nnoremap <expr> <C-p> ':Files<CR>'
+nnoremap <expr> <C-]> ':Tags ' . expand('<cword>') . '<CR>'
 let g:fzf_preview_window = ''
 
 
