@@ -4,6 +4,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
+let NERDTreeShowHidden = 1
 
 
 Plug 'jacoborus/tender.vim'
