@@ -100,6 +100,8 @@ export DYLD_LIBRARY_PATH="/usr/local/opt/mysql@5.7/:$DYLD_LIBRARY_PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
+export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
+
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
