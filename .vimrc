@@ -273,6 +273,13 @@ autocmd BufNewFile,BufRead *.slim  set filetype=slim
 
 Plug 'stephpy/vim-yaml'
 
+
+Plug 'APZelos/blamer.nvim'
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_template = '<committer> <committer-time> <summary>'
+let g:blamer_date_format = '%Y-%m-%d %H:%M'
+
 call plug#end()
 
 
