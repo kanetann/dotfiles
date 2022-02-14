@@ -275,11 +275,14 @@ autocmd BufNewFile,BufRead *.slim  set filetype=slim
 Plug 'stephpy/vim-yaml'
 
 
-Plug 'APZelos/blamer.nvim'
-let g:blamer_enabled = 1
-let g:blamer_delay = 500
-let g:blamer_template = '<committer> <committer-time> <summary>'
-let g:blamer_date_format = '%Y-%m-%d %H:%M'
+" Plug 'APZelos/blamer.nvim'
+" let g:blamer_enabled = 1
+" let g:blamer_delay = 500
+" let g:blamer_template = '<committer> <committer-time> <summary>'
+" let g:blamer_date_format = '%Y-%m-%d %H:%M'
+
+Plug 'iberianpig/tig-explorer.vim'
+let g:tig_explorer_use_builtin_term=0
 
 call plug#end()
 
