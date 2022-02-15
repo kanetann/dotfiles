@@ -318,3 +318,4 @@ autocmd BufReadPost * exe "normal! g'\""
 nnoremap <Leader>sp :<C-u>set paste<CR>
 
 nnoremap <Leader>t :terminal<CR>
+autocmd! FileType markdown hi! def link markdownItalic Normal
