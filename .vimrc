@@ -22,7 +22,7 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_linters = {
 \   'javascript': ['prettier', 'eslint'],
 \   'ruby': ['rubocop', 'rails_best_practices'],
