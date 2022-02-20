@@ -81,6 +81,10 @@ vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'mechatroner/rainbow_csv'
+
+
+
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
