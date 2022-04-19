@@ -86,6 +86,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'mechatroner/rainbow_csv'
 
+Plug 'tribela/vim-transparent'
+
 
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
