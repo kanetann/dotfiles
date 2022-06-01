@@ -293,6 +293,8 @@ Plug 'stephpy/vim-yaml'
 Plug 'iberianpig/tig-explorer.vim'
 let g:tig_explorer_use_builtin_term=0
 
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 
