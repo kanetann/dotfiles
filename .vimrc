@@ -294,6 +294,9 @@ Plug 'iberianpig/tig-explorer.vim'
 let g:tig_explorer_use_builtin_term=0
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
