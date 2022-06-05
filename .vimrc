@@ -297,6 +297,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'townk/vim-autoclose'
 
 call plug#end()
 
