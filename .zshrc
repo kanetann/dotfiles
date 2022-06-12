@@ -28,7 +28,7 @@ ZSH_THEME="my"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git brew bundler capistrano gem heroku knife rails rake rbenv rsync vagrant)
-plugins=(fancy-ctrl-z)
+plugins=(fancy-ctrl-z fzf)
 
 source $ZSH/oh-my-zsh.sh
 
