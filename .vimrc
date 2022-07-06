@@ -42,7 +42,8 @@ let g:ale_lint_on_enter = 0
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
+" nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
+nnoremap <expr> <C-g> ':!rg -n --hidden ' . expand('<cword>') . ' > zzz'
 nnoremap <expr> <C-p> ':Files<CR>'
 nnoremap <expr> <C-]> ':Tags ' . expand('<cword>') . '<CR>'
 let g:fzf_preview_window = ''
@@ -51,7 +52,7 @@ let g:fzf_preview_window = ''
 Plug 'vim-scripts/vim-auto-save'
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-let g:auto_save_silent = 1  " do not display the auto-save notification
+let g:auto_save_silent = 1 " do not display the auto-save notification
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 
 Plug 'ntpeters/vim-better-whitespace'
@@ -327,6 +328,7 @@ set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
 
 nnoremap <silent> q :q!<CR>
+nnoremap <silent> gf gF
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
