@@ -117,8 +117,8 @@ case ${OSTYPE} in
     ;;
 esac
 
-export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+# export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
+# export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 
 alias repos='cd $(ghq list -p | fzf)'
 alias rg='rg -n --hidden'
