@@ -89,6 +89,7 @@ Plug 'mechatroner/rainbow_csv'
 
 Plug 'tribela/vim-transparent'
 
+Plug 'tpope/vim-fugitive'
 
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
