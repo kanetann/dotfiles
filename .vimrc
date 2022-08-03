@@ -83,6 +83,43 @@ inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
 vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 
 
+Plug 'mechatroner/rainbow_csv'
+
+Plug 'tribela/vim-transparent'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'slim-template/vim-slim'
+syntax enable
+filetype plugin indent on
+autocmd BufNewFile,BufRead *.slim  set filetype=slim
+
+Plug 'stephpy/vim-yaml'
+
+
+" Plug 'APZelos/blamer.nvim'
+" let g:blamer_enabled = 1
+" let g:blamer_delay = 500
+" let g:blamer_template = '<committer> <committer-time> <summary>'
+" let g:blamer_date_format = '%Y-%m-%d %H:%M'
+
+Plug 'iberianpig/tig-explorer.vim'
+let g:tig_explorer_use_builtin_term=0
+
+Plug 'editorconfig/editorconfig-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'townk/vim-autoclose'
+Plug 'mattn/emmet-vim'
+
+
+
+
+
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
@@ -235,36 +272,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-Plug 'mechatroner/rainbow_csv'
-
-Plug 'tribela/vim-transparent'
-
-Plug 'tpope/vim-fugitive'
-
-Plug 'slim-template/vim-slim'
-syntax enable
-filetype plugin indent on
-autocmd BufNewFile,BufRead *.slim  set filetype=slim
-
-Plug 'stephpy/vim-yaml'
 
 
-" Plug 'APZelos/blamer.nvim'
-" let g:blamer_enabled = 1
-" let g:blamer_delay = 500
-" let g:blamer_template = '<committer> <committer-time> <summary>'
-" let g:blamer_date_format = '%Y-%m-%d %H:%M'
-
-Plug 'iberianpig/tig-explorer.vim'
-let g:tig_explorer_use_builtin_term=0
-
-Plug 'editorconfig/editorconfig-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'townk/vim-autoclose'
 
 call plug#end()
 
