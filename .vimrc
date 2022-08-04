@@ -3,41 +3,41 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'preservim/nerdtree'
-let NERDTreeShowHidden = 1
+" Plug 'preservim/nerdtree'
+" let NERDTreeShowHidden = 1
 
 
 Plug 'jacoborus/tender.vim'
 
 
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 
 
 Plug 'vim-scripts/tComment'
 
 
-Plug 'tyru/open-browser.vim'
-let g:netrw_nogx = 1
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
+" Plug 'tyru/open-browser.vim'
+" " let g:netrw_nogx = 1
+" nmap gx <Plug>(openbrowser-smart-search)
+" vmap gx <Plug>(openbrowser-smart-search)
 
 
-Plug 'dense-analysis/ale'
-let g:ale_linters = {
-\   'javascript': ['prettier', 'eslint'],
-\   'ruby': ['rubocop', 'rails_best_practices'],
-\}
-let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint'],
-\   'ruby': ['rubocop'],
-\}
-let g:ale_sign_column_always = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-" let g:ale_set_loclist = 0
-" let g:ale_set_quickfix = 1
-" let g:ale_fix_on_save = 1
+" Plug 'dense-analysis/ale'
+" let g:ale_linters = {
+" \   'javascript': ['prettier', 'eslint'],
+" \   'ruby': ['rubocop', 'rails_best_practices'],
+" \}
+" let g:ale_fixers = {
+" \   'javascript': ['prettier', 'eslint'],
+" \   'ruby': ['rubocop'],
+" \}
+" let g:ale_sign_column_always = 1
+" let g:airline#extensions#ale#enabled = 1
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_enter = 0
+" " let g:ale_set_loclist = 0
+" " let g:ale_set_quickfix = 1
+" " let g:ale_fix_on_save = 1
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -49,52 +49,52 @@ nnoremap <expr> <C-]> ':Tags ' . expand('<cword>') . '<CR>'
 let g:fzf_preview_window = ''
 
 
-Plug 'vim-scripts/vim-auto-save'
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-let g:auto_save_silent = 1 " do not display the auto-save notification
-let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
+" Plug 'vim-scripts/vim-auto-save'
+" let g:auto_save = 1  " enable AutoSave on Vim startup
+" let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+" let g:auto_save_silent = 1 " do not display the auto-save notification
+" let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 
-Plug 'ntpeters/vim-better-whitespace'
-let g:strip_whitespace_on_save=1
-let g:strip_whitespace_confirm=0
+" Plug 'ntpeters/vim-better-whitespace'
+" let g:strip_whitespace_on_save=1
+" let g:strip_whitespace_confirm=0
 
-Plug 'thinca/vim-quickrun'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-let g:quickrun_config = {}
-let g:quickrun_config['_'] = {
-  \ 'runner': 'vimproc',
-  \ 'runner/vimproc/updatetime' : 100,
-  \ 'outputter/buffer/opener' : "new"
-  \ }
-let g:quickrun_config['ruby.rspec'] = {
-  \ 'command': 'bundle',
-  \ 'cmdopt': 'exec rspec',
-  \ }
-augroup QuickRunRspec
-  autocmd!
-  autocmd BufEnter *_spec.rb set filetype=ruby.rspec
-augroup END
-" nnoremap <silent> <leader>q :<C-u>QuickRun<CR>
-" inoremap <silent> <leader>q <ESC>:<C-u>QuickRun<CR>
-" vnoremap <silent> <leader>q <ESC>:'<,'>QuickRun<CR>
-nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
-inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
-vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
+" Plug 'thinca/vim-quickrun'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" let g:quickrun_config = {}
+" let g:quickrun_config['_'] = {
+"   \ 'runner': 'vimproc',
+"   \ 'runner/vimproc/updatetime' : 100,
+"   \ 'outputter/buffer/opener' : "new"
+"   \ }
+" let g:quickrun_config['ruby.rspec'] = {
+"   \ 'command': 'bundle',
+"   \ 'cmdopt': 'exec rspec',
+"   \ }
+" augroup QuickRunRspec
+"   autocmd!
+"   autocmd BufEnter *_spec.rb set filetype=ruby.rspec
+" augroup END
+" " nnoremap <silent> <leader>q :<C-u>QuickRun<CR>
+" " inoremap <silent> <leader>q <ESC>:<C-u>QuickRun<CR>
+" " vnoremap <silent> <leader>q <ESC>:'<,'>QuickRun<CR>
+" nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
+" inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
+" vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 
 
-Plug 'mechatroner/rainbow_csv'
+" Plug 'mechatroner/rainbow_csv'
 
 Plug 'tribela/vim-transparent'
 
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
-Plug 'slim-template/vim-slim'
-syntax enable
-filetype plugin indent on
-autocmd BufNewFile,BufRead *.slim  set filetype=slim
+" Plug 'slim-template/vim-slim'
+" syntax enable
+" filetype plugin indent on
+" autocmd BufNewFile,BufRead *.slim  set filetype=slim
 
-Plug 'stephpy/vim-yaml'
+" Plug 'stephpy/vim-yaml'
 
 
 " Plug 'APZelos/blamer.nvim'
@@ -103,17 +103,17 @@ Plug 'stephpy/vim-yaml'
 " let g:blamer_template = '<committer> <committer-time> <summary>'
 " let g:blamer_date_format = '%Y-%m-%d %H:%M'
 
-Plug 'iberianpig/tig-explorer.vim'
-let g:tig_explorer_use_builtin_term=0
+" Plug 'iberianpig/tig-explorer.vim'
+" let g:tig_explorer_use_builtin_term=0
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'townk/vim-autoclose'
-Plug 'mattn/emmet-vim'
+" Plug 'alvan/vim-closetag'
+" Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-endwise'
+" Plug 'townk/vim-autoclose'
+" Plug 'mattn/emmet-vim'
 
 
 
@@ -122,6 +122,29 @@ Plug 'mattn/emmet-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-lists',
+      \ 'coc-diagnostic',
+      \ 'coc-calc',
+      \ 'coc-explorer',
+      \ 'coc-highlight',
+      \ 'coc-git',
+      \ 'coc-docker',
+      \ 'coc-html',
+      \ 'coc-emmet',
+      \ 'coc-css',
+      \ 'coc-tailwindcss',
+      \ 'coc-stylelint',
+      \ 'coc-stylelintplus',
+      \ 'coc-tsserver',
+      \ 'coc-eslint',
+      \ 'coc-prettier',
+      \ 'coc-solargraph',
+      \ 'coc-go',
+      \ 'coc-golines',
+      \ 'coc-sql',
+      \ 'coc-graphql', ]
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -290,10 +313,10 @@ call plug#end()
 "----------------------------
 " let mapleader = "\<Space>"
 
-" tmux 上で Vim を True Color (24 bit color) で使う - Qiita https://qiita.com/yami_beta/items/ef535d3458addd2e8fbb
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" " tmux 上で Vim を True Color (24 bit color) で使う - Qiita https://qiita.com/yami_beta/items/ef535d3458addd2e8fbb
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 colorscheme tender
 
@@ -308,14 +331,14 @@ set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
 
-" nnoremap <silent> q :q!<CR>
+nnoremap <silent> q :q!<CR>
 nnoremap <silent> gf gF
 vnoremap 9 $
 nnoremap 9 $
 vnoremap v $
 
 autocmd BufReadPost * exe "normal! g'\""
-nnoremap <Leader>sp :<C-u>set paste<CR>
+" nnoremap <Leader>sp :<C-u>set paste<CR>
 
-nnoremap <Leader>t :terminal<CR>
-autocmd! FileType markdown hi! def link markdownItalic Normal
+" nnoremap <Leader>t :terminal<CR>
+" autocmd! FileType markdown hi! def link markdownItalic Normal
