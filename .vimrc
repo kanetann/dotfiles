@@ -272,6 +272,14 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+nnoremap <silent><nowait> <space>f :exe 'CocList files'<CR>
+
+nnoremap <silent><nowait> <space>g :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+
+nnoremap <silent><nowait> <space>] :exe 'CocList --input='.expand('<cword>').' tags'<CR>
+
+
+
 
 
 
@@ -280,7 +288,7 @@ call plug#end()
 
 " options
 "----------------------------
-let mapleader = "\<Space>"
+" let mapleader = "\<Space>"
 
 " tmux 上で Vim を True Color (24 bit color) で使う - Qiita https://qiita.com/yami_beta/items/ef535d3458addd2e8fbb
 set termguicolors
@@ -300,7 +308,7 @@ set showmatch
 set whichwrap=b,s,h,l,<,>,[,]
 au FileType * setlocal formatoptions-=ro
 
-nnoremap <silent> q :q!<CR>
+" nnoremap <silent> q :q!<CR>
 nnoremap <silent> gf gF
 vnoremap 9 $
 nnoremap 9 $
