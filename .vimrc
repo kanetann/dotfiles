@@ -39,13 +39,13 @@ vmap gx <Plug>(openbrowser-smart-search)
 " " let g:ale_fix_on_save = 1
 
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
-nnoremap <expr> <C-r> ':!rg -n --hidden ' . expand('<cword>') . ' > zzz'
-nnoremap <expr> <C-p> ':Files<CR>'
-nnoremap <expr> <C-]> ':Tags ' . expand('<cword>') . '<CR>'
-let g:fzf_preview_window = ''
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+" nnoremap <expr> <C-g> ':Rg ' . expand('<cword>')
+" nnoremap <expr> <C-r> ':!rg -n --hidden ' . expand('<cword>') . ' > zzz'
+" nnoremap <expr> <C-p> ':Files<CR>'
+" nnoremap <expr> <C-]> ':Tags ' . expand('<cword>') . '<CR>'
+" let g:fzf_preview_window = ''
 
 
 " Plug 'vim-scripts/vim-auto-save'
@@ -300,7 +300,7 @@ nnoremap <silent><nowait> <space>g :exe 'CocList -I --input='.expand('<cword>').
 
 nnoremap <silent><nowait> <space>] :exe 'CocList --input='.expand('<cword>').' tags'<CR>
 
-
+nnoremap <expr>           <space>r ':!rg -n --hidden ' . expand('<cword>') . ' > _grep_results<Left><Left><Left><Left><Left><Left>'
 
 
 
