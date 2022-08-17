@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'jacoborus/tender.vim'
 
 
-" Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 
 Plug 'vim-scripts/tComment'
@@ -114,7 +114,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'townk/vim-autoclose'
 " Plug 'mattn/emmet-vim'
 
-
+Plug 'github/copilot.vim'
 
 
 
@@ -302,6 +302,10 @@ nnoremap <silent><nowait> <space>] :exe 'CocList --input='.expand('<cword>').' t
 
 nnoremap <expr>           <space>r ':!rg -n --hidden ' . expand('<cword>') . ' > _grep_results<Left><Left><Left><Left><Left><Left>'
 
+" F.A.Q · neoclide/coc.nvim Wiki https://github.com/neoclide/coc.nvim/wiki/F.A.Q#cursor-disappeared-after-exit-coclist
+let g:coc_disable_transparent_cursor = 1
+
+autocmd BufNewFile,BufRead *.erb setfiletype html
 
 
 
