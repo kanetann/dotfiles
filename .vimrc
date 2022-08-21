@@ -80,7 +80,10 @@ vmap gx <Plug>(openbrowser-smart-search)
 " nnoremap <silent> <C-q> :<C-u>QuickRun<CR>
 " inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
 " vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
-
+Plug 'thinca/vim-quickrun'
+let g:quickrun_config = {}
+nnoremap <silent> <C-q> :QuickRun -mode n<CR>
+vnoremap <silent> <C-q> :QuickRun -mode v<CR>
 
 " Plug 'mechatroner/rainbow_csv'
 
