@@ -305,6 +305,10 @@ nnoremap <silent><nowait> <space>] :exe 'CocList --input='.expand('<cword>').' t
 
 nnoremap <expr>           <space>r ':!rg -n --hidden ' . expand('<cword>') . ' > _grep_results<Left><Left><Left><Left><Left><Left>'
 
+nnoremap <silent><nowait> <C-p> :CocList files<CR>
+
+nnoremap <expr>           <C-g> ':CocSearch --hidden ' . expand('<cword>')
+
 " F.A.Q · neoclide/coc.nvim Wiki https://github.com/neoclide/coc.nvim/wiki/F.A.Q#cursor-disappeared-after-exit-coclist
 let g:coc_disable_transparent_cursor = 1
 
