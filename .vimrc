@@ -117,7 +117,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'townk/vim-autoclose'
 " Plug 'mattn/emmet-vim'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 
 
