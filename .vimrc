@@ -303,7 +303,7 @@ nnoremap <silent><nowait> <space>g :exe 'CocList -I --input='.expand('<cword>').
 
 nnoremap <silent><nowait> <space>] :exe 'CocList --input='.expand('<cword>').' tags'<CR>
 
-nnoremap <expr>           <space>r ':!rg -n --hidden ' . expand('<cword>') . ' > _grep_results<Left><Left><Left><Left><Left><Left>'
+nnoremap <expr>           <C-r> ':!rg -n --hidden ' . expand('<cword>') . ' > aaa'
 
 nnoremap <silent><nowait> <C-p> :CocList files<CR>
 
