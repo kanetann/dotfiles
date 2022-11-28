@@ -91,10 +91,10 @@ Plug 'tribela/vim-transparent'
 
 " Plug 'tpope/vim-fugitive'
 
-" Plug 'slim-template/vim-slim'
-" syntax enable
-" filetype plugin indent on
-" autocmd BufNewFile,BufRead *.slim  set filetype=slim
+Plug 'slim-template/vim-slim'
+syntax enable
+filetype plugin indent on
+autocmd BufNewFile,BufRead *.slim  set filetype=slim
 
 " Plug 'stephpy/vim-yaml'
 
