@@ -2,13 +2,15 @@
 
 set -ex
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install google-chrome
 brew install google-japanese-ime
 brew install rectangle
 brew install dropbox
 brew install visual-studio-code
 brew install kindle
+brew install iterm2
+brew install maccy
 
 brew install vim
 brew install ctags
@@ -19,9 +21,27 @@ brew install ripgrep
 brew install fzf
 brew install golang
 brew install ghq
-brew install neovim
+brew install node
 
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+brew tap homebrew/cask-fonts
+brew install font-fira-code-nerd-font
+brew install font-fira-code
+brew install font-fira-mono-for-powerline
+brew install font-fira-mono-nerd-font
+brew install font-fira-mono
+brew install font-fira-sans-condensed
+brew install font-fira-sans-extra-condensed
+brew install font-fira-sans
+brew install font-firago
+brew install font-hack-nerd-font
+brew install font-hack
+brew install font-hackgen-nerd
+brew install font-hackgen
+brew install font-inter-tight
+brew install font-inter
+
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ln -sf ~/dotfiles/.agignore ~/.agignore
 ln -sf ~/dotfiles/.editorconfig ~/.editorconfig
@@ -33,8 +53,6 @@ ln -sf ~/dotfiles/.vimrc ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.rubocop.yml ~/.rubocop.yml
 ln -sf ~/dotfiles/my.zsh-theme ~/.oh-my-zsh/custom/themes/my.zsh-theme
-# TODO:import to iTerm2 color setting.
-curl -O https://raw.githubusercontent.com/tombell/tender-iterm2/main/Tender.itermcolors
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
