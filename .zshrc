@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 case ${OSTYPE} in
   darwin*)
@@ -122,8 +123,8 @@ esac
 
 alias repos='cd $(ghq list -p | fzf)'
 alias rg='rg -n --hidden'
-alias vim='nvim'
-alias v='nvim'
+# alias vim='nvim'
+# alias v='nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
