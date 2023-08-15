@@ -3,15 +3,6 @@
 set -ex
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install google-chrome
-brew install google-japanese-ime
-brew install rectangle
-brew install dropbox
-brew install visual-studio-code
-brew install kindle
-brew install iterm2
-brew install maccy
-
 brew install vim
 brew install ctags
 brew install git
@@ -22,23 +13,22 @@ brew install fzf
 brew install golang
 brew install ghq
 brew install node
+brew install rbenv
+brew install ruby-build
+brew install fd
 
-brew tap homebrew/cask-fonts
-brew install font-fira-code-nerd-font
-brew install font-fira-code
-brew install font-fira-mono-for-powerline
-brew install font-fira-mono-nerd-font
-brew install font-fira-mono
-brew install font-fira-sans-condensed
-brew install font-fira-sans-extra-condensed
-brew install font-fira-sans
-brew install font-firago
-brew install font-hack-nerd-font
-brew install font-hack
-brew install font-hackgen-nerd
-brew install font-hackgen
-brew install font-inter-tight
-brew install font-inter
+brew install --cask google-chrome
+brew install --cask google-japanese-ime
+brew install --cask rectangle
+brew install --cask dropbox
+brew install --cask visual-studio-code
+brew install --cask kindle
+brew install --cask iterm2
+brew install --cask maccy
+brew install --cask karabiner-elements
+brew install --cask dash
+
+ghq get https://github.com/edihbrandon/RictyDiminished.git
 
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
