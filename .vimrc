@@ -117,7 +117,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'townk/vim-autoclose'
 " Plug 'mattn/emmet-vim'
 
-" Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 
 
 
@@ -362,4 +362,4 @@ autocmd BufReadPost * exe "normal! g'\""
 " nnoremap <Leader>sp :<C-u>set paste<CR>
 
 " nnoremap <Leader>t :terminal<CR>
-" autocmd! FileType markdown hi! def link markdownItalic Normal
+autocmd! FileType markdown hi! def link markdownItalic Normal
