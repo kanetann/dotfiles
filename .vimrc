@@ -21,11 +21,11 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
-" Plug 'dense-analysis/ale'
-" let g:ale_linters = {
-" \   'javascript': ['prettier', 'eslint'],
-" \   'ruby': ['rubocop', 'rails_best_practices'],
-" \}
+Plug 'dense-analysis/ale'
+let g:ale_linters = {
+      \   'javascript': ['prettier', 'eslint'],
+      \   'ruby': ['rubocop', 'rails_best_practices'],
+      \}
 " let g:ale_fixers = {
 " \   'javascript': ['prettier', 'eslint'],
 " \   'ruby': ['rubocop'],
