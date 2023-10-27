@@ -62,7 +62,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 # git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 # rbenv install <version>
 # rbenv global <version>
-# gem instal bundler
+# gem install bundler
+# gem install solargraph
 #
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 # nvm install <version>
