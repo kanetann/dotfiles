@@ -62,6 +62,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 # git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 # rbenv install <version>
 # rbenv global <version>
+
+# git clone https://github.com/amatsuda/gem-src.git "$(rbenv root)/plugins/gem-src"
+# mkdir ~/src
+# echo "gemsrc_clone_root: ~/src" >> ~/.gemrc
+# echo "gemsrc_use_ghq: true" >> ~/.gemrc
+
 # gem install bundler
 # gem install solargraph
 #
