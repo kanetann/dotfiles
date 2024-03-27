@@ -87,7 +87,7 @@ vnoremap <silent> <C-q> :QuickRun -mode v<CR>
 
 Plug 'tribela/vim-transparent'
 
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 Plug 'slim-template/vim-slim'
 syntax enable
