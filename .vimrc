@@ -115,10 +115,10 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'townk/vim-autoclose'
 " Plug 'mattn/emmet-vim'
 
-Plug 'github/copilot.vim'
-imap <C-J> <Plug>(copilot-next)
-imap <C-K> <Plug>(copilot-previous)
-imap <C-L> <Plug>(copilot-accept-word)
+" Plug 'github/copilot.vim'
+" imap <C-J> <Plug>(copilot-next)
+" imap <C-K> <Plug>(copilot-previous)
+" imap <C-L> <Plug>(copilot-accept-word)
 
 
 
