@@ -1238,8 +1238,8 @@ puts a * b
 x = a * b + c
 puts x
 
-
-
+# ruby-golf-style-guide/README_ja.md at master · siman-man/ruby-golf-style-guide
+# https://github.com/siman-man/ruby-golf-style-guide/blob/master/README_ja.md
 
 
 
@@ -1250,6 +1250,10 @@ puts x
 
 # Rubyのバリデーション用正規表現集 · GitHub
 # https://gist.github.com/nashirox/38323d5b51063ede1d41
+
+# RubyコードゴルフTips - HackMD
+# https://hackmd.io/@magurofly/B1hrwxR3D
+
 
 # CRASH OF CODE
 a = %w[dan-pc dan-pc. ftp://dan-pc http://dan-pc https://dan-pc]
@@ -1300,3 +1304,5 @@ a,b,m=8,7,2
 x=y=d=0
 D=-1,1,0,0
 p (1..1e6).find{d=(a*d+b)%m;[x+=D[d%4],y+=D[(d-2)%4]]==[0,0]}
+
+
