@@ -25,6 +25,7 @@ Plug 'dense-analysis/ale'
 let g:ale_linters = {
       \   'javascript': ['prettier', 'eslint'],
       \   'ruby': ['rubocop', 'rails_best_practices'],
+      \   'python': ['flake8'],
       \}
 " let g:ale_fixers = {
 "       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
