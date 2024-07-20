@@ -113,8 +113,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Plug 'alvan/vim-closetag'
 " Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-endwise'
-" Plug 'townk/vim-autoclose'
+Plug 'tpope/vim-endwise'
+Plug 'townk/vim-autoclose'
 " Plug 'mattn/emmet-vim'
 
 " Plug 'github/copilot.vim'
