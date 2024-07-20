@@ -26,6 +26,7 @@ let g:ale_linters = {
       \   'javascript': ['prettier', 'eslint'],
       \   'ruby': ['rubocop', 'rails_best_practices'],
       \   'python': ['flake8'],
+      \   'css': ['stylelint'],
       \}
 " let g:ale_fixers = {
 "       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
