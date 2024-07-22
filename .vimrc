@@ -35,6 +35,11 @@ let g:ale_linters = {
 "       \}
 let g:ale_fixers = {
       \   'python': ['autopep8', 'black', 'isort'],
+      \   'sql': [
+      \     { buffer -> {
+      \       'command': 'sql-formatter -l mysql'
+      \     }},
+      \   ],
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
       \}
 let g:ale_fix_on_save = 1
