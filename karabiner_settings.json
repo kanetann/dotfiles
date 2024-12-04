@@ -1,0 +1,13 @@
+{
+  "description": "Shift_R to Command + Tab",
+  "manipulators": [
+    {
+      "from": { "key_code": "right_shift" },
+      "to": {
+        "key_code": "tab",
+        "modifiers": ["command"]
+      },
+      "type": "basic"
+    }
+  ]
+}
