@@ -87,7 +87,12 @@ let g:ale_fix_on_save = 1
 " inoremap <silent> <C-q> <ESC>:<C-u>QuickRun<CR>
 " vnoremap <silent> <C-q> <ESC>:'<,'>QuickRun<CR>
 Plug 'thinca/vim-quickrun'
-let g:quickrun_config = {}
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+let g:quickrun_config._ = {
+      \ 'outputter/buffer/opener': 'new',
+      \ 'outputter/buffer/into': 0,
+      \ 'outputter/buffer/close_on_empty': 1,
+      \ }
 nnoremap <silent> <C-q> :QuickRun -mode n<CR>
 vnoremap <silent> <C-q> :QuickRun -mode v<CR>
 
