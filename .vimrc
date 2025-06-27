@@ -91,7 +91,7 @@ let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config._ = {
       \ 'outputter/buffer/opener': 'new',
       \ 'outputter/buffer/into': 0,
-      \ 'outputter/buffer/close_on_empty': 1,
+      \ 'outputter/buffer/close_on_empty': 0,
       \ }
 nnoremap <silent> <C-q> :QuickRun -mode n<CR>
 vnoremap <silent> <C-q> :QuickRun -mode v<CR>
